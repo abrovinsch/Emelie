@@ -3,3 +3,4 @@
 /Users/oskar/Egna Dokument/Programmering/Emelie/bin/Debug/Emelie.exe
 /Users/oskar/Egna Dokument/Programmering/Emelie/obj/x86/Debug/Emelie.exe
 /Users/oskar/Egna Dokument/Programmering/Emelie/obj/x86/Debug/Emelie.exe.mdb
+/Users/oskar/Egna Dokument/Programmering/Emelie/bin/Debug/Newtonsoft.Json.dll

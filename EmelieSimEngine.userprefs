@@ -1,1 +1,21 @@
-﻿<Properties StartupItem="Emelie.csproj" />
+﻿<Properties StartupItem="Emelie.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="EmelieTransition.cs">
+    <Files>
+      <File FileName="Program.cs" Line="20" Column="58" />
+      <File FileName="EmelieSimulationContext.cs" Line="37" Column="34" />
+      <File FileName="EmelieUtilities.cs" Line="18" Column="4" />
+      <File FileName="EmelieLog.cs" Line="7" Column="1" />
+      <File FileName="EmelieSyntaxDef.cs" Line="11" Column="48" />
+      <File FileName="EmelieState.cs" Line="24" Column="2" />
+      <File FileName="EmelieTransition.cs" Line="22" Column="44" />
+      <File FileName="EmelieSimulation.cs" Line="26" Column="40" />
+      <File FileName="EmelieTrait.cs" Line="25" Column="1" />
+      <File FileName="EmelieRequirements.cs" Line="17" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

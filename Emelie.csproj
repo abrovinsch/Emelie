@@ -31,12 +31,24 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Libraries\NewtonSoftJson\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EmptyClass.cs" />
     <Compile Include="EmelieSimulationContext.cs" />
+    <Compile Include="EmelieUtilities.cs" />
+    <Compile Include="EmelieLog.cs" />
+    <Compile Include="EmelieSyntaxDef.cs" />
+    <Compile Include="EmelieState.cs" />
+    <Compile Include="EmelieSimulation.cs" />
+    <Compile Include="EmelieCharacter.cs" />
+    <Compile Include="EmelieTrait.cs" />
+    <Compile Include="EmelieTransition.cs" />
+    <Compile Include="EmelieRequirements.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

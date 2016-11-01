@@ -3,16 +3,56 @@
 //
 // ------------------------------------------------------------------------------
 using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace Emelie
 {
-	public class EmelieSimulationContext
+	public class EmelieSimulationContext : System.Object
 	{
-		public EmelieSimulationContext ()
-		{
-		}
 
 		public string name;
+		public EmelieState[] states;
+		public EmelieTransition[] transitions;
+		public EmelieTrait[] traits;
+		public string[] personalityMeasurements;
+		public string startingState;
+
+		public EmelieState GetStartingState()
+		{
+			foreach(EmelieState state in states)
+			{
+				if(state.name == startingState)
+					return state;
+			}
+			return states[0];
+		}
+
+		public EmelieSimulationContext ()
+		{
+			name = "SIMULATION_NAME";
+			states = new EmelieState[2];
+			states[0] = new EmelieState();
+			states[1] = new EmelieState();
+
+			transitions = new EmelieTransition[2];
+			transitions[0] = new EmelieTransition();
+			transitions[1] = new EmelieTransition();
+
+			personalityMeasurements = new string[4];
+			personalityMeasurements[0] = "KIND";
+			personalityMeasurements[1] = "5";
+			personalityMeasurements[2] = "BRAVE";
+			personalityMeasurements[3] = "5";
+
+			startingState = "STATE_INFANCY";
+		}
+
+		public static string Serialize(EmelieSimulationContext context, string path)
+		{
+			return JsonConvert.SerializeObject(context,Formatting.Indented);
+		}
 	}
 }
 
