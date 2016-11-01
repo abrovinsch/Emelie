@@ -10,18 +10,22 @@ namespace Emelie
 	{
 		static string VERSION = "0.0";
 
+
 		public static void Main (string[] args)
 		{
 			Console.WriteLine ("------          Starting Emelie Text Engine v" + VERSION + "        ------\n" +
 							   "Code by Oskar Lundqvist 2016 | @oskar_lq | lundqvist.oskar01@gmail.com\n");
 
+			string OUTPUT_FILE;
+
+
 			bool programIsRunning = true;
 			EmelieSimulationContext context = new EmelieSimulationContext();
-			Log.Msg(EmelieSimulationContext.Serialize(context,""));
+			//EmelieIO.WriteStringToFile(EmelieSimulationContext.Serialize(context,""),OUTPUT_FILE);
 
 			while(programIsRunning)
 			{
-				Console.WriteLine ("Enter a command:");
+				Console.Write ("Enter a command: ");
 
 				string resultingLine = "";
 				while(resultingLine == "")
@@ -37,6 +41,14 @@ namespace Emelie
 					case "quit" : { 
 						programIsRunning = false;
 						Console.WriteLine("Closing Emelie...");
+					} break;
+
+					case "set_output_file" : { 
+						if(CheckParameters("set_output_file",parameters,1))
+						{
+							OUTPUT_FILE= parameters[1].Replace("%20"," ");
+							Log.Msg("OUTPUT_FILE = " + OUTPUT_FILE);
+						}
 					} break;
 
 					case "run" : { 
@@ -69,10 +81,11 @@ namespace Emelie
 
 		private static void Help()
 		{
-			Console.WriteLine ("\nList of commands:\n" +
+			Console.WriteLine ("\nLIST OF COMMANDS:\n" +
 				"quit - closes the program\n" +
 				"help - prints a list of all commands\n" +
 				"load -filepath – loads a .emelie file and sets it as current simulation context\n" +
+				"set_output_file -filepath – sets the file to write output to\n" +
 				"run -times - runs the simulation a certain amount of time");
 		}
 

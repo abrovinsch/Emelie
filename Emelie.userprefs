@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="Emelie.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+    <Files>
+      <File FileName="EmelieUtilities.cs" Line="7" Column="34" />
+      <File FileName="Program.cs" Line="73" Column="8" />
+      <File FileName="EmelieIO.cs" Line="13" Column="10" />
+      <File FileName="../Twitterbotar/EvertTextEngine/EvertTextEngine/TerminalInterface.cs" Line="58" Column="30" />
+      <File FileName="../Twitterbotar/EvertTextEngine/EvertTextEngine/EvertDictionaryFile.cs" Line="43" Column="10" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

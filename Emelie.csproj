@@ -8,6 +8,8 @@
     <RootNamespace>Emelie</RootNamespace>
     <AssemblyName>Emelie</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,6 +51,7 @@
     <Compile Include="EmelieTrait.cs" />
     <Compile Include="EmelieTransition.cs" />
     <Compile Include="EmelieRequirements.cs" />
+    <Compile Include="EmelieIO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
