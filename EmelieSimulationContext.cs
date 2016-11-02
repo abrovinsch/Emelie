@@ -29,6 +29,15 @@ namespace Emelie
 			return states[0];
 		}
 
+
+		public override string ToString ()
+		{
+			return string.Format ("[EmelieSimulationContext]\n" +
+								  "[Name:] " + name +
+								  "\n[Startingstate] " + startingState +
+								  "\n[PersonalityMeasurment] " + EmelieUtilities.StringArrayToString(personalityMeasurements));
+		}
+
 		public EmelieSimulationContext ()
 		{
 			name = "SIMULATION_NAME";
@@ -49,9 +58,16 @@ namespace Emelie
 			startingState = "STATE_INFANCY";
 		}
 
-		public static string Serialize(EmelieSimulationContext context, string path)
+		public static string Serialize(EmelieSimulationContext context)
 		{
 			return JsonConvert.SerializeObject(context,Formatting.Indented);
+		}
+
+		public static EmelieSimulationContext Deserialize(string json)
+		{
+			EmelieSimulationContext newContext =  (EmelieSimulationContext)JsonConvert.DeserializeObject(json,
+																				typeof(EmelieSimulationContext));
+			return newContext;
 		}
 	}
 }

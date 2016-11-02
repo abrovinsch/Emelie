@@ -51,6 +51,16 @@ namespace Emelie
 						}
 					} break;
 
+					case "load" : { 
+						if(CheckParameters("load",parameters,1))
+						{
+							string fileToLoad= parameters[1].Replace("%20"," ");
+							string fileContents = EmelieIO.ReadFile(fileToLoad);
+							context = EmelieSimulationContext.Deserialize(fileContents);
+							Log.Msg(context.ToString());
+						}
+					} break;
+
 					case "run" : { 
 						if(CheckParameters("run",parameters,1))
 						{
@@ -97,7 +107,8 @@ namespace Emelie
 			return result;
 		}
 
-		private static bool CheckParameters(string commandName, string[] parameters, int amount)
+		private static bool CheckParameters
+		(string commandName, string[] parameters, int amount)
 		{
 			if(parameters.Length != amount + 1)
 			{
