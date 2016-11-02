@@ -20,6 +20,12 @@ namespace Emelie
 			transitions[0] = "TRANSITION";
 			transitions[1] = "TRANSITION";
 		}
+		/*
+		public EmelieTransition[] GetPossibleTransitions()
+		{
+			
+		}
+		*/
 	}
 
 }

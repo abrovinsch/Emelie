@@ -18,6 +18,8 @@ namespace Emelie
 		public EmelieTrait[] traits;
 		public string[] personalityMeasurements;
 		public string startingState;
+		public float simulationStep
+		;
 
 		public EmelieState GetStartingState()
 		{
@@ -55,6 +57,10 @@ namespace Emelie
 			personalityMeasurements[2] = "BRAVE";
 			personalityMeasurements[3] = "5";
 
+			traits = new EmelieTrait[2];
+			traits[0] = new EmelieTrait();
+			traits[1] = new EmelieTrait();
+
 			startingState = "STATE_INFANCY";
 		}
 
@@ -65,9 +71,17 @@ namespace Emelie
 
 		public static EmelieSimulationContext Deserialize(string json)
 		{
-			EmelieSimulationContext newContext =  (EmelieSimulationContext)JsonConvert.DeserializeObject(json,
+			try{
+				EmelieSimulationContext newContext =  (EmelieSimulationContext)JsonConvert.DeserializeObject(json,
 																				typeof(EmelieSimulationContext));
-			return newContext;
+				return newContext;
+			}
+			catch(Exception e)
+			{
+				Log.Error("Failure in parsing JSON: \"" + e.Message + "\"");
+				return null;
+			}
+
 		}
 	}
 }

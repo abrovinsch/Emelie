@@ -10,15 +10,17 @@ namespace Emelie
 	public class EmelieTrait : System.Object
 	{
 		public string name;
+		public string pointAffected;
+		public int effect;
 
 		public EmelieTrait()
 		{
-			name = "TRAIT";
+			name = "TRAIT_FOOL";
+			pointAffected = "INTELLIGENCE";
+			effect  = -5;
 		}
-
-		public string[] personalityEffects;
+			
 	}
-
 
 
 }

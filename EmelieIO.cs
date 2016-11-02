@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Emelie
 {
-	public static class EmelieIO
+		public static class EmelieIO
 	{
 		public static void WriteStringToFile (string content, string path)
 		{

@@ -16,7 +16,8 @@ namespace Emelie
 			Console.WriteLine ("------          Starting Emelie Text Engine v" + VERSION + "        ------\n" +
 							   "Code by Oskar Lundqvist 2016 | @oskar_lq | lundqvist.oskar01@gmail.com\n");
 
-			string OUTPUT_FILE;
+			string OUTPUT_FILE = ""
+				;
 
 
 			bool programIsRunning = true;
@@ -56,9 +57,23 @@ namespace Emelie
 						{
 							string fileToLoad= parameters[1].Replace("%20"," ");
 							string fileContents = EmelieIO.ReadFile(fileToLoad);
-							context = EmelieSimulationContext.Deserialize(fileContents);
-							Log.Msg(context.ToString());
+
+							if(fileContents != null)
+							{
+								context = EmelieSimulationContext.Deserialize(fileContents);
+								Log.Msg(context.ToString());
+							}
 						}
+					} break;
+
+
+					case "out" : {
+						if(OUTPUT_FILE != "")
+						{
+							EmelieIO.WriteStringToFile(EmelieSimulationContext.Serialize(context),OUTPUT_FILE);
+						}
+						else Log.Error("No output file set. Please use \"set_output_file\"");
+
 					} break;
 
 					case "run" : { 
@@ -101,8 +116,13 @@ namespace Emelie
 
 		private static string RunSimulation(EmelieSimulationContext context)
 		{
+			if(context == null)
+			{
+				Log.Error("Cannot run simulation because context is null");
+
+			}
 			EmelieSimulation simulation = new EmelieSimulation();
-			string result = simulation.Run(context);
+			string result = simulation.Run(context, VERSION);
 			Log.Msg("SIMULATION RESULT: '" + result + "'");
 			return result;
 		}
