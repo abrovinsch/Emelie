@@ -7,19 +7,20 @@ using System.Collections.Generic;
 
 namespace Emelie
 {
-	public class EmelieTransition
+	public class EmelieEvent
 	{
 		public string name;
 		public float probability;
 		public string destinationState;
-		public EmelieRequirements requirements;
+		public EmelieRequirement[] requirements;
 
-		public EmelieTransition()
+		public EmelieEvent()
 		{
-			name = "TRANSITION_NAME";
+			name = "EVENT_NAME";
 			destinationState = "DEST_STATE";
 			probability = 10;
-			requirements = new EmelieRequirements();
+			requirements = new EmelieRequirement[1];
+			requirements[0] = new EmelieRequirement();
 		}
 	}
 

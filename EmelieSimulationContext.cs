@@ -14,7 +14,7 @@ namespace Emelie
 
 		public string name;
 		public EmelieState[] states;
-		public EmelieTransition[] transitions;
+		public EmelieEvent[] events;
 		public EmelieTrait[] traits;
 		public string[] personalityMeasurements;
 		public string startingState;
@@ -47,9 +47,9 @@ namespace Emelie
 			states[0] = new EmelieState();
 			states[1] = new EmelieState();
 
-			transitions = new EmelieTransition[2];
-			transitions[0] = new EmelieTransition();
-			transitions[1] = new EmelieTransition();
+			events = new EmelieEvent[2];
+			events[0] = new EmelieEvent();
+			events[1] = new EmelieEvent();
 
 			personalityMeasurements = new string[4];
 			personalityMeasurements[0] = "KIND";
@@ -62,6 +62,31 @@ namespace Emelie
 			traits[1] = new EmelieTrait();
 
 			startingState = "STATE_INFANCY";
+		}
+
+		public EmelieState GetState(string stateName)
+		{
+			foreach(EmelieState state in states)
+			{
+				if(state.name == stateName)
+					return state;
+			}
+
+
+			Log.Error("Undefined state: \"" + stateName + "\"");
+			return null;
+		}
+
+		public EmelieEvent GetEvent(string eventName)
+		{
+			foreach(EmelieEvent _event in events)
+			{
+				if(_event.name == eventName)
+					return _event;
+			}
+
+			Log.Error("Undefined event: \"" + eventName + "\"");
+			return null;
 		}
 
 		public static string Serialize(EmelieSimulationContext context)

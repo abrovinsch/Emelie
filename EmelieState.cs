@@ -11,21 +11,17 @@ namespace Emelie
 	{
 		public string name;
 
-		public string[] transitions;
+		public string[] events;
 
 		public EmelieState()
 		{
 			name = "STATE_NAME";
-			transitions = new string[2];
-			transitions[0] = "TRANSITION";
-			transitions[1] = "TRANSITION";
+			events = new string[2];
+			events[0] = "EVENT";
+			events[1] = "EVENT";
 		}
-		/*
-		public EmelieTransition[] GetPossibleTransitions()
-		{
-			
-		}
-		*/
+
+
 	}
 
 }

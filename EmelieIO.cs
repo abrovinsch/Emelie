@@ -65,9 +65,6 @@ namespace Emelie
 		{
 			if(File.Exists(path))
 			{
-				string[] pathTokens = path.Split('/');
-				string fileName = pathTokens[pathTokens.Length-1];
-
 				try
 				{
 					string fileContents = File.ReadAllText(path,UTF8Encoding.Default);

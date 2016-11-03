@@ -35,11 +35,10 @@ namespace Emelie
 
 			c.name = "<# name>";
 			resultingEvert += "<$ character_name " + c.name + " >\n";
+			resultingEvert += "<$ gender " + c.gender + " >\n";
+
 			c.finalAge = EmelieUtilities.RandomRange(5f,90f);
-
-
 			c.currentAge = 0f;
-
 
 			int numOfTraits = 3;
 
@@ -51,23 +50,61 @@ namespace Emelie
 				{
 					SimLog(c.currentAge, "born with trait " + randomTrait.name);
 				}
+
 			}
 
 			foreach(EmelieTrait trait in context.traits)
 			{
 				bool r = c.traits.Contains(trait);
-				resultingEvert += "<$ has_trait_" + trait.name + " " + r.ToString() +">\n";
+				resultingEvert += "<$ has_trait_" + trait.name + " " + r.ToString().ToLower()	 +">\n";
+			}
+
+			foreach(string s in context.personalityMeasurements)
+			{
+				resultingEvert += "<$ personality_" + s + " " + c.personalityPoints[s] + ">\n";
 			}
 
 			EmelieState startingState = context.GetStartingState();
 
 			SimLog(c.currentAge, "Character Born");
-			resultingEvert += "\n//Actual story:\n\n<# character_born>\n";
+			resultingEvert += "\n//Actual story:" +
+				"" +
+				"\n\n<# character_born>\n";
+
+			EmelieState currentState = startingState;
 
 			while(c.currentAge < c.finalAge)
 			{
 
-				//foreach(EmelieTransition in 
+				foreach(string eventName in currentState.events)
+				{
+					EmelieEvent _event = context.GetEvent(eventName);
+
+					float percentDice = EmelieUtilities.RandomRange(0f,100f);
+					if(percentDice <= _event.probability)
+					{
+						bool passedAlltests = true;
+						foreach(EmelieRequirement req in _event.requirements)
+						{
+							if(!req.IsMet(c,_event)) passedAlltests = false;
+						}
+
+						if(!passedAlltests) continue;
+
+
+						SimLog(c.currentAge,"EVENT: " + _event.name);
+						resultingEvert += "\n<$ CURRENT_AGE " + c.currentAge + ">";
+						resultingEvert += "\n<# EVENT_" + _event.name + ">";
+
+						if(_event.destinationState != "")
+						{
+							resultingEvert += "\n" +
+								"// Change state to " + _event.destinationState + "\n";
+							currentState = context.GetState(_event.destinationState);
+							continue;
+						}
+					}
+				}
 
 				c.currentAge += context.simulationStep;
 				if(c.currentAge > c.finalAge) c.currentAge = c.finalAge;

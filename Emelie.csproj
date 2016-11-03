@@ -49,9 +49,9 @@
     <Compile Include="EmelieSimulation.cs" />
     <Compile Include="EmelieCharacter.cs" />
     <Compile Include="EmelieTrait.cs" />
-    <Compile Include="EmelieTransition.cs" />
-    <Compile Include="EmelieRequirements.cs" />
     <Compile Include="EmelieIO.cs" />
+    <Compile Include="EmelieRequirement.cs" />
+    <Compile Include="EmelieEvent.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

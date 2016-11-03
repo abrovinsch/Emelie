@@ -11,13 +11,17 @@ namespace Emelie
 	{
 		public string name;
 		public List<EmelieTrait> traits;
-		private Dictionary<string,uint> personalityPoints;
+		public List<string> attributes;
+		public Dictionary<string,uint> personalityPoints;
 		public float finalAge;
 		public float currentAge;
+		public string gender;
+		public uint economicClass;
 
 		public EmelieCharacter(EmelieSimulationContext context)
 		{
 			traits = new List<EmelieTrait>();
+			attributes = new List<string>();
 
 			personalityPoints = new Dictionary<string, uint>();
 			for(int i = 0; i < context.personalityMeasurements.Length; i++)
@@ -30,14 +34,22 @@ namespace Emelie
 				
 				Log.Msg(personalityMeasurement);
 			}
+
+			if(EmelieUtilities.RandomRange(0,1) == 1)
+			{
+				gender = "male";
+			}
+			else
+			{
+				gender = "female";
+			}
 		}
 
 
 		public bool AddTrait(EmelieTrait trait)
 		{
 			if(traits.Contains(trait))
-				return false
-					;
+				return false;
 
 			traits.Add(trait);
 					
@@ -49,6 +61,29 @@ namespace Emelie
 
 			personalityPoints[trait.pointAffected] = (uint)(personalityPoints[trait.pointAffected] + trait.effect);
 			return true;
+		}
+
+		public bool HaveTrait(string _trait)
+		{
+			
+			foreach(EmelieTrait t in traits)
+			{
+				if (_trait == t.name)
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+
+		public bool AddAttribute(string attribute)
+		{
+			if(!attributes.Contains(attribute)) 
+			{
+				attributes.Add(attribute);
+				return true;
+			}
+			return false;
 		}
 			
 	}
