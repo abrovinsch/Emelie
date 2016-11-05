@@ -26,7 +26,7 @@ namespace Emelie
 
 		public static bool PercentageChance(float percentage)
 		{   
-			return (RandomRange(0f,100f) > 50f);
+			return (RandomRange(0f,100f) <= percentage);
 		}
 
 		public static bool IsAllWhiteSpace(string s)

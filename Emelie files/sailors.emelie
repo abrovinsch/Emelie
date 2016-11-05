@@ -60,7 +60,8 @@
         "BUY_FARM",
         "JOIN_ARMY",
         "GO_SAILING",
-        "GO_HOBO"
+        "GO_HOBO",
+        "GET_MARRIED"
       ]
     },
     {
@@ -74,8 +75,6 @@
       "events": [
         "LOSE_FARM",
         "GET_MARRIED",
-        "GET_CHILD",
-        "FALL_IN_LOVE"
       ]
     },
     {
@@ -86,7 +85,6 @@
         "GO_FIND_WORK",
         "SOLDIER_DESERT",
         "RETIRE_FROM_MILITARY_SERVICE"
-        "FALL_IN_LOVE"
       ]
     },
     {
@@ -340,10 +338,25 @@
     },
     {
       "name": "HAVE_AN_AFFAIR",
-      "probability": 0.1,
+      "probability": 50,
       "destinationState": "",
-      "attributesAdded": [],
+      "attributesAdded": ["has_had_an_affair"],
       "requirements": [
+       {
+          "comparer": "DONT_HAVE_ATTRIBUTE",
+          "text": "has_had_an_affair",
+          "number": 4
+        },
+        {
+          "comparer": "HAVE_ATTRIBUTE",
+          "text": "in_love",
+          "number": 4
+        },
+        {
+          "comparer": "HAVE_ATTRIBUTE",
+          "text": "married",
+          "number": 4
+        },
         {
           "comparer": "PERSONALITY_POINT_LESS_THAN",
           "text": "HONESTY",
@@ -441,6 +454,7 @@
     },
     {
       "name": "GET_FOOLED",
+
       "probability": 10.0,
       "destinationState": "",
       "attributesAdded": [],
@@ -454,10 +468,16 @@
     },
     {
       "name": "GET_INJURED",
-      "probability": 30.0,
+      "probability": 10.0,
       "destinationState": "",
       "attributesAdded": ["injured"],
-      "requirements": []
+      "requirements": [
+        {
+          "comparer": "DONT_HAVE_ATTRIBUTE",
+          "text": "TRAIT_INJURED",
+          "number": 0
+        }
+      ]
     },
     {
       "name": "SOLVE_MYSTERY",
