@@ -77,17 +77,24 @@ namespace Emelie
 			while(c.currentAge < c.finalAge)
 			{
 
-				foreach(string eventName in currentState.events)
+				List<string> possibleEvents = new List<string>();
+				possibleEvents.AddRange(currentState.events);
+				possibleEvents.AddRange(context.alwaysPossibleEvents);
+
+				foreach(string eventName in possibleEvents)
 				{
 					EmelieEvent _event = context.GetEvent(eventName);
 
-					float percentDice = EmelieUtilities.RandomRange(0f,100f);
-					if(percentDice <= _event.probability)
+					if(EmelieUtilities.PercentageChance( _event.probability))
 					{
 						bool passedAlltests = true;
 						foreach(EmelieRequirement req in _event.requirements)
 						{
-							if(!req.IsMet(c,_event)) passedAlltests = false;
+							if(!req.IsMet(c,_event)) 
+							{
+								passedAlltests = false;
+								break;
+							}
 						}
 
 						if(!passedAlltests) continue;

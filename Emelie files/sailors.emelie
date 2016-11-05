@@ -1,5 +1,36 @@
 {
   "name": "SIMULATION_NAME",
+
+  "personalityMeasurements": [
+    "KINDNESS",
+    "COURAGE",
+    "INTELLIGENCE",
+    "SOCIABILITY",
+    "PHYSICAL",
+    "HONESTY",
+    "HEALTH",
+    "SOCIAL",
+    "SERIOUSNESS"
+  ],
+
+  "alwaysPossibleEvents": [
+    "STRUCK_BY_LIGHTNING",
+    "BECOME_ILL",
+    "FALL_IN_LOVE",
+    "BECOME_RELIGIOUS",
+    "COMMIT_CRIME",
+    "HAVE_AN_AFFAIR",
+    "BECOME_MOTHER",
+    "BECOME_FATHER",
+    "FRIEND_DIES",
+    "HATE_SPOUSE",
+    "BECOME_HAUNTED"
+  ],
+
+  "startingState": "INFANCY",
+
+  "simulationStep": 1.0,
+
   "states": [
     {
       "name": "INFANCY",
@@ -43,7 +74,6 @@
       "events": [
         "LOSE_FARM",
         "GET_MARRIED",
-        "STRUCK_BY_LIGHTNING",
         "GET_CHILD",
         "FALL_IN_LOVE"
       ]
@@ -263,7 +293,148 @@
     },
     {
       "name": "STRUCK_BY_LIGHTNING",
-      "probability": 1.0,
+      "probability": 0.1,
+      "destinationState": "",
+      "attributesAdded": [],
+      "requirements": []
+    },
+    {
+      "name": "BECOME_ILL",
+      "probability": 0.1,
+      "destinationState": "",
+      "attributesAdded": [],
+      "requirements": []
+    },
+    {
+      "name": "FALL_IN_LOVE",
+      "probability": 2,
+      "destinationState": "",
+      "attributesAdded": ["in_love"],
+      "requirements": []
+    },
+    {
+      "name": "BECOME_RELIGIOUS",
+      "probability": 1,
+      "destinationState": "",
+      "attributesAdded": [],
+      "requirements": [
+        {
+          "comparer": "DONT_HAVE_ATTRIBUTE",
+          "text": "religious",
+          "number": 6
+        }
+      ]
+    },
+    {
+      "name": "COMMIT_CRIME",
+      "probability": 1,
+      "destinationState": "",
+      "attributesAdded": [],
+      "requirements": [
+        {
+          "comparer": "PERSONALITY_POINT_LESS_THAN",
+          "text": "HONESTY",
+          "number": 3
+        }
+      ]
+    },
+    {
+      "name": "HAVE_AN_AFFAIR",
+      "probability": 0.1,
+      "destinationState": "",
+      "attributesAdded": [],
+      "requirements": [
+        {
+          "comparer": "PERSONALITY_POINT_LESS_THAN",
+          "text": "HONESTY",
+          "number": 4
+        }
+      ]
+    },
+    {
+      "name": "BECOME_MOTHER",
+      "probability": 5,
+      "destinationState": "",
+      "attributesAdded": ["parent","mother"],
+      "requirements": [
+        {
+          "comparer": "HAS_GENDER",
+          "text": "female",
+          "number": 4
+        },
+        {
+          "comparer": "IS_YOUNGER_THAN",
+          "text": "female",
+          "number": 40
+        },
+        {
+          "comparer": "IS_OLDER_THAN",
+          "text": "female",
+          "number": 15
+        }
+      ]
+    },
+    {
+      "name": "BECOME_FATHER",
+      "probability": 5,
+      "destinationState": "",
+      "attributesAdded": ["parent","father"],
+      "requirements": [
+        {
+          "comparer": "HAS_GENDER",
+          "text": "male",
+          "number": 4
+        },
+        {
+          "comparer": "IS_OLDER_THAN",
+          "text": "",
+          "number": 15
+        }
+      ]
+    },
+    {
+      "name": "FRIEND_DIES",
+      "probability": 1,
+      "destinationState": "",
+      "attributesAdded": [],
+      "requirements": []
+    },
+    {
+      "name": "BECOME_HAUNTED",
+      "probability": 0.1,
+      "destinationState": "",
+      "attributesAdded": [],
+      "requirements": []
+    },
+    {
+      "name": "EMPTY_EVENT",
+      "probability": 0.1,
+      "destinationState": "",
+      "attributesAdded": [],
+      "requirements": []
+    },
+    {
+      "name": "HATE_SPOUSE",
+      "probability": 1,
+      "destinationState": "",
+      "attributesAdded": ["spouse_hater"],
+      "requirements": [
+        {
+          "comparer": "PERSONALITY_POINT_LESS_THAN",
+          "text": "KINDNESS",
+          "number": 5
+        },
+        {
+          "comparer": "DONT_HAVE_ATTRIBUTE",
+          "text": "spouse_hater",
+          "number": 5
+        }
+
+      ]
+    },
+    {
+      "name": "STRUCK_BY_LIGHTNING",
+      "probability": 0.1,
       "destinationState": "",
       "attributesAdded": [],
       "requirements": []
@@ -592,18 +763,5 @@
       "pointAffected": "SERIOUSNESS",
       "effect": 5
     }
-  ],
-  "personalityMeasurements": [
-    "KINDNESS",
-    "COURAGE",
-    "INTELLIGENCE",
-    "SOCIABILITY",
-    "PHYSICAL",
-    "HONESTY",
-    "HEALTH",
-    "SOCIAL",
-    "SERIOUSNESS"
-  ],
-  "startingState": "INFANCY",
-  "simulationStep": 1.0
+  ]
 }

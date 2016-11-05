@@ -16,6 +16,7 @@ namespace Emelie
 		public string[] personalityMeasurements;
 		public string startingState;
 		public float simulationStep;
+		public string[] alwaysPossibleEvents;
 
 		public EmelieState[] states;
 		public EmelieEvent[] events;
