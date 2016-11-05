@@ -1,12 +1,16 @@
 ﻿<Properties StartupItem="Emelie.csproj" RefactoringSettings.EnableRefactorings="True">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Twitterbotar/EvertTextEngine/EvertTextEngine/TerminalInterface.cs">
     <Files>
-      <File FileName="EmelieUtilities.cs" Line="7" Column="34" />
-      <File FileName="Program.cs" Line="73" Column="8" />
-      <File FileName="EmelieIO.cs" Line="13" Column="10" />
-      <File FileName="../Twitterbotar/EvertTextEngine/EvertTextEngine/TerminalInterface.cs" Line="58" Column="30" />
-      <File FileName="../Twitterbotar/EvertTextEngine/EvertTextEngine/EvertDictionaryFile.cs" Line="43" Column="10" />
+      <File FileName="EmelieSimulation.cs" Line="1" Column="1" />
+      <File FileName="EmelieState.cs" Line="1" Column="1" />
+      <File FileName="EmelieRequirement.cs" Line="1" Column="1" />
+      <File FileName="EmelieSimulationContext.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="37" Column="51" />
+      <File FileName="EmelieCharacter.cs" Line="1" Column="1" />
+      <File FileName="Emelie files/sailors.emelie" Line="19" Column="35" />
+      <File FileName="EmelieIO.cs" Line="66" Column="34" />
+      <File FileName="../Twitterbotar/EvertTextEngine/EvertTextEngine/TerminalInterface.cs" Line="247" Column="58" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

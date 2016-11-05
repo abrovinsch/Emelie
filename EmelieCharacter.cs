@@ -32,10 +32,9 @@ namespace Emelie
 				if(!personalityPoints.ContainsKey(personalityMeasurement)) 
 					personalityPoints.Add(personalityMeasurement, 5);
 				
-				Log.Msg(personalityMeasurement);
 			}
 
-			if(EmelieUtilities.RandomRange(0,1) == 1)
+			if(EmelieUtilities.PercentageChance(50f))
 			{
 				gender = "male";
 			}

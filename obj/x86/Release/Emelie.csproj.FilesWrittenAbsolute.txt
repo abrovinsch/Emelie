@@ -1,0 +1,6 @@
+/Users/oskar/Egna Dokument/Programmering/Emelie/obj/x86/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/oskar/Egna Dokument/Programmering/Emelie/bin/Release/Emelie.exe.mdb
+/Users/oskar/Egna Dokument/Programmering/Emelie/bin/Release/Emelie.exe
+/Users/oskar/Egna Dokument/Programmering/Emelie/obj/x86/Release/Emelie.exe
+/Users/oskar/Egna Dokument/Programmering/Emelie/obj/x86/Release/Emelie.exe.mdb
+/Users/oskar/Egna Dokument/Programmering/Emelie/bin/Release/Newtonsoft.Json.dll

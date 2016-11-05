@@ -13,13 +13,13 @@ namespace Emelie
 	{
 
 		public string name;
+		public string[] personalityMeasurements;
+		public string startingState;
+		public float simulationStep;
+
 		public EmelieState[] states;
 		public EmelieEvent[] events;
 		public EmelieTrait[] traits;
-		public string[] personalityMeasurements;
-		public string startingState;
-		public float simulationStep
-		;
 
 		public EmelieState GetStartingState()
 		{
@@ -36,8 +36,7 @@ namespace Emelie
 		{
 			return string.Format ("[EmelieSimulationContext]\n" +
 								  "[Name:] " + name +
-								  "\n[Startingstate] " + startingState +
-								  "\n[PersonalityMeasurment] " + EmelieUtilities.StringArrayToString(personalityMeasurements));
+								  "\n[Startingstate] " + startingState);
 		}
 
 		public EmelieSimulationContext ()
@@ -77,10 +76,18 @@ namespace Emelie
 			return null;
 		}
 
+
 		public EmelieEvent GetEvent(string eventName)
 		{
+			int t = 0;
+
 			foreach(EmelieEvent _event in events)
 			{
+				if(_event == null)
+					Log.SyntaxError("Event # " + t.ToString() + "/" + events.Length.ToString() + " was null");
+
+				t++;
+
 				if(_event.name == eventName)
 					return _event;
 			}

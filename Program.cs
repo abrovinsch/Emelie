@@ -8,7 +8,7 @@ namespace Emelie
 {
 	class MainClass
 	{
-		static string VERSION = "0.0";
+		static string VERSION = "0.1";
 
 
 		public static void Main (string[] args)
@@ -24,6 +24,8 @@ namespace Emelie
 			EmelieSimulationContext context = new EmelieSimulationContext();
 			//EmelieIO.WriteStringToFile(EmelieSimulationContext.Serialize(context,""),OUTPUT_FILE);
 
+			string lastCommand = "help";
+
 			while(programIsRunning)
 			{
 				Console.Write ("Enter a command: ");
@@ -31,6 +33,11 @@ namespace Emelie
 				string resultingLine = "";
 				while(resultingLine == "")
 					resultingLine = Console.ReadLine();
+
+				resultingLine = resultingLine.Replace("\\ ","%20");
+
+				if(resultingLine == "a") resultingLine = lastCommand;
+				else lastCommand = resultingLine;
 
 				string[] parameters = resultingLine.Split(new string[] {" ","\t"}, StringSplitOptions.RemoveEmptyEntries);
 				string command = parameters[0].ToLower();
@@ -61,6 +68,7 @@ namespace Emelie
 							if(fileContents != null)
 							{
 								context = EmelieSimulationContext.Deserialize(fileContents);
+
 								Log.Msg(context.ToString());
 							}
 						}
@@ -123,6 +131,7 @@ namespace Emelie
 			}
 			EmelieSimulation simulation = new EmelieSimulation();
 			string result = simulation.Run(context, VERSION);
+			//
 			//Log.Msg("SIMULATION RESULT: '" + result + "'");
 			return result;
 		}
@@ -137,13 +146,5 @@ namespace Emelie
 			}
 			return true;
 		}
-
-		/*public static string[] LoadFile(string filepath)
-		{
-			if(System.
-			System.IO.File.ReadAllLines(filepath);
-			return filepath.S
-		}
-		*/
 	}
 }

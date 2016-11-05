@@ -24,6 +24,11 @@ namespace Emelie
 			return (float)RANDOM.NextDouble() * (max - min) + min;
 		}
 
+		public static bool PercentageChance(float percentage)
+		{   
+			return (RandomRange(0f,100f) > 50f);
+		}
+
 		public static bool IsAllWhiteSpace(string s)
 		{
 			foreach (char whitespace_symbol in SyntaxDef.WHITESPACE_SYMBOLS)
@@ -56,12 +61,12 @@ namespace Emelie
 			return result;
 		}
 
-		public static string StringArrayToString(IEnumerable<string> list)
+		public static string StringArrayToString(IEnumerable<string> list, string separator = "")
 		{
 			string result = "";
 			foreach (string s in list)
 			{
-				result += s;
+				result += s+separator;
 			}
 			return result;
 		}

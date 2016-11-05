@@ -63,6 +63,8 @@ namespace Emelie
 
 		public static string ReadFile(string path)
 		{
+			path = path.Replace("%20","gg");
+
 			if(File.Exists(path))
 			{
 				try

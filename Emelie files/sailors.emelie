@@ -1,0 +1,609 @@
+{
+  "name": "SIMULATION_NAME",
+  "states": [
+    {
+      "name": "INFANCY",
+      "events": [
+        "GROW_UP",
+        "FIND_FROG"
+      ]
+    },
+    {
+      "name": "CHILDHOOD",
+      "events": [
+        "GO_FIND_WORK",
+        "GO_SAILING",
+        "BECOME_ADULT_WOMAN"
+      ]
+    },
+    {
+      "name": "UNMARRIED_WOMAN",
+      "events": [
+        "GET_MARRIED",
+        "RUN_AWAY_FROM_HOME",
+      ]
+    },
+    {
+      "name": "SEARCHING_FOR_WORK",
+      "events": [
+        "BUY_FARM",
+        "JOIN_ARMY",
+        "GO_SAILING",
+        "GO_HOBO"
+      ]
+    },
+    {
+      "name": "WOMAN_ON_THE_RUN",
+      "events": [
+        "GO_SAILING",
+      ]
+    },
+    {
+      "name": "FARMER",
+      "events": [
+        "LOSE_FARM",
+        "GET_MARRIED",
+        "STRUCK_BY_LIGHTNING",
+        "GET_CHILD",
+        "FALL_IN_LOVE"
+      ]
+    },
+    {
+      "name": "FIGHTING_WAR",
+      "events": [
+        "GO_HOBO",
+        "GET_INJURED",
+        "GO_FIND_WORK",
+        "SOLDIER_DESERT",
+        "RETIRE_FROM_MILITARY_SERVICE"
+        "FALL_IN_LOVE"
+      ]
+    },
+    {
+      "name": "SOLDIER",
+      "events": [
+      	"GO_TO_WAR",
+      	"SOLDIER_DESERT",
+      	"RETIRE_FROM_MILITARY_SERVICE"
+      ]
+    },
+    {
+      "name": "SAILING",
+      "events": [
+        "ATTACKED_BY_WHALE",
+        "VIOLENT_STORM",
+        "ATTACKED_BY_PIRATES",
+        "FALL_IN_LOVE",
+        "MUTINY",
+        "GO_FIND_WORK"
+      ]
+    },
+    {
+      "name": "HOBO",
+      "events": [
+        "HOBO_GOES_CRIMINAL"
+      ]
+    },
+    {
+      "name": "CRIMINAL",
+      "events": [
+        "GO_SAILING"
+      ]
+    },
+    {
+      "name": "HOUSE_WIFE",
+      "events": [
+        "RUN_AWAY_HOUSEWIFE",
+        "GET_DIVORCED"
+      ]
+    },
+    null,
+    {
+      "name": "UNMARRIED_WOMAN",
+      "events": [
+        "BECOME_HOUSEWIFE",
+        "GET_MARRIED"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "GO_SAILING",
+      "probability": 15.0,
+      "destinationState": "SAILING",
+      "attributesAdded": ["experienced_sailor"],
+      "requirements": [
+        {
+          "comparer": "PERSONALITY_POINT_GREATER_THAN",
+          "text": "COURAGE",
+          "number": 5
+        },
+        {
+          "comparer": "IS_OLDER_THAN",
+          "text": "",
+          "number": 14
+        },
+        {
+          "comparer": "IS_YOUNGER_THAN",
+          "text": "",
+          "number": 50
+        },
+        {
+          "comparer": "HAS_GENDER",
+          "text": "male",
+          "number": 0
+        }
+      ]
+    },
+    {
+      "name": "GO_FIND_WORK",
+      "probability": 11.0,
+      "destinationState": "SEARCHING_FOR_WORK",
+      "attributesAdded": [],
+      "requirements": [
+        {
+          "comparer": "IS_OLDER_THAN",
+          "text": "",
+          "number": 15
+        },
+        {
+          "comparer": "HAS_GENDER",
+          "text": "male",
+          "number": 0
+        }
+      ]
+    },
+    {
+      "name": "BECOME_HOUSEWIFE",
+      "probability": 80.0,
+      "destinationState": "HOUSE_WIFE",
+      "attributesAdded": [],
+      "requirements": [
+        {
+          "comparer": "IS_OLDER_THAN",
+          "text": "",
+          "number": 15
+        },
+        {
+          "comparer": "HAS_GENDER",
+          "text": "female",
+          "number": 0
+        },
+        {
+          "comparer": "HAVE_ATTRIBUTE",
+          "text": "married",
+          "number": 0
+        }
+      ]
+    },
+    {
+      "name": "GO_HOBO",
+      "probability": 0.3,
+      "destinationState": "HOBO",
+      "attributesAdded": [],
+      "requirements": [
+        {
+          "comparer": "IS_OLDER_THAN",
+          "text": "",
+          "number": 15
+        }
+      ]
+    }
+    ,
+    {
+      "name": "HOBO_GOES_CRIMINAL",
+      "probability": 10.0,
+      "destinationState": "CRIMINAL",
+      "attributesAdded": [],
+      "requirements": [
+        {
+          "comparer": "PERSONALITY_POINT_LESS_THAN",
+          "text": "HONESTY",
+          "number": 4
+        }
+      ]
+    },
+    {
+      "name": "GROW_UP",
+      "probability": 100.0,
+      "destinationState": "CHILDHOOD",
+      "attributesAdded": [],
+      "requirements": [
+        {
+          "comparer": "IS_OLDER_THAN",
+          "text": "",
+          "number": 5
+        }
+      ]
+    },
+
+    {
+      "name": "BECOME_ADULT_WOMAN",
+      "probability": 100.0,
+      "destinationState": "UNMARRIED_WOMAN",
+      "attributesAdded": [],
+      "requirements": [
+        {
+          "comparer": "IS_OLDER_THAN",
+          "text": "",
+          "number": 16
+        },
+        {
+          "comparer": "HAS_GENDER",
+          "text": "female",
+          "number": 0
+        }
+      ]
+    },
+    {
+      "name": "FIND_FROG",
+      "probability": 7.0,
+      "destinationState": "",
+      "attributesAdded": [],
+      "requirements": [
+        {
+          "comparer": "PERSONALITY_POINT_LESS_THAN",
+          "text": "SERIOUSNESS",
+          "number": 4
+        }
+      ]
+    },
+    {
+      "name": "RUN_AWAY_FROM_HOME",
+      "probability": 2.0,
+      "destinationState": "WOMAN_ON_THE_RUN",
+      "attributesAdded": ["on_the_run"],
+      "requirements": [
+        {
+          "comparer": "PERSONALITY_POINT_GREATER_THAN",
+          "text": "COURAGE",
+          "number": 6
+        }
+      ]
+    },
+    {
+      "name": "STRUCK_BY_LIGHTNING",
+      "probability": 1.0,
+      "destinationState": "",
+      "attributesAdded": [],
+      "requirements": []
+    },
+    {
+      "name": "GET_FOOLED",
+      "probability": 10.0,
+      "destinationState": "",
+      "attributesAdded": [],
+      "requirements": [
+        {
+          "comparer": "HAS_TRAIT",
+          "text": "TRAIT_FOOL",
+          "number": 0
+        }
+      ]
+    },
+    {
+      "name": "GET_INJURED",
+      "probability": 30.0,
+      "destinationState": "",
+      "attributesAdded": ["injured"],
+      "requirements": []
+    },
+    {
+      "name": "SOLVE_MYSTERY",
+      "probability": 10.0,
+      "destinationState": "",
+      "attributesAdded": [],
+      "requirements": [
+        {
+          "comparer": "HAS_TRAIT",
+          "text": "TRAIT_GENIUS",
+          "number": 0
+        }
+      ]
+    },
+    {
+      "name": "BUY_FARM",
+      "probability": 1.0,
+      "destinationState": "FARMER",
+      "attributesAdded": [],
+      "requirements": [
+        {
+          "comparer": "PERSONALITY_POINT_GREATER_THAN",
+          "text": "PHYSICAL",
+          "number": 4
+        }
+      ]
+    },
+    {
+      "name": "LOSE_FARM",
+      "probability": 0.5,
+      "destinationState": "SEARCHING_FOR_WORK",
+      "attributesAdded": ["bitter"],
+      "requirements": []
+    },
+    {
+      "name": "GET_MARRIED",
+      "probability": 15.0,
+      "destinationState": "",
+      "attributesAdded": ["married"],
+      "requirements": [
+        {
+          "comparer": "DONT_HAVE_ATTRIBUTE",
+          "text": "married",
+          "number": 4
+        }
+      ]
+    },
+    {
+      "name": "GO_TO_WAR",
+      "probability": 25.0,
+      "destinationState": "FIGHTING_WAR",
+      "attributesAdded": ["war_veteran"],
+      "requirements": []
+    },
+    {
+      "name": "JOIN_ARMY",
+      "probability": 1.0,
+      "destinationState": "SOLDIER",
+      "attributesAdded": [],
+      "requirements": [
+        {
+          "comparer": "PERSONALITY_POINT_GREATER_THAN",
+          "text": "COURAGE",
+          "number": 4
+        },
+        {
+          "comparer": "PERSONALITY_POINT_GREATER_THAN",
+          "text": "PHYSICAL",
+          "number": 4
+        },
+        {
+          "comparer": "IS_YOUNGER_THAN",
+          "text": "",
+          "number": 40
+        }
+      ]
+    },
+    {
+      "name": "LOSE_HAIR",
+      "probability": 5.0,
+      "destinationState": "",
+      "attributesAdded": [],
+      "requirements": [
+        {
+          "comparer": "HAS_TRAIT",
+          "text": "TRAIT_BAD_GENES",
+          "number": 0
+        }
+      ]
+    },
+    {
+      "name": "RETIRE_FROM_MILITARY_SERVICE",
+      "probability": 20.0,
+      "destinationState": "SEARCHING_FOR_WORK",
+      "attributesAdded": ["veteran"],
+      "requirements": [
+        {
+          "comparer": "IS_OLDER_THAN",
+          "text": "",
+          "number": 45
+        }
+      ]
+    },
+    {
+      "name": "SOLDIER_DESERT",
+      "probability": 5.0,
+      "destinationState": "HOBO",
+      "attributesAdded": ["deserter","on_the_run"],
+      "requirements": [
+        {
+          "comparer": "PERSONALITY_POINT_LOWER_THAN",
+          "text": "HONESTY",
+          "number": 4
+        }
+      ]
+    },
+    {
+      "name": "FIGHT_WILD_ANIMAL",
+      "probability": 3.0,
+      "destinationState": "",
+      "attributesAdded": ["injured"],
+      "requirements": [
+        {
+          "comparer": "HAS_TRAIT",
+          "text": "TRAIT_BRAVE",
+          "number": 0
+        }
+      ]
+    },
+    {
+      "name": "BECOME_DEPRESSED",
+      "probability": 3.0,
+      "destinationState": "",
+      "attributesAdded": [],
+      "requirements": [
+        {
+          "comparer": "HAS_TRAIT",
+          "text": "TRAIT_MELANCHOLIC",
+          "number": 0
+        }
+      ]
+    },
+    {
+      "name": "ATTACKED_BY_WHALE",
+      "probability": 1.0,
+      "destinationState": "",
+      "attributesAdded": [],
+      "requirements": []
+    },
+    {
+      "name": "ATTACKED_BY_PIRATES",
+      "probability": 1.0,
+      "destinationState": "",
+      "attributesAdded": [],
+      "requirements": []
+    },
+    {
+      "name": "VIOLENT_STORM",
+      "probability": 1.0,
+      "destinationState": "",
+      "attributesAdded": [],
+      "requirements": []
+    },
+    {
+      "name": "FALL_IN_LOVE",
+      "probability": 1.0,
+      "destinationState": "",
+      "attributesAdded": ["in_love"],
+      "requirements": []
+    },
+    {
+      "name": "MUTINY",
+      "probability": 0.5,
+      "destinationState": "",
+      "attributesAdded": [],
+      "requirements": []
+    },
+    {
+      "name": "FIGHT_ABOARD",
+      "probability": 0.5,
+      "destinationState": "",
+      "attributesAdded": [],
+      "requirements": []
+    },
+    {
+      "name": "RUN_AWAY_FROM_SHIP",
+      "probability": 2.5,
+      "destinationState": "ABROAD",
+      "attributesAdded": ["on_the_run"],
+      "requirements": [
+        {
+          "comparer": "PERSONALITY_POINT_LESS_THAN",
+          "text": "HONESTY",
+          "number": 4
+        }
+      ]
+    },
+    {
+      "name": "RUN_AWAY_HOUSEWIFE",
+      "probability": 0.5,
+      "destinationState": "UNMARRIED_WOMAN",
+      "attributesAdded": ["on_the_run"],
+      "requirements": [
+        {
+          "comparer": "PERSONALITY_POINT_GREATER_THAN",
+          "text": "COURAGE",
+          "number": 7
+        }
+      ]
+    },
+    {
+      "name": "GET_DIVORCED",
+      "probability": 1.0,
+      "destinationState": "UNMARRIED_WOMAN",
+      "attributesAdded": [],
+      "requirements": [
+        {
+          "comparer": "HAS_GENDER",
+          "text": "female",
+          "number": 7
+        }
+      ]
+    }
+  ],
+  "traits": [
+    {
+      "name": "TRAIT_FOOL",
+      "pointAffected": "INTELLIGENCE",
+      "effect": -5
+    },
+    {
+      "name": "TRAIT_COWARD",
+      "pointAffected": "COURAGE",
+      "effect": -5
+    },
+    {
+      "name": "TRAIT_MEAN",
+      "pointAffected": "KINDNESS",
+      "effect": -5
+    },
+    {
+      "name": "TRAIT_GENIUS",
+      "pointAffected": "INTELLIGENCE",
+      "effect": 5
+    },
+    {
+      "name": "TRAIT_SHY",
+      "pointAffected": "SOCIAL",
+      "effect": -5
+    },
+    {
+      "name": "TRAIT_HONEST",
+      "pointAffected": "HONESTY",
+      "effect": 3
+    },
+    {
+      "name": "TRAIT_BRAVE",
+      "pointAffected": "COURAGE",
+      "effect": 3
+    },
+    {
+      "name": "TRAIT_CHARMER",
+      "pointAffected": "SOCIAL",
+      "effect": 3
+    },
+    {
+      "name": "TRAIT_STRONG",
+      "pointAffected": "PHYSICAL",
+      "effect": 3
+    },
+    {
+      "name": "TRAIT_SHREWD",
+      "pointAffected": "INTELLIGENCE",
+      "effect": 3
+    },
+    {
+      "name": "TRAIT_SCHEMER",
+      "pointAffected": "HONESTY",
+      "effect": -3
+    },
+    {
+      "name": "TRAIT_PLAYFUL",
+      "pointAffected": "SERIOUSNESS",
+      "effect": -3
+    },
+    {
+      "name": "TRAIT_STERN",
+      "pointAffected": "SERIOUSNESS",
+      "effect": 3
+    },
+    {
+      "name": "TRAIT_GOOD_GENES",
+      "pointAffected": "HEALTH",
+      "effect": 5
+    },
+    {
+      "name": "TRAIT_BAD_GENES",
+      "pointAffected": "HEALTH",
+      "effect": -5
+    },
+    {
+      "name": "TRAIT_MELANCHOLIC",
+      "pointAffected": "SERIOUSNESS",
+      "effect": 5
+    }
+  ],
+  "personalityMeasurements": [
+    "KINDNESS",
+    "COURAGE",
+    "INTELLIGENCE",
+    "SOCIABILITY",
+    "PHYSICAL",
+    "HONESTY",
+    "HEALTH",
+    "SOCIAL",
+    "SERIOUSNESS"
+  ],
+  "startingState": "INFANCY",
+  "simulationStep": 1.0
+}

@@ -12,6 +12,7 @@ namespace Emelie
 		public string name;
 		public float probability;
 		public string destinationState;
+		public string[] attributesAdded;
 		public EmelieRequirement[] requirements;
 
 		public EmelieEvent()
@@ -21,6 +22,7 @@ namespace Emelie
 			probability = 10;
 			requirements = new EmelieRequirement[1];
 			requirements[0] = new EmelieRequirement();
+			attributesAdded = new string[0];
 		}
 	}
 

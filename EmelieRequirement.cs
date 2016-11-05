@@ -95,6 +95,9 @@ namespace Emelie
 					return c.economicClass < number;
 				}
 
+			default: Log.SyntaxError("Undefined requirement comaparer:" + comparer); break;
+				
+
 			}
 
 			return true;

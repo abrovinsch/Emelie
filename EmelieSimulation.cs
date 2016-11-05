@@ -15,6 +15,7 @@ namespace Emelie
 
 		public string Run(EmelieSimulationContext context, string programVersion)
 		{
+			
 			string resultingEvert = "\n" + 
 									"// -- Using Emelie Simulation Engine v." + programVersion + " --\n" + 
 				                    "// -- Generated on " + System.DateTime.Now.ToString("G") + " --\n" +
@@ -66,7 +67,7 @@ namespace Emelie
 
 			EmelieState startingState = context.GetStartingState();
 
-			SimLog(c.currentAge, "Character Born");
+			SimLog(c.currentAge, "Character Born, gender=" + c.gender + ", final age=" + System.Math.Round((double)c.finalAge).ToString());
 			resultingEvert += "\n//Actual story:" +
 				"" +
 				"\n\n<# character_born>\n";
@@ -92,15 +93,25 @@ namespace Emelie
 						if(!passedAlltests) continue;
 
 
+
+
 						SimLog(c.currentAge,"EVENT: " + _event.name);
 						resultingEvert += "\n<$ CURRENT_AGE " + c.currentAge + ">";
 						resultingEvert += "\n<# EVENT_" + _event.name + ">";
+
+						foreach(string attr in _event.attributesAdded)
+						{	
+							c.AddAttribute(attr);
+							SimLog(c.currentAge,"ATTRIBUTE_ADDED: " + attr);
+							resultingEvert += "\n<$ HAS_ATTRIBUTE_" + attr + " true>";
+						}
 
 						if(_event.destinationState != "")
 						{
 							resultingEvert += "\n" +
 								"// Change state to " + _event.destinationState + "\n";
 							currentState = context.GetState(_event.destinationState);
+							SimLog(c.currentAge,"STATE: " + currentState.name);
 							continue;
 						}
 					}
