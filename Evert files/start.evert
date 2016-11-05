@@ -1,6 +1,6 @@
 #origin
 {
-<$ setVariables><# CHARACTER_BORN>
+<$ setVariables><# stories>
 }
 
 $setVariables
@@ -10,32 +10,11 @@ $setVariables
 <= currentAge 20>
 }
 
-#yearslater
-{
-But as the years passed
-Later,
-After a couple of years,
-One thing happened when i was <$ currentAge>:
-But then
-Later on
-It was the year <$ currentYear> when
-It was in <# month> <$ currentYear> that
-}
-
-#suddenly
-{
-Suddenly
-But then the most <# incredible> thing happened -
-It was than it occurred:
-That was a special day indeed,
-Then it happened:
-}
-
-#once
-{
-I remember once
-A <# incredible> thing happened when i was <currentAge>
-Once
-}
-
 [i sailors]
+[i stories]
+
+[i events]
+[i adjectives]
+[i weather]
+[i calendar]
+[i emotions]

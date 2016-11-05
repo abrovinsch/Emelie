@@ -1,9 +1,11 @@
-#weatherAdjective
+#weather_descriptor
 {
 sunny
 rainy
 foggy
 beautiful
 cold
+snowy
+windy
 warm
 }

@@ -1,0 +1,81 @@
+#CHARACTER_BORN
+{
+I was born on a <# weather_descriptor> day in <# calendar_month><% 20 " in <$ yearOfBirth>">. 
+I was born in this very town, in the good year of <$ yearOfBirth>. 
+}
+
+#EVENT_FALL_IN_LOVE
+{
+<= loveInterest <# sailors_name>><# yearsLater> I fell in love with <$ loveInterest>. 
+<= loveInterest <# sailors_name>><# yearsLater> I met <$ loveInterest>. It changed my world. I became so <# emotions_happy>. 
+}
+
+#EVENT_BECOME_RELIGIOUS
+{
+<# yearsLater> I found god. 
+<# suddenly> the most important thing happened - I discovered Jesus. 
+<# yearsLater> I found guidance in the Lord. 
+I started going more and more to Church and studied the bible closely. 
+}
+
+#EVENT_GROW_UP
+{
+<# yearsLater> I grew older and older. 
+}
+
+#EVENT_FIND_FROG
+{
+<# once> I found a frog. 
+}
+
+#EVENT_STRUCK_BY_LIGHTNING
+{
+<# suddenly> I was struck by lighting!
+}
+
+#EVENT_BECOME_ADULT_WOMAN
+{
+<# yearsLater> I wasn't a child anymore. 
+<# yearsLater> I became a woman. 
+<# yearsLater> I turned into an adult. 
+}
+
+#EVENT_GET_MARRIED
+{
+<# yearsLater> I married. 
+}
+
+#EVENT_COMMIT_CRIME
+{
+<# once> I did a <# adjectives_horrible> thing: i committed a crime: I <# sailors_crime>. 
+<# once> I <# sailors_crime>. 
+}
+
+#EVENT_BECOME_MOTHER
+{
+<# yearsLater> and I got a <# adjectives_incredible> little baby.
+<# suddenly> my lovely <# sailors_name> was born!
+<# yearsLater> I became a mother.
+}
+
+#EVENT_HAVE_AN_AFFAIR
+{
+<# yearsLater> I had an extramarital affair!
+}
+
+#EVENT_BUY_FARM
+{
+<# yearsLater> my dream came true and I managed to buy a farm.
+}
+
+#EVENT_GO_FIND_WORK
+{
+<# yearsLater> I realised i had to go and search for employment. It was difficult.
+I had to find employment.
+I went ahead and tried to get a job.
+}
+
+#EVENT_HATE_SPOUSE
+{
+I began hating my <? gender male wife><? gender female husband>. 
+}

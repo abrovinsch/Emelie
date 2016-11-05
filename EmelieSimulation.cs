@@ -19,7 +19,7 @@ namespace Emelie
 			string resultingEvert = "\n" + 
 									"// -- Using Emelie Simulation Engine v." + programVersion + " --\n" + 
 				                    "// -- Generated on " + System.DateTime.Now.ToString("G") + " --\n" +
-									"\norigin\n{\n" +
+									"\n#stories\n{\n" +
 									"";
 
 			simulationLog = new List<string>();
@@ -36,10 +36,12 @@ namespace Emelie
 			EmelieCharacter c = new EmelieCharacter(context);
 
 			c.name = "<# name>";
-			resultingEvert += "<= character_name " + c.name + " >\n";
-			resultingEvert += "<= gender " + c.gender + " >\n";
-
 			c.finalAge = EmelieUtilities.RandomRange(5f,90f);
+
+			resultingEvert += "<= character_name " + c.name + " >";
+			resultingEvert += "<= gender " + c.gender + " >";
+			resultingEvert += "<= finalAge " + c.finalAge + " >";
+
 			c.currentAge = 0f;
 
 			int numOfTraits = 3;
@@ -58,18 +60,18 @@ namespace Emelie
 			foreach(EmelieTrait trait in context.traits)
 			{
 				bool r = c.traits.Contains(trait);
-				resultingEvert += "<= IS_" + trait.name + " " + r.ToString().ToLower()	 +">\n";
+				resultingEvert += "<= IS_" + trait.name + " " + r.ToString().ToLower()	 +">";
 			}
 
 			foreach(string s in context.personalityMeasurements)
 			{
-				resultingEvert += "<= " + s + " " + c.personalityPoints[s] + ">\n";
+				resultingEvert += "<= " + s + " " + c.personalityPoints[s] + ">";
 			}
 
 			EmelieState startingState = context.GetStartingState();
 
 			SimLog(c.currentAge, "Character Born, gender=" + c.gender + ", final age=" + System.Math.Round((double)c.finalAge).ToString());
-			resultingEvert += "<# character_born>";
+			resultingEvert += "<# CHARACTER_BORN><= gender " + c.gender +"><= name " + c.name + ">";
 
 			EmelieState currentState = startingState;
 

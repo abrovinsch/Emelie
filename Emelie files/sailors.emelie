@@ -372,16 +372,16 @@
         {
           "comparer": "HAS_GENDER",
           "text": "female",
-          "number": 4
+          "number": 0
         },
         {
           "comparer": "IS_YOUNGER_THAN",
-          "text": "female",
+          "text": "",
           "number": 40
         },
         {
           "comparer": "IS_OLDER_THAN",
-          "text": "female",
+          "text": "",
           "number": 15
         }
       ]
@@ -784,3 +784,4 @@
     }
   ]
 }
+

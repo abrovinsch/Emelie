@@ -1,46 +1,49 @@
-#CHARACTER_BORN
+#sailors_name
 {
-I was born on a <# weatherAdjective> day in <# month> <% 20 ' in <$ yearOfBirth'>.
-I was born in this very town, in the good year of <$ yearOfBirth>.
+Mary
+Anne
+Kate
+Louise
 }
 
-#EVENT_FALL_IN_LOVE
+#yearsLater
 {
-<= loveInterest <# name>><# yearslater> I fell in love with <$ loveInterest>.
-<# yearslater> I met <$ loveInterest>. It changed my world. I became <# happyEmotion>
+But as the years passed
+Later,
+After a couple of years,
+One thing happened when i was <$ currentAge>:
+But then
+Later on
+It was the year <$ currentYear> when
+It was in <# calendar_month> <$ currentYear> that
 }
 
-#EVENT_BECOME_RELIGIOUS
+#suddenly
 {
-<# yearsLater> I found god.
-<# suddenly> the most important thing happened - I discovered Jesus.
-<# yearsLater> I found guidance in the Lord
-I started going more and more to Church and studied the bible closely.
+Suddenly
+But then the most <# adjectives_incredible> thing happened -
+It was than it occurred:
+That was a special day indeed,
+Then it happened:
 }
 
-#EVENT_GROW_UP
+#once
 {
-<# yearsLater> I grew older and older.
+I remember once
+A <# incredible> thing happened when i was <$ currentAge>
+Once
 }
 
-#EVENT_FIND_FROG
+#story_end
 {
-<# once> I found a frog.
+The End.
 }
 
-#EVENT_STRUCK_BY_LIGHTNING
+#sailors_crime
 {
-<# suddenly> I was struck by lighting!
+stole a loaf of bread.
+murdered a priest.
+insulted the Queen.
+pickpocketed a banker.
+nicked a silver cross.
 }
-
-#EVENT_BECOME_ADULT_WOMAN
-{
-<# yearsPassed> I wasn't a child anymore.
-<# yearsPassed> I became a woman.
-<# yearsPassed> I turned into an adult.
-}
-
-
-
-[i weather]
-[i calendar]
