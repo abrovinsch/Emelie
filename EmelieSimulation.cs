@@ -19,7 +19,8 @@ namespace Emelie
 			string resultingEvert = "\n" + 
 									"// -- Using Emelie Simulation Engine v." + programVersion + " --\n" + 
 				                    "// -- Generated on " + System.DateTime.Now.ToString("G") + " --\n" +
-									"\norigin\n{\n\n//Setting Variables:\n";
+									"\norigin\n{\n" +
+									"";
 
 			simulationLog = new List<string>();
 
@@ -35,8 +36,8 @@ namespace Emelie
 			EmelieCharacter c = new EmelieCharacter(context);
 
 			c.name = "<# name>";
-			resultingEvert += "<$ character_name " + c.name + " >\n";
-			resultingEvert += "<$ gender " + c.gender + " >\n";
+			resultingEvert += "<= character_name " + c.name + " >\n";
+			resultingEvert += "<= gender " + c.gender + " >\n";
 
 			c.finalAge = EmelieUtilities.RandomRange(5f,90f);
 			c.currentAge = 0f;
@@ -57,20 +58,18 @@ namespace Emelie
 			foreach(EmelieTrait trait in context.traits)
 			{
 				bool r = c.traits.Contains(trait);
-				resultingEvert += "<$ has_trait_" + trait.name + " " + r.ToString().ToLower()	 +">\n";
+				resultingEvert += "<= IS_" + trait.name + " " + r.ToString().ToLower()	 +">\n";
 			}
 
 			foreach(string s in context.personalityMeasurements)
 			{
-				resultingEvert += "<$ personality_" + s + " " + c.personalityPoints[s] + ">\n";
+				resultingEvert += "<= " + s + " " + c.personalityPoints[s] + ">\n";
 			}
 
 			EmelieState startingState = context.GetStartingState();
 
 			SimLog(c.currentAge, "Character Born, gender=" + c.gender + ", final age=" + System.Math.Round((double)c.finalAge).ToString());
-			resultingEvert += "\n//Actual story:" +
-				"" +
-				"\n\n<# character_born>\n";
+			resultingEvert += "<# character_born>";
 
 			EmelieState currentState = startingState;
 
@@ -103,20 +102,18 @@ namespace Emelie
 
 
 						SimLog(c.currentAge,"EVENT: " + _event.name);
-						resultingEvert += "\n<$ CURRENT_AGE " + c.currentAge + ">";
-						resultingEvert += "\n<# EVENT_" + _event.name + ">";
+						resultingEvert += "<= currentAge " + c.currentAge + ">";
+						resultingEvert += "<# EVENT_" + _event.name + ">";
 
 						foreach(string attr in _event.attributesAdded)
 						{	
 							c.AddAttribute(attr);
 							SimLog(c.currentAge,"ATTRIBUTE_ADDED: " + attr);
-							resultingEvert += "\n<$ HAS_ATTRIBUTE_" + attr + " true>";
+							resultingEvert += "<= HAS_ATTRIBUTE_" + attr + " true>";
 						}
 
 						if(_event.destinationState != "")
 						{
-							resultingEvert += "\n" +
-								"// Change state to " + _event.destinationState + "\n";
 							currentState = context.GetState(_event.destinationState);
 							SimLog(c.currentAge,"STATE: " + currentState.name);
 							continue;

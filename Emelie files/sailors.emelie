@@ -125,7 +125,6 @@
         "GET_DIVORCED"
       ]
     },
-    null,
     {
       "name": "UNMARRIED_WOMAN",
       "events": [

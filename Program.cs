@@ -132,7 +132,7 @@ namespace Emelie
 			EmelieSimulation simulation = new EmelieSimulation();
 			string result = simulation.Run(context, VERSION);
 			//
-			//Log.Msg("SIMULATION RESULT: '" + result + "'");
+			Log.Msg("SIMULATION RESULT: '" + result + "'");
 			return result;
 		}
 

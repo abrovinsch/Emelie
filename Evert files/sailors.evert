@@ -1,0 +1,46 @@
+#CHARACTER_BORN
+{
+I was born on a <# weatherAdjective> day in <# month> <% 20 ' in <$ yearOfBirth'>.
+I was born in this very town, in the good year of <$ yearOfBirth>.
+}
+
+#EVENT_FALL_IN_LOVE
+{
+<= loveInterest <# name>><# yearslater> I fell in love with <$ loveInterest>.
+<# yearslater> I met <$ loveInterest>. It changed my world. I became <# happyEmotion>
+}
+
+#EVENT_BECOME_RELIGIOUS
+{
+<# yearsLater> I found god.
+<# suddenly> the most important thing happened - I discovered Jesus.
+<# yearsLater> I found guidance in the Lord
+I started going more and more to Church and studied the bible closely.
+}
+
+#EVENT_GROW_UP
+{
+<# yearsLater> I grew older and older.
+}
+
+#EVENT_FIND_FROG
+{
+<# once> I found a frog.
+}
+
+#EVENT_STRUCK_BY_LIGHTNING
+{
+<# suddenly> I was struck by lighting!
+}
+
+#EVENT_BECOME_ADULT_WOMAN
+{
+<# yearsPassed> I wasn't a child anymore.
+<# yearsPassed> I became a woman.
+<# yearsPassed> I turned into an adult.
+}
+
+
+
+[i weather]
+[i calendar]
