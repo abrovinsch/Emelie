@@ -7,13 +7,14 @@
 #EVENT_FALL_IN_LOVE
 {
 <= loveInterest <# random_name>><# yearsLater> I fell in love with <$ loveInterest>. 
-<= loveInterest <# random_name>><# yearsLater> I met <$ loveInterest>. It changed my world. I became so <# emotions_happy>. 
+<= loveInterest <# random_name>><# yearsLater> I met <$ loveInterest>. It changed my world. I became so <# emotions_happy>. Our relationship was <# adjectives_incredible>. 
+<= loveInterest <# random_name>>I will never forget the year <$ currentYear>, for that was when I met the <# adjectives_lovely> <$ loveInterest>. <$ loveInterest> made me <# emotions_happy> unlike no one else. 
 }
 
 #EVENT_BECOME_RELIGIOUS
 {
 <# yearsLater> I found god. 
-<# suddenly> the most important thing happened - I discovered Jesus. 
+<# suddenly> the most important thing happened - I discovered Jesus. <# itsTrue>
 <# yearsLater> I found guidance in the Lord. 
 I started going more and more to Church and studied the bible closely. 
 }
@@ -21,16 +22,18 @@ I started going more and more to Church and studied the bible closely.
 #EVENT_GROW_UP
 {
 <# yearsLater> I grew older and older. 
+My childhood was <# adjectives_kinda> <# emotions_random>. 
 }
 
 #EVENT_FIND_FROG
 {
-<# once> I found a frog. 
+<# once> I found a frog. <# itsTrue>
 }
 
 #EVENT_STRUCK_BY_LIGHTNING
 {
-<# suddenly> I was struck by lighting! 
+<# suddenly> I was struck by lighting! <# itsTrue>
+<# suddenly> lightning struck me! I almost died! <# itsTrue>
 }
 
 #EVENT_BECOME_ADULT_WOMAN
@@ -42,27 +45,30 @@ I started going more and more to Church and studied the bible closely.
 
 #EVENT_GET_MARRIED
 {
-<# yearsLater> I married. 
+<$ setSpouseName><# yearsLater> I married. 
+<$ setSpouseName><# yearsLater> I got married to <$ spouse>.
+<$ setSpouseName><# yearsLater> I married <$ spouse>. 
+<$ setSpouseName><# yearsLater> <$ spouse>, my <? gender male wife><? gender female husband>, and I married. 
 }
 
 #EVENT_COMMIT_CRIME
 {
 <# once> I did a <# adjectives_horrible> thing: i committed a crime: I <# sailors_crime>. 
-<# once> I <# sailors_crime>. 
+<# once> I <# sailors_crime>. <# itsTrue>
 }
 
 #EVENT_BECOME_MOTHER
 {
 <# yearsLater> and I got a <# adjectives_incredible> little baby. 
-<# suddenly> my lovely <# sailors_name> was born! 
+<# suddenly> my <# adjectives_lovely> <# random_name> was born! 
 <# yearsLater> I became a mother. 
 }
 
-#EVENT_BECOME_MOTHER
+#EVENT_BECOME_FATHER
 {
 <# yearsLater> and I got a <# adjectives_incredible> little kid named <# random_name>.
-<# suddenly> my lovely <# random_name> was born!
-<# yearsLater> I became a mother.
+<# suddenly> my <# adjectives_lovely> <# random_name> was born!
+<# yearsLater> I became a father.
 }
 
 #EVENT_HAVE_AN_AFFAIR
@@ -72,19 +78,23 @@ I started going more and more to Church and studied the bible closely.
 
 #EVENT_BUY_FARM
 {
-<# yearsLater> my dream came true and I managed to buy a farm.
+<# yearsLater> my <# adjectives_old> dream came true and I managed to buy a farm.
 }
 
 #EVENT_GO_FIND_WORK
 {
-<# yearsLater> I realised i had to go and search for employment. It was difficult. 
+<# yearsLater> I realised i had to go and search for employment. It was <# adjectives_difficult>. 
 I had to find employment. 
 I went ahead and tried to get a job. 
 }
 
 #EVENT_HATE_SPOUSE
 {
-I began hating my <? gender male wife><? gender female husband>. 
+I began hating my <? gender male wife><? gender female husband>. <# itsTrue>
+Me and my <? gender male wife><? gender female husband> never got along. We fought all the time. We did <# verbs_hate> eachother. <# itsTrue>
+<# yearsLater> I realized how <# adjectives_horrible> my <? gender male wife><? gender female husband> was. 
+<# yearsLater> I saw what a <# adjectives_horrible>, <# adjectives_horrible> person my <? gender male wife><? gender female husband> was.
+<# yearsLater> I become very <# emotions_sad> when I understood that my <? gender male wife><? gender female husband> did <# verbs_hate> me.
 }
 
 #EVENT_GET_FEMALE_WORK
@@ -92,15 +102,45 @@ I began hating my <? gender male wife><? gender female husband>.
 I started working as a <= currentJob <# _18thcentury_femaleLowerClassWork>> <$ currentJob>. 
 }
 
-#EVENT_SOLVE_MYSTERY
+#EVENT_GET_MANUAL_WORK
 {
-<# once> I did something rather <# adjectives_incredible>: I solved the <# adjectives_old> problem of <# mysteryName>. 
+<= currentJob <# _18thcentury_maleLowerClassWork>><# yearsLater>I started working as a <$ currentJob>.
+<= currentJob <# _18thcentury_maleLowerClassWork>><# yearsLater>I got a job as a <$ currentJob>.  
+<= currentJob <# _18thcentury_maleLowerClassWork>><# suddenly>a fellow called <# male_name> emplyed me as a <$ currentJob>. 
+<= currentJob <# _18thcentury_maleLowerClassWork>><# suddenly>I found work as a <$ currentJob>. 
+<= currentJob <# _18thcentury_maleLowerClassWork>><# yearsLater>I was <# emotions_happy> I could get a job as a <$ currentJob>. 
+<= currentJob <# _18thcentury_maleLowerClassWork>><# yearsLater>I had to face reality and take a job as a <$ currentJob>. 
+<= currentJob <# _18thcentury_maleLowerClassWork>><# yearsLater>I was <# emotions_sad> that I had to get a job as a <$ currentJob>. 
 }
 
-#mysteryName
+#EVENT_SOLVE_MYSTERY
 {
-<# _18thcentury_famousPoliticalFigures>
-<# _18thcentury_famousArtists>
-<# _18thcentury_famousScientistExplorers>
-the <# _18thcentury_maleMiddleClassWork>
+<# once>: I solved the <# adjectives_old> problem of <# mysteryName>. <# itsTrue>
+I kept on trying to solve the problem of <# mysteryName> and in <$ currentYear> I finally succeeded. 
+I managed to solve the mystery of <# mysteryName> when I was <$ currentAge>. <# itsTrue>
 }
+
+#EVENT_FRIEND_DIES
+{
+<# yearsLater> my <# adjectives_dear> <# nouns_friend> <# random_name> <# verbs_died>.
+<# suddenly> <# random_name>, my <# adjectives_dear> <# adjectives_old> <# nouns_friend>, <# verbs_died>.
+}
+
+#EVENT_GET_KICKED_FROM_WORK
+{
+<# yearsLater> I got the foot from my job as a <$ currentJob> because <# firedReason>. <= currentJob unemployed>
+<# yearsLater> I lost my job. <# firedReason> actually. <= currentJob unemployed>
+<# suddenly> I was forced to leave my job. They said §1<# firedReason>.§1 All lies of course. <= currentJob unemployed>
+<# newLine><# firedReason> so I was fired from my job as <$ currentJob> in <$ currentYear>. <= currentJob unemployed>
+}
+
+#EVENT_BECOME_HAUNTED
+{
+<# yearsLater> was when I started noticing the <# adjectives_horrible> demons that had started haunting me.
+<# suddenly> ghosts started following me. <# itsTrue>. It was <# adjectives_horrible>!
+But since I was so full of <# verbs_hate> for my siblings, the Lord punished me. I became haunted! <# itsTrue>
+In the year <$ currentYear> I started seeing ghosts.
+<# yearsLater> I discovered my talent: I could see those who had <# verbs_died>.
+Have I told you about my relationship with the dead? It started in <$ currentYear>. Every night they came to me, whispering who would die.
+}
+

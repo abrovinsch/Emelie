@@ -22,23 +22,30 @@
 
 #yearsLater
 {
-<# newLine>But as the years passed
-Later,
-<# newLine>After a couple of years,
-<# newLine>One thing happened when i was <$ currentAge>:
-But then
-Later on
-<# newLine>It was the year <$ currentYear> when
-<# newLine>It was in <# calendar_month> <$ currentYear> that
+<# newLine>But as the years passed 
+Years later, 
+<# newLine>After a couple of years, 
+<# newLine>One thing happened when I was <$ currentAge>: 
+<# newLine>Several years after that 
+<# newLine>Much later 
+<# newLine>It was the year <$ currentYear> when 
+<# newLine>It was in <# calendar_month> <$ currentYear> that 
+<# newLine>When I was <$ currentAge>[x 3] 
+<# newLine>I was <$ currentAge> when 
+<# newLine>It was the year i turned<$ currentAge> that 
+<# newLine>A long time later 
 }
 
 #suddenly
 {
-Suddenly
-But then the most <# adjectives_incredible> thing happened -
-It was than it occurred:
-That was a special day indeed,
-Then it happened:
+Suddenly, on <# certainDay>, 
+But on <# certainDay> the most <# adjectives_incredible> thing happened - 
+It was than it occurred: 
+That was a special day indeed, 
+Then it happened: 
+In <$ currentYear> something <# adjectives_incredible> happened: 
+You will not believe what happened to me on <# certainDay>: 
+I was <# adjectives_completely> unprepared for what happened later: 
 }
 
 #once
@@ -48,9 +55,69 @@ A <# adjectives_incredible> thing happened when i was <$ currentAge>
 Once
 }
 
+#itsTrue
+{
+§0 [x 10]
+It is true! 
+I tell you it is the truth! 
+I am honest with you! 
+I promise! 
+You probably don't believe it but it's true! 
+I am not lying! 
+You have my word of honor! 
+I assure you! 
+}
+
+#mysteryName
+{
+<# _18thcentury_famousPoliticalFigures>
+<# _18thcentury_famousArtists>
+<# _18thcentury_famousScientistExplorers>
+the <# _18thcentury_maleMiddleClassWork>
+}
+
+#itWasAdjective
+{
+It was <%  30 quite> <# adjectives_difficult>. 
+It was <%  30 rather  <# adjectives_easy>.
+It wasn't <%  30 very> <# adjectives_easy>.
+It wasn't <%  30 particularly> <# adjectives_difficult>.
+}
+
+#firedReason
+{
+I stole from my boss 
+I dropped a cup of tea on my boss' wife 
+I flirted with bypassers 
+I wrote false love letters from my boss 
+I overslept every <# calendar_weekDay> 
+I dropped a new china set 
+I accidentally dropped a hammer on my boss' cat
+I took too many naps during workhours
+I didn't get any work done for the whole month of <# calendar_month> 
+I bought cigarres with the company money 
+I was sick every <# calendar_weekDay> 
+the business weren't any good
+they hired too many young wasters that took my place 
+the boss ran away with some mistress 
+}
+
+#certainDay
+{
+the <# calendar_dayOfMonth> of <# calendar_month>
+the first <# calendar_weekDay> of <# calendar_month> in <$ currentYear>
+a <# weather_descriptor> <# calendar_weekDay>
+the <# calendar_dayOfMonth> of <# calendar_month> <$ currentYear>
+}
+
 #story_end
 {
 <# newLine>‹b›The End.‹/b›‹/p›
+}
+
+$setSpouseName
+{
+<? gender male <= spouse <# female_name>> <= spouse <# male_name>>>
 }
 
 #sailors_crime
