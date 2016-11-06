@@ -1,0 +1,119 @@
+// A list of typical items and cultural references relevant n the
+// later half of th 18th century in Europe and the United States
+
+#18thcentury_maleLowerClassWork
+{
+manufactury worker
+blacksmith
+courier
+shipbuilder
+carpenter
+deckhand on a fishing boat
+soldier in the royal army
+fisherman
+dockworker
+gambler
+sailor
+trader
+shopkeeper
+butcher
+workman
+carpenter
+builder
+farmer
+farmhand
+gardener
+smith
+cartwright
+bareman
+baker
+buckler
+brewer
+}
+
+#18thcentury_femalePhysicalWork
+{
+maid
+servant girl
+nanny
+cook
+rowing lady
+}
+
+#18thcentury_maleMiddleClassWork
+{
+writer
+teacher
+watchmaker
+small scale trader
+post officer
+mapmaker
+light house keeper
+apotechary
+attorney
+lawyer
+priest
+bargeman
+boatswain on a large merchantman
+merchant
+poet
+philosopher of sorts
+clerk
+}
+
+#18thcentury_famousArtists
+{
+Johann Wolfgang von Goethe
+Friedrich Schiller
+Joseph Haydn
+Voltaire
+Amadeus Mozart
+George Frideric Handel
+Daniel Defoe
+Jonathan Swift
+Pierre-Ambroise Choderlos de Laclos 
+}
+
+#18thcentury_famousPoliticalFigures
+{
+King George III
+Rousseau
+Benjamin Franklin
+Washington
+Marie Antoinette
+Eva Ekeblad
+Gustav III of Sweden
+Maria Theresa
+Joseph II of Austria
+Louis XVI of France
+Thomas Jefferson
+Denis Diderot
+Alexander Hamilton
+Wilhelm von Humboldt
+Thomas Paine
+Adam Smith
+Mary Wollstonecraft
+Frederick II of Prussia
+}
+
+#18thcentury_famousBooks
+{
+Candide
+Robinson Crusoe
+The Sorrows of Young Werther 
+Les Liaisons dangereuses 
+Songs of Innocence and of Experience 
+Gulliver's Travels
+A Vindication of the Rights of Woman
+}
+
+#18thcentury_famousScientistExplorers
+{
+Carl von Linné
+Thomas Cook
+John Harrison
+James Watt
+Antoine-Laurent de Lavoisier
+John Campbell
+James Hargreaves
+}

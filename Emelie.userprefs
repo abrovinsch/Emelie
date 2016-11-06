@@ -1,15 +1,11 @@
 ﻿<Properties StartupItem="Emelie.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Emelie files/sailors.emelie">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EmelieSimulation.cs">
     <Files>
-      <File FileName="EmelieSimulation.cs" Line="1" Column="1" />
-      <File FileName="EmelieRequirement.cs" Line="1" Column="1" />
-      <File FileName="EmelieEvent.cs" Line="1" Column="1" />
-      <File FileName="EmelieSimulationContext.cs" Line="1" Column="1" />
-      <File FileName="EmelieUtilities.cs" Line="1" Column="1" />
-      <File FileName="Emelie files/sailors.emelie" Line="788" Column="1" />
-      <File FileName="Program.cs" Line="1" Column="1" />
-      <File FileName="Evert files/sailors.evert" Line="1" Column="1" />
+      <File FileName="EmelieRequirement.cs" Line="23" Column="50" />
+      <File FileName="Emelie files/sailors.emelie" Line="195" Column="7" />
+      <File FileName="Program.cs" Line="40" Column="24" />
+      <File FileName="EmelieSimulation.cs" Line="39" Column="53" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

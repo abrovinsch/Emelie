@@ -1,7 +1,7 @@
 #CHARACTER_BORN
 {
-I was born on a <# weather_descriptor> day in <# calendar_month><% 20 " in <$ yearOfBirth>">. 
-I was born in this very town, in the good year of <$ yearOfBirth>. 
+<# startTitle><$ character_name><# endTitle>‹p›I was born on a <# weather_descriptor> day in <# calendar_month><% 20 " in <$ yearOfBirth>">. 
+<# startTitle><$ character_name><# endTitle>‹p›I was born in this very town, in the good year of <$ yearOfBirth>. 
 }
 
 #EVENT_FALL_IN_LOVE

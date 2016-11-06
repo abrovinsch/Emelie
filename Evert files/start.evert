@@ -1,6 +1,6 @@
 #origin
 {
-<$ setVariables><# stories>
+<$ formatting_begin><$ setVariables><# stories><$ formatting_end>
 }
 
 $setVariables
@@ -8,6 +8,31 @@ $setVariables
 <= yearOfBirth 1741>
 <= currentYear 1761>
 <= currentAge 20>
+}
+
+#newLine
+{
+‹/p›‹p›
+}
+
+#startHeading
+{
+‹h2›
+}
+
+#endHeading
+{
+‹/h2›
+}
+
+#startTitle
+{
+‹h1›
+}
+
+#endTitle
+{
+‹/h1›
 }
 
 [i sailors]
@@ -18,3 +43,4 @@ $setVariables
 [i weather]
 [i calendar]
 [i emotions]
+[i formatting]

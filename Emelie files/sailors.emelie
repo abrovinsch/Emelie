@@ -24,8 +24,9 @@
     "BECOME_FATHER",
     "FRIEND_DIES",
     "HATE_SPOUSE",
-    "BECOME_HAUNTED"
-  ],
+    "BECOME_HAUNTED",
+    "SOLVE_MYSTERY"
+      ],
 
   "startingState": "INFANCY",
 
@@ -52,11 +53,13 @@
       "events": [
         "GET_MARRIED",
         "RUN_AWAY_FROM_HOME",
+        "GET_FEMALE_WORK"
       ]
     },
     {
       "name": "SEARCHING_FOR_WORK",
       "events": [
+      	"GET_MANUAL_WORK",
         "BUY_FARM",
         "JOIN_ARMY",
         "GO_SAILING",
@@ -68,13 +71,23 @@
       "name": "WOMAN_ON_THE_RUN",
       "events": [
         "GO_SAILING",
+        "GO_HOBO"
       ]
+    },
+    {
+      "name": "MANUAL_WORKER",
+      "events": [
+        "GET_KICKED_FROM_WORK"
+      ]
+    },
+    {
+      "name": "FEMALE_WORKER",
+      "events": []
     },
     {
       "name": "FARMER",
       "events": [
-        "LOSE_FARM",
-        "GET_MARRIED",
+        "LOSE_FARM"
       ]
     },
     {
@@ -310,6 +323,13 @@
       "requirements": []
     },
     {
+      "name": "GET_KICKED_FROM_WORK",
+      "probability": 1,
+      "destinationState": "SEARCHING_FOR_WORK", 
+      "attributesAdded": ["kicked"],
+      "requirements": []
+    },
+    {
       "name": "BECOME_RELIGIOUS",
       "probability": 1,
       "destinationState": "",
@@ -480,7 +500,7 @@
     },
     {
       "name": "SOLVE_MYSTERY",
-      "probability": 10.0,
+      "probability": 2.0,
       "destinationState": "",
       "attributesAdded": [],
       "requirements": [
@@ -488,6 +508,32 @@
           "comparer": "HAS_TRAIT",
           "text": "TRAIT_GENIUS",
           "number": 0
+        }
+      ]
+    },
+    {
+      "name": "GET_MANUAL_WORK",
+      "probability": 25.0,
+      "destinationState": "MANUAL_WORKER",
+      "attributesAdded": [],
+      "requirements": [
+        {
+          "comparer": "CLASS_LESS_THAN",
+          "text": "",
+          "number": 3
+        }
+      ]
+    },
+    {
+      "name": "GET_FEMALE_WORK",
+      "probability": 10.0,
+      "destinationState": "FEMALE_WORKER",
+      "attributesAdded": [],
+      "requirements": [
+        {
+          "comparer": "CLASS_LESS_THAN",
+          "text": "",
+          "number": 3
         }
       ]
     },

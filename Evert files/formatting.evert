@@ -1,0 +1,19 @@
+$formatting_begin
+{
+<= pageTitle Emelie∫Output>
+‹html›
+‹head›
+‹style type="text/css"›
+‹/style›
+‹title›<$ pageTitle>‹/title›
+‹/head›
+
+‹body›
+‹h1›<$ pageTitle>‹/h1›
+}
+
+$formatting_end
+{
+‹/body›
+‹/html›
+}

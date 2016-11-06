@@ -8,14 +8,14 @@ Louise
 
 #yearsLater
 {
-But as the years passed
+<# newLine>But as the years passed
 Later,
-After a couple of years,
-One thing happened when i was <$ currentAge>:
+<# newLine>After a couple of years,
+<# newLine>One thing happened when i was <$ currentAge>:
 But then
 Later on
-It was the year <$ currentYear> when
-It was in <# calendar_month> <$ currentYear> that
+<# newLine>It was the year <$ currentYear> when
+<# newLine>It was in <# calendar_month> <$ currentYear> that
 }
 
 #suddenly
@@ -36,7 +36,7 @@ Once
 
 #story_end
 {
-The End.
+<# newLine>‹b›The End.‹/b›‹/p›
 }
 
 #sailors_crime

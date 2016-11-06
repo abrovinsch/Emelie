@@ -37,7 +37,7 @@ namespace Emelie
 
 			c.name = "<# name>";
 			c.finalAge = EmelieUtilities.RandomRange(5f,90f);
-
+			resultingEvert += "<= character_name " + c.name + " >";
 			resultingEvert += "<= character_name " + c.name + " >";
 			resultingEvert += "<= gender " + c.gender + " >";
 			resultingEvert += "<= finalAge " + c.finalAge + " >";
@@ -71,7 +71,7 @@ namespace Emelie
 			EmelieState startingState = context.GetStartingState();
 
 			SimLog(c.currentAge, "Character Born, gender=" + c.gender + ", final age=" + System.Math.Round((double)c.finalAge).ToString());
-			resultingEvert += "<# CHARACTER_BORN><= gender " + c.gender +"><= name " + c.name + ">";
+			resultingEvert += "<= gender " + c.gender +"><= character_name " + c.name + "><# CHARACTER_BORN>";
 
 			EmelieState currentState = startingState;
 
