@@ -16,11 +16,7 @@ namespace Emelie
 		public string Run(EmelieSimulationContext context, string programVersion)
 		{
 			
-			string resultingEvert = "\n" + 
-									"// -- Using Emelie Simulation Engine v." + programVersion + " --\n" + 
-				                    "// -- Generated on " + System.DateTime.Now.ToString("G") + " --\n" +
-									"\n#stories\n{\n" +
-									"";
+			string resultingEvert = "";
 
 			simulationLog = new List<string>();
 
@@ -126,11 +122,7 @@ namespace Emelie
 				if(c.currentAge > c.finalAge) c.currentAge = c.finalAge;
 
 			}
-			resultingEvert += "<# story_end>\n" +
-				"}\n\n" +
-				"[i sailorLife]\n" +
-				"// [Emelie end]" +
-				"";
+			resultingEvert += "<# story_end>\n";
 			return resultingEvert;
 
 		}

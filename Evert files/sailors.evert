@@ -17,7 +17,6 @@
 #surName
 {
 <# names_englishSurname>
-
 }
 
 #yearsLater
@@ -30,9 +29,9 @@ Years later,
 <# newLine>Much later 
 <# newLine>It was the year <$ currentYear> when 
 <# newLine>It was in <# calendar_month> <$ currentYear> that 
-<# newLine>When I was <$ currentAge>[x 3] 
+<# newLine>When I was <$ currentAge> [x 3]
 <# newLine>I was <$ currentAge> when 
-<# newLine>It was the year i turned<$ currentAge> that 
+<# newLine>It was the year i turned <$ currentAge> that 
 <# newLine>A long time later 
 }
 
@@ -46,6 +45,9 @@ Then it happened:
 In <$ currentYear> something <# adjectives_incredible> happened: 
 You will not believe what happened to me on <# certainDay>: 
 I was <# adjectives_completely> unprepared for what happened later: 
+I got older and one day 
+Months and years passed but suddenly 
+Nothing much happened for a long time. But one day in the <# calendar_season> of <$ currentYear> 
 }
 
 #once
@@ -122,9 +124,177 @@ $setSpouseName
 
 #sailors_crime
 {
-stole a loaf of bread.
-murdered a priest.
-insulted the Queen.
-pickpocketed a banker.
-nicked a silver cross.
+stole a loaf of bread. 
+murdered a <# _18thcentury_maleMiddleClassWork>. 
+insulted the Queen. 
+insulted <# _18thcentury_famousPoliticalFigures>. 
+pickpocketed a <# _18thcentury_maleMiddleClassWork>. 
+nicked a silver cross. 
+bribed a public official. 
+broke into a house in <# geography_englishVillage>. 
+conspired against the government.
+disturbed the peace when I celebrated my <$ currentAge> birthday. 
+plotted to institue a republic. 
+drunk ale and rode my horse.
+forged the handwriting of <# _18thcentury_famousArtists>.
+kidnapped a <# nouns_pet>.
+put my enemy <# random_name>'s house on fire. 
+attacked my <# nouns_friend> <# random_name>.
+grew illegal plants. 
+smuggled <# contraband> from <# geography_country.
 }
+
+#contraband
+{
+liquor
+vodka
+cigarres
+porcelain
+revolutionary litterature
+tea
+opium
+forbidden books
+pornography
+}
+
+#kidStuff
+{
+I loved to spend time in the woods. 
+I was always fishing in the local lake. 
+I was bullied by the <# adjectives_horrible> children. 
+My big interest was drawing with charcoal. 
+I used to build things in my uncle <# male_name>'s workshop. 
+I often played with my friend <# random_name>.
+I used to row my boat to the market.
+<# once> me and my friends broke in to the local brewery and stole a barrel of beer.
+<# once> me and my friends built a catapult for aunt <# female_name>'s <# nouns_pet>. 
+I prayed a lot when I was a child.
+I had to work a lot of course, it was <# adjectives_difficult>.
+I thought a lot about the mystery of <# mysteryName>.
+I used to visit the <# _18thcentury_publicPlaces> and look for the <# _18thcentury_maleMiddleClassWork>s and <# _18thcentury_maleMiddleClassWork>s. 
+I loved to read, especially §1<# _18thcentury_famousBooks>§0. 
+Every <# calendar_weekDay> I went to the <# _18thcentury_publicPlaces>. 
+I often borrowed my uncle's boat and sailed it far. 
+I was forced to polish the shoes of rich gentlemen to make some money. 
+}
+
+#shipName
+{
+<# names_englishFemaleName> [x 8]
+<# adjectives_incredible> <# shipSuffix>
+Queen of <# geography_country>
+<# geography_country> <# shipSuffix>
+<# nouns_abstract>
+<# nouns_abstract> <# shipSuffix>
+<# adjectives_incredible> <# shipSuffix>
+<# adjectives_shippy> <# shipSuffix>
+<# adjectives_shippy> <# names_englishFemaleName>
+<# adjectives_shippy> <# nouns_abstract>
+}
+
+#shipTypes
+{
+sloop
+Schooner
+Brig
+barque
+full rigged ship
+cutter
+ketch
+topsail schooner
+}
+
+#shipSuffix
+{
+Rover
+Rider
+Dolphin
+Whale
+Trader
+Adventure
+Wasp
+Witch
+Hunter
+Queen
+}
+
+#goToSeaIntro
+{
+But I felt it was time for met to go to sea. I left on a ship called §1<$ currentShip>§1. 
+I wanted to go sailing. I found a <$ shipType> by the name §1<$ currentShip>§1.
+I took to the sea on §1<$ currentShip>§1, a <# adjectives_looks> <$ shipType>.
+}
+
+#goToSeaInfo
+{
+It was <# adjectives_lovely> ship, indeed.
+The ship itself was built from <# nouns_woods> logs. 
+It was <# adjectives_horrible> looking ship.
+The crew was <# adjectives_kinda>  <# adjectives_old>.
+The captain, Mr. <$ captainsName> was a <? KINDNESS 5 <# adjectives_nice>,> <# adjectives_incredible> man. He looked <# adjectives_looks>.
+}
+
+#goToSeaTravelInfo
+{
+We were bound for <# geography_country> and <# geography_country>. 
+We were sailing on the coast of <# geography_country>. 
+The ocean passages were <# adjectives_long>.
+We were smuggling <# contraband> from  <# geography_country>. 
+They said our ship had once brought <# _18thcentury_famousPoliticalFigures> home.
+We were following the tradewinds <# geography_cardinaldDirection>-ward. 
+The seas were high and the weather was <# weather_descriptor>. 
+We passed many <# adjectives_old> ports.
+We had to sail with reefed sails for much of the journey.
+The crew grew tired by the <# adjectives_long> legs.
+I had many <# nouns_friend>s among the crew. One of them, <# random_name>, <# random_person_fact>.
+}
+
+#random_person_fact
+{
+was a secret lover to <# _18thcentury_famousPoliticalFigures>. 
+had smuggled <# contraband> to the prince of <# geography_country>. 
+could lift 100 pounds. 
+had eigtheen children.
+could speak <# geography_language>, <# geography_language> and <# geography_language>. 
+was a former pirate. 
+had fought in the <# history_war>. 
+was a childhood friend of <# _18thcentury_famousFigures>. 
+}
+
+
+#diseaseResult
+{
+But fortunately I got better after some months. 
+<# diseaseCure>, and I felt my strength returning.
+<# diseaseCure>, so I got better. 
+<# diseaseCure>, fortunately it was effective.
+<# diseaseCure>. And soon my health returned.
+<# diseaseCure>. Unfortunately it only made me feel worse. But then I tried something else: <# diseaseCure>. That worked and now I am as healthy as ever!
+My doctor, who <# random_person_fact>, gave me advice. <# diseaseCure>. It didn't really work out. I took me nine months to feel well again.
+<# diseaseCure> and it made me feel worse. I almost died. I thank the lord i am still alive. 
+<# diseaseCure> but it didn't help. Nowadays I feel better. 
+<# diseaseCure> and I almost <# verbs_died>. I am fortunately a bit better now.
+<# diseaseCure>. Never try that.
+}
+
+#diseaseCure
+{
+I cured myself using my grandmothers healthy stew
+I treated my body with holy water
+I ate medicine and lay in bed for the whole <$ calendar_seasons>
+I followed a diet of exclusively <# food_fruit>s
+I drank only <# food_drinks>
+I slept 14 hours a day
+I prayed intensely to Jesus
+I went to get some fresh air in <# geography_englishVillage>
+I read lots of books on medicine and followed their advice
+I didn't open my mouth or my eyes to keep more unhealthy air out
+I had to get rid of my <# nouns_pet>
+I drank lots of water
+I ate lots of brown bread
+}
+
+
+
+
+

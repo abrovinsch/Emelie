@@ -12,9 +12,9 @@ namespace Emelie
 	{
 		public static void WriteStringToFile (string content, string path)
 		{
-			if(!path.EndsWith(".txt"))
+			if(!path.EndsWith(".txt") && !path.EndsWith(".evert"))
 			{
-				Log.Error("May only write to .txt files! You are trying to write to \"" + path + "\"");
+				Log.Error("May only write to .txt or .evert files! You are trying to write to \"" + path + "\"");
 				return;
 			}
 

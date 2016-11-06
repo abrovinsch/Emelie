@@ -13,16 +13,36 @@ namespace Emelie
 
 		public static void Main (string[] args)
 		{
-			Console.WriteLine ("------          Starting Emelie Text Engine v" + VERSION + "        ------\n" +
+			Console.WriteLine ("------        Starting Emelie Text Engine v" + VERSION + "        ------\n" +
 							   "Code by Oskar Lundqvist 2016 | @oskar_lq | lundqvist.oskar01@gmail.com\n");
 
-			string OUTPUT_FILE = ""
-				;
-
+			string OUTPUT_FILE = "";
 
 			bool programIsRunning = true;
 			EmelieSimulationContext context = new EmelieSimulationContext();
 			//EmelieIO.WriteStringToFile(EmelieSimulationContext.Serialize(context,""),OUTPUT_FILE);
+
+			if(args.Length == 1)
+			{
+				context = Load(args[0]);
+			}
+			if(args.Length == 2)
+			{
+				context = Load(args[0]);
+				OUTPUT_FILE = args[1];
+			}
+			if(args.Length == 3)
+			{
+				context = Load(args[0]);
+				OUTPUT_FILE = args[1];
+				string[] f = new string[2
+				];
+				f[0] = "run";
+				f[1] = args[2];
+				Console.WriteLine(f.Length);
+				Run(f,context,OUTPUT_FILE);
+				programIsRunning = false;
+			}
 
 			string lastCommand = "help";
 
@@ -62,15 +82,7 @@ namespace Emelie
 					case "load" : { 
 						if(CheckParameters("load",parameters,1))
 						{
-							string fileToLoad= parameters[1].Replace("%20"," ");
-							string fileContents = EmelieIO.ReadFile(fileToLoad);
-
-							if(fileContents != null)
-							{
-								context = EmelieSimulationContext.Deserialize(fileContents);
-
-								Log.Msg(context.ToString());
-							}
+							context = Load(parameters[1]);
 						}
 					} break;
 
@@ -85,25 +97,7 @@ namespace Emelie
 					} break;
 
 					case "run" : { 
-						if(CheckParameters("run",parameters,1))
-						{
-							uint times = 0;
-							if(!uint.TryParse(parameters[1],out times))
-							{
-								Log.Msg("Parameter " + parameters[1] + " could not be converted to a positive integer!");
-							}
-							else {
-								for(uint i = 0; i < times; i++)
-								{
-									if(context != null)
-									{
-										RunSimulation(context);
-									}
-									else Log.Msg("No Simulation context has been set! Please load an emelie file to set it!");
-								}
-							}
-						}
-							
+						Run(parameters,context,OUTPUT_FILE);
 					} break;
 
 					default : Console.WriteLine ("Unknown command '" + command + "'. Type 'help' to get a list of commands."); break;
@@ -145,6 +139,54 @@ namespace Emelie
 				return false;
 			}
 			return true;
+		}
+
+		private static EmelieSimulationContext Load(string path)
+		{
+			string fileToLoad= path.Replace("%20"," ");
+			string fileContents = EmelieIO.ReadFile(fileToLoad);
+
+			if(fileContents != null)
+			{
+				EmelieSimulationContext context = EmelieSimulationContext.Deserialize(fileContents);
+				Log.Msg(context.ToString());
+				return context;
+			}
+			return null;
+
+		}
+
+		private static void Run(string[] parameters, EmelieSimulationContext context, string outputFile)
+		{
+			outputFile = outputFile.Replace("%20"," ");
+
+			if(CheckParameters("run",parameters,1))
+			{
+				string runResult = "\n" + 
+					"// -- Using Emelie Simulation Engine v." + VERSION + " --\n" + 
+					"// -- Generated on " + System.DateTime.Now.ToString("G") + " --\n" +
+					"\n#stories\n{\n" +
+					"";
+
+				uint times = 0;
+				if(!uint.TryParse(parameters[1],out times))
+				{
+					Log.Msg("Parameter " + parameters[1] + " could not be converted to a positive integer!");
+				}
+				else {
+					for(uint i = 0; i < times; i++)
+					{
+						if(context != null)
+						{
+							runResult += RunSimulation(context);
+						}
+						else Log.Msg("No Simulation context has been set! Please load an emelie file to set it!");
+					}
+					runResult += "}\n\n" +
+								 "// [Emelie end]";
+					EmelieIO.WriteStringToFile(runResult,outputFile);
+				}
+			}
 		}
 	}
 }

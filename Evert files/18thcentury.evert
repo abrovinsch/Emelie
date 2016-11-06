@@ -74,6 +74,13 @@ Jonathan Swift
 Pierre-Ambroise Choderlos de Laclos 
 }
 
+
+#_18thcentury_famousFigures
+{
+<# _18thcentury_famousPoliticalFigures>
+<# _18thcentury_famousArtists>
+<# _18thcentury_famousScientistExplorers>
+}
 #_18thcentury_famousPoliticalFigures
 {
 King George III
@@ -81,7 +88,6 @@ Rousseau
 Benjamin Franklin
 Washington
 Marie Antoinette
-Eva Ekeblad
 Gustav III of Sweden
 Maria Theresa
 Joseph II of Austria
@@ -116,4 +122,12 @@ James Watt
 Antoine-Laurent de Lavoisier
 John Campbell
 James Hargreaves
+}
+
+#_18thcentury_publicPlaces
+{
+church [x 3]
+market
+fort
+main square
 }

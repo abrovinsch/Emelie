@@ -7,3 +7,105 @@ partner
 benefactor
 mentor
 }
+
+#nouns_pet
+{
+dog
+cat
+guinea pig
+hamster
+hound
+}
+
+#nouns_abstract
+{
+Adventure
+Assurance
+Bravery
+Courage
+Danger
+Death
+Defiance
+Desolation
+Destiny
+Devotion
+Eternity
+Expedition
+Faith
+Fear
+Ferocity
+Force
+Foresight
+Freedom
+Hatred
+Hope
+Illusion
+Isolation
+Love
+Mystery
+Mystery
+Patience
+Pride
+Revenge
+Strength
+Treasure
+Triumph
+Unity
+Vengeance
+Victory
+}
+
+#nouns_diseases
+{
+asthma
+allergy
+acne
+back pain
+gonorrhea
+leprosy
+mumps
+otitis
+plague
+rheumatism
+rabies
+scurvy
+tuberculosis
+cancer
+bursitis
+celiac disease
+fever
+cold
+malaria
+migraine
+pneumonia
+psoriasis
+syphilis
+yellow fever
+depression
+ear infection
+flu
+herpes
+hepatitis
+}
+
+#nouns_woods
+{
+cedar
+cypress
+fir
+pine
+oak
+red cedar
+european black pine
+monterey pine
+spruce
+ash
+birch
+brazilwood
+ebony
+elm
+ironwood
+white oak
+teak
+willow
+}

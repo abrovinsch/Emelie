@@ -2,6 +2,8 @@
 {
 <# startTitle><$ character_name><# endTitle>‹p›I was born on a <# weather_descriptor> day in <# calendar_month><% 20 " in <$ yearOfBirth>">. 
 <# startTitle><$ character_name><# endTitle>‹p›I was born in this very town, in the good year of <$ yearOfBirth>. 
+<# startTitle><$ character_name><# endTitle>‹p›I come from <# geography_englishVillage>. 
+<# startTitle><$ character_name><# endTitle>‹p›I was born in <# weather_descriptor> <# geography_englishVillage> in <$ yearOfBirth>">. 
 }
 
 #EVENT_FALL_IN_LOVE
@@ -21,8 +23,13 @@ I started going more and more to Church and studied the bible closely.
 
 #EVENT_GROW_UP
 {
-<# yearsLater> I grew older and older. 
-My childhood was <# adjectives_kinda> <# emotions_random>. 
+<# yearsLater> I grew older and older. <# kidStuff>. 
+My childhood was <# adjectives_kinda> <# emotions_random>. <# kidStuff>. 
+<# kidStuff>. 
+When I grew up my dad taught me all about his trade as a <# _18thcentury_maleLowerClassWork>. <# kidStuff>
+My father was a <# _18thcentury_maleLowerClassWork> and my mother a <# _18thcentury_femaleLowerClassWork>. 
+I was an orphan child and had to manage on my own. <# kidStuff><# kidStuff>
+
 }
 
 #EVENT_FIND_FROG
@@ -46,7 +53,7 @@ My childhood was <# adjectives_kinda> <# emotions_random>.
 #EVENT_GET_MARRIED
 {
 <$ setSpouseName><# yearsLater> I married. 
-<$ setSpouseName><# yearsLater> I got married to <$ spouse>.
+<$ setSpouseName><# yearsLater> I got married to <$ spouse>. 
 <$ setSpouseName><# yearsLater> I married <$ spouse>. 
 <$ setSpouseName><# yearsLater> <$ spouse>, my <? gender male wife><? gender female husband>, and I married. 
 }
@@ -66,9 +73,9 @@ My childhood was <# adjectives_kinda> <# emotions_random>.
 
 #EVENT_BECOME_FATHER
 {
-<# yearsLater> and I got a <# adjectives_incredible> little kid named <# random_name>.
+<# yearsLater> and I got a <# adjectives_incredible> little kid named <# random_name>. 
 <# suddenly> my <# adjectives_lovely> <# random_name> was born!
-<# yearsLater> I became a father.
+<# yearsLater> I became a father. 
 }
 
 #EVENT_HAVE_AN_AFFAIR
@@ -78,7 +85,7 @@ My childhood was <# adjectives_kinda> <# emotions_random>.
 
 #EVENT_BUY_FARM
 {
-<# yearsLater> my <# adjectives_old> dream came true and I managed to buy a farm.
+<# yearsLater> my <# adjectives_old> dream came true and I managed to buy a farm. 
 }
 
 #EVENT_GO_FIND_WORK
@@ -93,8 +100,8 @@ I went ahead and tried to get a job.
 I began hating my <? gender male wife><? gender female husband>. <# itsTrue>
 Me and my <? gender male wife><? gender female husband> never got along. We fought all the time. We did <# verbs_hate> eachother. <# itsTrue>
 <# yearsLater> I realized how <# adjectives_horrible> my <? gender male wife><? gender female husband> was. 
-<# yearsLater> I saw what a <# adjectives_horrible>, <# adjectives_horrible> person my <? gender male wife><? gender female husband> was.
-<# yearsLater> I become very <# emotions_sad> when I understood that my <? gender male wife><? gender female husband> did <# verbs_hate> me.
+<# yearsLater> I saw what a <# adjectives_horrible>, <# adjectives_horrible> person my <? gender male wife><? gender female husband> was. 
+<# yearsLater> I become very <# emotions_sad> when I understood that my <? gender male wife><? gender female husband> did <# verbs_hate> me. 
 }
 
 #EVENT_GET_FEMALE_WORK
@@ -104,7 +111,7 @@ I started working as a <= currentJob <# _18thcentury_femaleLowerClassWork>> <$ c
 
 #EVENT_GET_MANUAL_WORK
 {
-<= currentJob <# _18thcentury_maleLowerClassWork>><# yearsLater>I started working as a <$ currentJob>.
+<= currentJob <# _18thcentury_maleLowerClassWork>><# yearsLater>I started working as a <$ currentJob>. 
 <= currentJob <# _18thcentury_maleLowerClassWork>><# yearsLater>I got a job as a <$ currentJob>.  
 <= currentJob <# _18thcentury_maleLowerClassWork>><# suddenly>a fellow called <# male_name> emplyed me as a <$ currentJob>. 
 <= currentJob <# _18thcentury_maleLowerClassWork>><# suddenly>I found work as a <$ currentJob>. 
@@ -122,8 +129,8 @@ I managed to solve the mystery of <# mysteryName> when I was <$ currentAge>. <# 
 
 #EVENT_FRIEND_DIES
 {
-<# yearsLater> my <# adjectives_dear> <# nouns_friend> <# random_name> <# verbs_died>.
-<# suddenly> <# random_name>, my <# adjectives_dear> <# adjectives_old> <# nouns_friend>, <# verbs_died>.
+<# yearsLater> my <# adjectives_dear> <# nouns_friend> <# random_name> <# verbs_died>. 
+<# suddenly> <# random_name>, my <# adjectives_dear> <# adjectives_old> <# nouns_friend>, <# verbs_died>. 
 }
 
 #EVENT_GET_KICKED_FROM_WORK
@@ -136,11 +143,23 @@ I managed to solve the mystery of <# mysteryName> when I was <$ currentAge>. <# 
 
 #EVENT_BECOME_HAUNTED
 {
-<# yearsLater> was when I started noticing the <# adjectives_horrible> demons that had started haunting me.
+<# yearsLater> was when I started noticing the <# adjectives_horrible> demons that had started haunting me. 
 <# suddenly> ghosts started following me. <# itsTrue>. It was <# adjectives_horrible>!
 But since I was so full of <# verbs_hate> for my siblings, the Lord punished me. I became haunted! <# itsTrue>
-In the year <$ currentYear> I started seeing ghosts.
-<# yearsLater> I discovered my talent: I could see those who had <# verbs_died>.
-Have I told you about my relationship with the dead? It started in <$ currentYear>. Every night they came to me, whispering who would die.
+In the year <$ currentYear> I started seeing ghosts. 
+<# yearsLater> I discovered my talent: I could see those who had <# verbs_died>. 
+Have I told you about my relationship with the dead? It started in <$ currentYear>. Every night they came to me, whispering who would die. 
 }
 
+#EVENT_GO_SAILING
+{
+<= currentShip <# shipName>><= shipType <# shipTypes>><= captainsName <# male_name><# surName>><# newLine><# goToSeaIntro><# goToSeaInfo><# goToSeaInfo><# goToSeaInfo><# goToSeaTravelInfo>
+}
+
+#EVENT_BECOME_ILL
+{
+<# suddenly> I was cursed with a <# adjectives_horrible> sickness. It was <# nouns_diseases>. <# diseaseResult>. 
+<# once> I went to the doctor and he told me I had <# nouns_diseases>. <# diseaseResult>. 
+<# yearsLater> I contracted something <# adjectives_horrible>: <# nouns_diseases>. <# diseaseResult>. 
+<# newLine>Do you know about <# nouns_diseases>? I didn't until I was <$ currentAge> and got it. <# diseaseResult>. 
+}
