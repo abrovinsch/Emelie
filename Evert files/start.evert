@@ -1,6 +1,6 @@
 #origin
 {
-<$ formatting_begin><$ setVariables><# stories><$ formatting_end>
+<# formattingBegin><$ setVariables><# stories><# formattingEnd>
 }
 
 $setVariables
@@ -38,9 +38,11 @@ $setVariables
 [i sailors]
 [i stories]
 
+[i names]
 [i events]
 [i adjectives]
 [i weather]
 [i calendar]
+[i 18thcentury]
 [i emotions]
 [i formatting]

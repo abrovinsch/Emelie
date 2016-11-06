@@ -6,8 +6,8 @@
 
 #EVENT_FALL_IN_LOVE
 {
-<= loveInterest <# sailors_name>><# yearsLater> I fell in love with <$ loveInterest>. 
-<= loveInterest <# sailors_name>><# yearsLater> I met <$ loveInterest>. It changed my world. I became so <# emotions_happy>. 
+<= loveInterest <# random_name>><# yearsLater> I fell in love with <$ loveInterest>. 
+<= loveInterest <# random_name>><# yearsLater> I met <$ loveInterest>. It changed my world. I became so <# emotions_happy>. 
 }
 
 #EVENT_BECOME_RELIGIOUS
@@ -30,7 +30,7 @@ I started going more and more to Church and studied the bible closely.
 
 #EVENT_STRUCK_BY_LIGHTNING
 {
-<# suddenly> I was struck by lighting!
+<# suddenly> I was struck by lighting! 
 }
 
 #EVENT_BECOME_ADULT_WOMAN
@@ -53,8 +53,15 @@ I started going more and more to Church and studied the bible closely.
 
 #EVENT_BECOME_MOTHER
 {
-<# yearsLater> and I got a <# adjectives_incredible> little baby.
-<# suddenly> my lovely <# sailors_name> was born!
+<# yearsLater> and I got a <# adjectives_incredible> little baby. 
+<# suddenly> my lovely <# sailors_name> was born! 
+<# yearsLater> I became a mother. 
+}
+
+#EVENT_BECOME_MOTHER
+{
+<# yearsLater> and I got a <# adjectives_incredible> little kid named <# random_name>.
+<# suddenly> my lovely <# random_name> was born!
 <# yearsLater> I became a mother.
 }
 
@@ -70,12 +77,30 @@ I started going more and more to Church and studied the bible closely.
 
 #EVENT_GO_FIND_WORK
 {
-<# yearsLater> I realised i had to go and search for employment. It was difficult.
-I had to find employment.
-I went ahead and tried to get a job.
+<# yearsLater> I realised i had to go and search for employment. It was difficult. 
+I had to find employment. 
+I went ahead and tried to get a job. 
 }
 
 #EVENT_HATE_SPOUSE
 {
 I began hating my <? gender male wife><? gender female husband>. 
+}
+
+#EVENT_GET_FEMALE_WORK
+{
+I started working as a <= currentJob <# _18thcentury_femaleLowerClassWork>> <$ currentJob>. 
+}
+
+#EVENT_SOLVE_MYSTERY
+{
+<# once> I did something rather <# adjectives_incredible>: I solved the <# adjectives_old> problem of <# mysteryName>. 
+}
+
+#mysteryName
+{
+<# _18thcentury_famousPoliticalFigures>
+<# _18thcentury_famousArtists>
+<# _18thcentury_famousScientistExplorers>
+the <# _18thcentury_maleMiddleClassWork>
 }

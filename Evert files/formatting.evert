@@ -1,19 +1,9 @@
-$formatting_begin
+#formattingBegin
 {
-<= pageTitle Emelie∫Output>
-‹html›
-‹head›
-‹style type="text/css"›
-‹/style›
-‹title›<$ pageTitle>‹/title›
-‹/head›
-
-‹body›
-‹h1›<$ pageTitle>‹/h1›
+<= pageTitle Emelie∫Output>‹html›‹head›‹title›<$ pageTitle>‹/title›‹link rel§4§1stylesheet§1 href§4§1formatting.css§1›‹/head›‹body›
 }
 
-$formatting_end
+#formattingEnd
 {
-‹/body›
-‹/html›
+‹/body›‹/html›
 }

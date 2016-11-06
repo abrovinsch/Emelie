@@ -16,9 +16,6 @@ phenomenal
 special
 stupendous
 terrific
-unusual
-weird
-wicked
 }
 
 #adjectives_horrible
@@ -67,4 +64,15 @@ wretched
 #adjectives_nice
 {
 nice
+}
+
+#adjectives_old
+{
+old
+ancient
+}
+
+#adjectives_lovely
+{
+lovely
 }

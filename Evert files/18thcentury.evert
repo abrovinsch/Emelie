@@ -1,7 +1,7 @@
 // A list of typical items and cultural references relevant n the
 // later half of th 18th century in Europe and the United States
 
-#18thcentury_maleLowerClassWork
+#_18thcentury_maleLowerClassWork
 {
 manufactury worker
 blacksmith
@@ -31,7 +31,7 @@ buckler
 brewer
 }
 
-#18thcentury_femalePhysicalWork
+#_18thcentury_femaleLowerClassWork
 {
 maid
 servant girl
@@ -40,7 +40,7 @@ cook
 rowing lady
 }
 
-#18thcentury_maleMiddleClassWork
+#_18thcentury_maleMiddleClassWork
 {
 writer
 teacher
@@ -61,7 +61,7 @@ philosopher of sorts
 clerk
 }
 
-#18thcentury_famousArtists
+#_18thcentury_famousArtists
 {
 Johann Wolfgang von Goethe
 Friedrich Schiller
@@ -74,7 +74,7 @@ Jonathan Swift
 Pierre-Ambroise Choderlos de Laclos 
 }
 
-#18thcentury_famousPoliticalFigures
+#_18thcentury_famousPoliticalFigures
 {
 King George III
 Rousseau
@@ -96,7 +96,7 @@ Mary Wollstonecraft
 Frederick II of Prussia
 }
 
-#18thcentury_famousBooks
+#_18thcentury_famousBooks
 {
 Candide
 Robinson Crusoe
@@ -107,7 +107,7 @@ Gulliver's Travels
 A Vindication of the Rights of Woman
 }
 
-#18thcentury_famousScientistExplorers
+#_18thcentury_famousScientistExplorers
 {
 Carl von Linné
 Thomas Cook

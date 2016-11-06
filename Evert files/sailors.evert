@@ -1,9 +1,23 @@
-#sailors_name
+#random_name
 {
-Mary
-Anne
-Kate
-Louise
+<# female_name>
+<# male_name>
+}
+
+#female_name
+{
+<# names_englishFemaleName>
+}
+
+#male_name
+{
+<# names_englishMaleName>
+}
+
+#surName
+{
+<# names_englishSurname>
+
 }
 
 #yearsLater
@@ -30,7 +44,7 @@ Then it happened:
 #once
 {
 I remember once
-A <# incredible> thing happened when i was <$ currentAge>
+A <# adjectives_incredible> thing happened when i was <$ currentAge>
 Once
 }
 
