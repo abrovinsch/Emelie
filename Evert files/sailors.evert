@@ -45,7 +45,7 @@ Years later,
 {
 Suddenly, on <# certainDay>, 
 But on <# certainDay> the most <# adjectives_incredible> thing happened - 
-It was than it occurred: 
+It was then it occurred: 
 That was a special day indeed, 
 Then it happened: 
 In <$ currentYear> something <# adjectives_incredible> happened: 
@@ -59,7 +59,7 @@ Nothing much happened for a long time. But one day in the <# calendar_season> of
 #once
 {
 I remember once
-A <# adjectives_incredible> thing happened when i was <$ currentAge>
+A <# adjectives_incredible> thing happened when I was <$ currentAge>
 Once
 }
 
@@ -99,15 +99,15 @@ It wasn't <%  30 particularly> <# adjectives_difficult>.
 #firedReason
 {
 I stole from my boss 
-I dropped a cup of tea on my boss' wife 
+I dropped a cup of tea on my boss's wife 
 I flirted with bypassers 
 I wrote false love letters from my boss 
 I overslept every <# calendar_weekDay> 
 I dropped a new china set 
-I accidentally dropped a hammer on my boss' cat
+I accidentally dropped a hammer on my boss's cat
 I took too many naps during workhours
 I didn't get any work done for the whole month of <# calendar_month> 
-I bought cigarres with the company money 
+I bought cigars with the company money 
 I was sick every <# calendar_weekDay> 
 the business weren't any good
 they hired too many young wasters that took my place 
