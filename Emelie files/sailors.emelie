@@ -26,11 +26,14 @@
     "HATE_SPOUSE",
     "BECOME_HAUNTED",
     "SOLVE_MYSTERY"
+    "BECOME_MOTHER_FIRST_TIME",
       ],
 
   "startingState": "INFANCY",
 
   "simulationStep": 1.0,
+
+  "year":1783,
 
   "states": [
     {
@@ -114,7 +117,6 @@
         "ATTACKED_BY_WHALE",
         "VIOLENT_STORM",
         "ATTACKED_BY_PIRATES",
-        "FALL_IN_LOVE",
         "MUTINY",
         "GO_FIND_WORK"
       ]
@@ -177,7 +179,7 @@
     },
     {
       "name": "GO_FIND_WORK",
-      "probability": 11.0,
+      "probability": 30.0,
       "destinationState": "SEARCHING_FOR_WORK",
       "attributesAdded": [],
       "requirements": [
@@ -218,7 +220,7 @@
     },
     {
       "name": "GO_HOBO",
-      "probability": 0.3,
+      "probability": 1,
       "destinationState": "HOBO",
       "attributesAdded": [],
       "requirements": [
@@ -316,15 +318,8 @@
       "requirements": []
     },
     {
-      "name": "FALL_IN_LOVE",
-      "probability": 2,
-      "destinationState": "",
-      "attributesAdded": ["in_love"],
-      "requirements": []
-    },
-    {
       "name": "GET_KICKED_FROM_WORK",
-      "probability": 1,
+      "probability": 0.5,
       "destinationState": "SEARCHING_FOR_WORK", 
       "attributesAdded": ["kicked"],
       "requirements": []
@@ -333,7 +328,7 @@
       "name": "BECOME_RELIGIOUS",
       "probability": 1,
       "destinationState": "",
-      "attributesAdded": [],
+      "attributesAdded": ["religious"],
       "requirements": [
         {
           "comparer": "DONT_HAVE_ATTRIBUTE",
@@ -385,6 +380,34 @@
     },
     {
       "name": "BECOME_MOTHER",
+      "probability": 3,
+      "destinationState": "",
+      "attributesAdded": ["parent","mother"],
+      "requirements": [
+        {
+          "comparer": "HAS_GENDER",
+          "text": "female",
+          "number": 0
+        },
+        {
+          "comparer": "HAVE_ATTRIBUTE",
+          "text": "mother",
+          "number": 0
+        },
+        {
+          "comparer": "IS_YOUNGER_THAN",
+          "text": "",
+          "number": 40
+        },
+        {
+          "comparer": "IS_OLDER_THAN",
+          "text": "",
+          "number": 15
+        }
+      ]
+    },
+    {
+      "name": "BECOME_MOTHER_FIRST_TIME",
       "probability": 5,
       "destinationState": "",
       "attributesAdded": ["parent","mother"],
@@ -392,6 +415,11 @@
         {
           "comparer": "HAS_GENDER",
           "text": "female",
+          "number": 0
+        },
+        {
+          "comparer": "DONT_HAVE_ATTRIBUTE",
+          "text": "mother",
           "number": 0
         },
         {
@@ -457,6 +485,11 @@
           "number": 5
         },
         {
+          "comparer": "HAVE_ATTRIBUTE",
+          "text": "married",
+          "number": 5
+        },
+        {
           "comparer": "DONT_HAVE_ATTRIBUTE",
           "text": "spouse_hater",
           "number": 5
@@ -474,7 +507,7 @@
     {
       "name": "GET_FOOLED",
 
-      "probability": 10.0,
+      "probability": 1.0,
       "destinationState": "",
       "attributesAdded": [],
       "requirements": [
@@ -487,7 +520,7 @@
     },
     {
       "name": "GET_INJURED",
-      "probability": 10.0,
+      "probability": 1.0,
       "destinationState": "",
       "attributesAdded": ["injured"],
       "requirements": [
@@ -500,14 +533,25 @@
     },
     {
       "name": "SOLVE_MYSTERY",
-      "probability": 2.0,
+      "probability": 0.4,
       "destinationState": "",
-      "attributesAdded": [],
+      "attributesAdded": ["mystery_solver"],
       "requirements": [
         {
           "comparer": "HAS_TRAIT",
           "text": "TRAIT_GENIUS",
           "number": 0
+        },
+        {
+          "comparer": "DONT_HAVE_ATTRIBUTE",
+          "text": "mystery_solver",
+          "number": 0
+        }
+        ,
+        {
+          "comparer": "IS_OLDER_THAN",
+          "text": "mystery_solver",
+          "number": 7
         }
       ]
     },
@@ -688,10 +732,16 @@
     },
     {
       "name": "FALL_IN_LOVE",
-      "probability": 1.0,
+      "probability": 0.5,
       "destinationState": "",
       "attributesAdded": ["in_love"],
-      "requirements": []
+      "requirements": [
+       {
+          "comparer": "IS_OLDER_THAN",
+          "text": "",
+          "number": 12
+        }
+      ]
     },
     {
       "name": "MUTINY",
@@ -729,7 +779,7 @@
         {
           "comparer": "PERSONALITY_POINT_GREATER_THAN",
           "text": "COURAGE",
-          "number": 7
+          "number": 6
         }
       ]
     },
@@ -827,7 +877,47 @@
       "name": "TRAIT_MELANCHOLIC",
       "pointAffected": "SERIOUSNESS",
       "effect": 5
-    }
+    },
+    {
+      "name": "TRAIT_BRIGHT",
+      "pointAffected": "INTELLIGENCE",
+      "effect": 2
+    },
+    {
+      "name": "TRAIT_HUGE",
+      "pointAffected": "STRENGTH",
+      "effect": 5
+    },
+    {
+      "name": "TRAIT_SLOW",
+      "pointAffected": "INTELLIGENCE",
+      "effect": -3
+    },
+    {
+      "name": "TRAIT_TALKER",
+      "pointAffected": "SOCIAL",
+      "effect": 4
+    },
+    {
+      "name": "TRAIT_CARING",
+      "pointAffected": "KINDNESS",
+      "effect": 4
+    },
+    {
+      "name": "TRAIT_NARCISSIST",
+      "pointAffected": "KINDNESS",
+      "effect": -3
+    },
+    {
+      "name": "TRAIT_SHORT",
+      "pointAffected": "STRENGTH",
+      "effect": -3
+    },
+    {
+      "name": "TRAIT_COMFORTABLE",
+      "pointAffected": "COURAGE",
+      "effect": -3
+    },
   ]
 }
 

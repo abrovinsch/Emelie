@@ -63,12 +63,15 @@ namespace Emelie
 				resultingEvert += "<= " + s + " " + c.personalityPoints[s] + ">";
 			}
 
+			float currentYear = context.year - c.finalAge;
+
 			EmelieState startingState = context.GetStartingState();
 
 			SimLog(c.currentAge, "Character Born, gender=" + c.gender + ", final age=" + System.Math.Round((double)c.finalAge).ToString());
-			resultingEvert += "<# CHARACTER_BORN>";
+			resultingEvert += "<# CHARACTER_BORN><= currentYear " + currentYear.ToString("####") + ">";
 
 			EmelieState currentState = startingState;
+
 
 			while(c.currentAge < c.finalAge)
 			{
@@ -100,6 +103,7 @@ namespace Emelie
 
 						SimLog(c.currentAge,"EVENT: " + _event.name);
 						resultingEvert += "<= currentAge " + c.currentAge + ">";
+						resultingEvert += "<= currentYear " + currentYear.ToString("####") + ">";
 						resultingEvert += "<# EVENT_" + _event.name + ">";
 
 						foreach(string attr in _event.attributesAdded)
@@ -119,6 +123,7 @@ namespace Emelie
 				}
 
 				c.currentAge += context.simulationStep;
+				currentYear += context.simulationStep;
 				if(c.currentAge > c.finalAge) c.currentAge = c.finalAge;
 
 			}

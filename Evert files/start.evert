@@ -5,8 +5,6 @@
 
 $setVariables
 {
-<= yearOfBirth 1741>
-<= currentYear 1761>
 <= currentAge 20>
 }
 
@@ -44,6 +42,7 @@ $setVariables
 [i verbs]
 [i nouns]
 [i geography]
+[i comment]
 [i weather]
 [i calendar]
 [i 18thcentury]

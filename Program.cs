@@ -116,20 +116,6 @@ namespace Emelie
 				"run -times - runs the simulation a certain amount of time");
 		}
 
-		private static string RunSimulation(EmelieSimulationContext context)
-		{
-			if(context == null)
-			{
-				Log.Error("Cannot run simulation because context is null");
-
-			}
-			EmelieSimulation simulation = new EmelieSimulation();
-			string result = simulation.Run(context, VERSION);
-			//
-			Log.Msg("SIMULATION RESULT: '" + result + "'");
-			return result;
-		}
-
 		private static bool CheckParameters
 		(string commandName, string[] parameters, int amount)
 		{
@@ -178,7 +164,10 @@ namespace Emelie
 					{
 						if(context != null)
 						{
-							runResult += RunSimulation(context);
+							EmelieSimulation simulation = new EmelieSimulation();
+							string result = simulation.Run(context, VERSION);
+							Log.Msg("SIMULATION RESULT: '" + result + "'");
+							runResult += result;
 						}
 						else Log.Msg("No Simulation context has been set! Please load an emelie file to set it!");
 					}

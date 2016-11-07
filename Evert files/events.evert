@@ -1,16 +1,16 @@
 #CHARACTER_BORN
 {
-<# startTitle><$ character_name><# endTitle>‹p›I was born on a <# weather_descriptor> day in <# calendar_month><% 20 " in <$ yearOfBirth>">. 
-<# startTitle><$ character_name><# endTitle>‹p›I was born in this very town, in the good year of <$ yearOfBirth>. 
+<# startTitle><$ character_name><# endTitle>‹p›I was born on a <# weather_descriptor> day in <# calendar_month><% 20 " in "<$ currentYear>>. 
+<# startTitle><$ character_name><# endTitle>‹p›I was born in this very town, in the good year of <$ currentYear>. 
 <# startTitle><$ character_name><# endTitle>‹p›I come from <# geography_englishVillage>. 
-<# startTitle><$ character_name><# endTitle>‹p›I was born in <# weather_descriptor> <# geography_englishVillage> in <$ yearOfBirth>">. 
+<# startTitle><$ character_name><# endTitle>‹p›I was born in <# weather_descriptor> <# geography_englishVillage> in <$ currentYear>. 
 }
 
 #EVENT_FALL_IN_LOVE
 {
-<= loveInterest <# random_name>><# yearsLater> I fell in love with <$ loveInterest>. 
-<= loveInterest <# random_name>><# yearsLater> I met <$ loveInterest>. It changed my world. I became so <# emotions_happy>. Our relationship was <# adjectives_incredible>. 
-<= loveInterest <# random_name>>I will never forget the year <$ currentYear>, for that was when I met the <# adjectives_lovely> <$ loveInterest>. <$ loveInterest> made me <# emotions_happy> unlike no one else. 
+<$ newPerson><= loveInterest <$ npName>><# yearsLater> I fell in love with <$ loveInterest>. <= cName <$ npName>><= cPron <$ npPron>><# comment_like>
+<$ newPerson><= loveInterest <$ npName>><# yearsLater> I met <$ loveInterest>. It changed my world. I became so <# emotions_happy>. Our relationship was <# adjectives_incredible>. <= cName <$ npName>><= cPron <$ npPron>><# comment_like>
+<$ newPerson><= loveInterest <$ npName>>I will never forget the year <$ currentYear>, for that was when I met the <# adjectives_lovely> <$ loveInterest>. <$ npPron> made me <# emotions_happy> unlike no one else. <= cName <$ npName>><= cPron <$ npPron>><# comment_like>
 }
 
 #EVENT_BECOME_RELIGIOUS
@@ -53,7 +53,7 @@ I was an orphan child and had to manage on my own. <# kidStuff><# kidStuff>
 #EVENT_GET_MARRIED
 {
 <$ setSpouseName><# yearsLater> I married. 
-<$ setSpouseName><# yearsLater> I got married to <$ spouse>. 
+<$ setSpouseName><# yearsLater> I got married to <$ spouse>. <= cName <$ spouse>><= cPron <$ spousePron>><# comment_like>
 <$ setSpouseName><# yearsLater> I married <$ spouse>. 
 <$ setSpouseName><# yearsLater> <$ spouse>, my <? gender male wife><? gender female husband>, and I married. 
 }
@@ -64,11 +64,26 @@ I was an orphan child and had to manage on my own. <# kidStuff><# kidStuff>
 <# once> I <# sailors_crime>. <# itsTrue>
 }
 
+#EVENT_BECOME_MOTHER_FIRST_TIME
+{
+<# yearsLater> I got a <# adjectives_incredible> little baby. 
+<$ newPerson><= newKid <$ npName>><# suddenly> my <# adjectives_lovely> <$ newKid> was born! 
+<$ newPerson><= newKid <$ npName>><# yearsLater> I became a mother for the first time. It was a <? npPron she girl><? npPron he boy> called <$ newKid>.
+<$ newPerson><= newKid <$ npName>><# yearsLater> I gave birth to my eldest <? npPron she girl><? npPron he boy> <$ newKid>. 
+<$ newPerson><= newKid <$ npName>><# yearsLater> my eldest <? npPron she girl><? npPron he boy> <$ newKid> were born.
+<# yearsLater> I became pregnant and had twins named <# random_name> and  <# random_name>. 
+}
+
 #EVENT_BECOME_MOTHER
 {
-<# yearsLater> and I got a <# adjectives_incredible> little baby. 
-<# suddenly> my <# adjectives_lovely> <# random_name> was born! 
-<# yearsLater> I became a mother. 
+<# yearsLater> I got another <# adjectives_lovely> child named <# random_name>. 
+<# yearsLater> my <# adjectives_lovely> <# random_name> was born! 
+<# yearsLater> I became a mother again. It was a boy and we called him <# male_name>. 
+<# yearsLater> I got another daughter named <# female_name>. 
+<# yearsLater> I had another child named <# random_name>. 
+<# yearsLater> my son <# male_name> were born. 
+<# yearsLater> my daughter <# female_name> were born. 
+<# yearsLater> my <# adjectives_cursed> <# random_name> was born. I <# verbs_hate> that kid. 
 }
 
 #EVENT_BECOME_FATHER
@@ -76,6 +91,8 @@ I was an orphan child and had to manage on my own. <# kidStuff><# kidStuff>
 <# yearsLater> and I got a <# adjectives_incredible> little kid named <# random_name>. 
 <# suddenly> my <# adjectives_lovely> <# random_name> was born!
 <# yearsLater> I became a father. 
+<# yearsLater> my son <# male_name> were born.
+<# yearsLater> my daughter <# female_name> were born.
 }
 
 #EVENT_HAVE_AN_AFFAIR
@@ -102,6 +119,7 @@ Me and my <? gender male wife><? gender female husband> never got along. We foug
 <# yearsLater> I realized how <# adjectives_horrible> my <? gender male wife><? gender female husband> was. 
 <# yearsLater> I saw what a <# adjectives_horrible>, <# adjectives_horrible> person my <? gender male wife><? gender female husband> was. 
 <# yearsLater> I become very <# emotions_sad> when I understood that my <? gender male wife><? gender female husband> did <# verbs_hate> me. 
+But efter living with <$ spouse> for a few years <$ spousePron> drove me mad! 
 }
 
 #EVENT_GET_FEMALE_WORK
@@ -129,8 +147,8 @@ I managed to solve the mystery of <# mysteryName> when I was <$ currentAge>. <# 
 
 #EVENT_FRIEND_DIES
 {
-<# yearsLater> my <# adjectives_dear> <# nouns_friend> <# random_name> <# verbs_died>. 
-<# suddenly> <# random_name>, my <# adjectives_dear> <# adjectives_old> <# nouns_friend>, <# verbs_died>. 
+<$ newPerson><# yearsLater> my <# adjectives_dear> <# nouns_friend> <$ npName> <# verbs_died>. <= cName <$ npName>><= cPron <$ npPron>><# comment_like>
+<$ newPerson><# suddenly> <$ npName>, my <# adjectives_dear> <# adjectives_old> <# nouns_friend>, <# verbs_died>. <= cName <$ npName>><= cPron <$ npPron>><# comment_like><# comment_like>
 }
 
 #EVENT_GET_KICKED_FROM_WORK

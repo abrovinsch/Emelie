@@ -1,0 +1,16 @@
+#comment_like
+{
+§0[x 9]
+<? cPron he He><? cPron she She> was very <# adjectives_positiveTraits>. 
+<$ cName> was so <# adjectives_positiveTraits>. 
+<$ cPron> was <# adjectives_positiveTraits> anf <# adjectives_positiveTraits>. 
+I liked that <$ cPron> was so <# adjectives_positiveTraits>. 
+The thing I liked best about <$ cName> was how <# adjectives_positiveTraits> <$ cPron> was. 
+<$ cName> was as <# adjectives_positiveTraits> as <$ cPron> was <# adjectives_positiveTraits>. 
+I liked how <# adjectives_positiveTraits> <$ cPron> was.
+<? cPron he He><? cPron she She> was very <# adjectives_positiveTraits> and <# adjectives_positiveTraits>. 
+}
+
+#comment_neutral
+{
+}

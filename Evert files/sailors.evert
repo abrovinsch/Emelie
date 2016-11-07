@@ -4,6 +4,12 @@
 <# male_name>
 }
 
+#random_full_name
+{
+<# female_name> <# surName>
+<# male_name> <# surName>
+}
+
 #female_name
 {
 <# names_englishFemaleName>
@@ -75,7 +81,11 @@ I assure you!
 <# _18thcentury_famousPoliticalFigures>
 <# _18thcentury_famousArtists>
 <# _18thcentury_famousScientistExplorers>
-the <# _18thcentury_maleMiddleClassWork>
+<# _18thcentury_maleMiddleClassWork>
+<# nouns_abstract> mystery
+<# adjectives_shippy> <# nouns_abstract>
+the riddle of the prince of <# geography_country>
+
 }
 
 #itWasAdjective
@@ -119,7 +129,10 @@ the <# calendar_dayOfMonth> of <# calendar_month> <$ currentYear>
 
 $setSpouseName
 {
-<? gender male <= spouse <# female_name>> <= spouse <# male_name>>>
+<?= gender male spouse <# female_name>>
+<?= gender male spousePron she>
+<?= gender female spouse <# male_name>>
+<?= gender female spousePron he>
 }
 
 #sailors_crime
@@ -164,18 +177,20 @@ I was always fishing in the local lake.
 I was bullied by the <# adjectives_horrible> children. 
 My big interest was drawing with charcoal. 
 I used to build things in my uncle <# male_name>'s workshop. 
-I often played with my friend <# random_name>.
-I used to row my boat to the market.
-<# once> me and my friends broke in to the local brewery and stole a barrel of beer.
+I often played with my friend <# random_name>. 
+I used to row my boat to the market. 
+<# once> me and my friends broke in to the local brewery and stole a barrel of beer. 
 <# once> me and my friends built a catapult for aunt <# female_name>'s <# nouns_pet>. 
-I prayed a lot when I was a child.
-I had to work a lot of course, it was <# adjectives_difficult>.
-I thought a lot about the mystery of <# mysteryName>.
+I prayed a lot when I was a child. 
+I had to work a lot of course, it was <# adjectives_difficult>. 
+I thought a lot about the mystery of <# mysteryName>. 
 I used to visit the <# _18thcentury_publicPlaces> and look for the <# _18thcentury_maleMiddleClassWork>s and <# _18thcentury_maleMiddleClassWork>s. 
 I loved to read, especially §1<# _18thcentury_famousBooks>§0. 
 Every <# calendar_weekDay> I went to the <# _18thcentury_publicPlaces>. 
 I often borrowed my uncle's boat and sailed it far. 
 I was forced to polish the shoes of rich gentlemen to make some money. 
+My mother <# random_person_fact>. 
+My dad <# random_person_fact>. 
 }
 
 #shipName
@@ -294,7 +309,10 @@ I drank lots of water
 I ate lots of brown bread
 }
 
-
-
+$newPerson
+{
+<= npName <# male_name>><= npPron he>
+<= npName <# female_name>><= npPron she>
+}
 
 
