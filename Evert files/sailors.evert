@@ -28,39 +28,39 @@
 #yearsLater
 {
 <# newLine>But as the years passed 
-Years later, 
+<# newLine>Years later, 
 <# newLine>After a couple of years, 
 <# newLine>One thing happened when I was <$ currentAge>: 
 <# newLine>Several years after that 
 <# newLine>Much later 
 <# newLine>It was the year <$ currentYear> when 
 <# newLine>It was in <# calendar_month> <$ currentYear> that 
-<# newLine>When I was <$ currentAge> [x 3]
+<# newLine>When I was <$ currentAge>∫[x 3]
 <# newLine>I was <$ currentAge> when 
-<# newLine>It was the year i turned <$ currentAge> that 
+<# newLine>It was the year I turned <$ currentAge> that 
 <# newLine>A long time later 
 }
 
 #suddenly
 {
-Suddenly, on <# certainDay>, 
-But on <# certainDay> the most <# adjectives_incredible> thing happened - 
-It was then it occurred: 
-That was a special day indeed, 
-Then it happened: 
-In <$ currentYear> something <# adjectives_incredible> happened: 
-You will not believe what happened to me on <# certainDay>: 
-I was <# adjectives_completely> unprepared for what happened later: 
-I got older and one day 
-Months and years passed but suddenly 
-Nothing much happened for a long time. But one day in the <# calendar_season> of <$ currentYear> 
+<# newLine>Suddenly, on <# certainDay>, 
+<# newLine>But on <# certainDay> the most <# adjectives_incredible> thing happened - 
+<# newLine>It was then it occurred: 
+<# newLine>It was a special day indeed, the <# calendar_dayOfMonth> <# calendar_month> because 
+<# newLine>Then it happened: 
+<# newLine>In <$ currentYear> something <# adjectives_incredible> happened: 
+<# newLine>You will not believe what happened to me on <# certainDay>: 
+I<# newLine> was <# adjectives_completely> unprepared for what happened later: 
+<# newLine>I got older and one day 
+<# newLine>Months and years passed but suddenly 
+<# newLine>Nothing much happened for a long time. But one day in the <# calendar_season> of <$ currentYear> 
 }
 
 #once
 {
-I remember once
-A <# adjectives_incredible> thing happened when I was <$ currentAge>
-Once
+<# newLine>I remember once
+<# newLine>A <# adjectives_incredible> thing happened when I was <$ currentAge> -
+<# newLine>Once
 }
 
 #itsTrue
@@ -78,22 +78,23 @@ I assure you!
 
 #mysteryName
 {
-<# _18thcentury_famousPoliticalFigures>
-<# _18thcentury_famousArtists>
-<# _18thcentury_famousScientistExplorers>
-<# _18thcentury_maleMiddleClassWork>
+dilemma of <# _18thcentury_famousPoliticalFigures>
+question of <# _18thcentury_famousArtists>
+problem <# _18thcentury_famousScientistExplorers>
+mystery of the <# _18thcentury_maleMiddleClassWork>
 <# nouns_abstract> mystery
-<# adjectives_shippy> <# nouns_abstract>
+<# adjectives_shippy> <# nouns_abstract> mystery
 the riddle of the prince of <# geography_country>
+<# geography_country> riddle.f
 
 }
 
 #itWasAdjective
 {
-It was <%  30 quite> <# adjectives_difficult>. 
-It was <%  30 rather  <# adjectives_easy>.
-It wasn't <%  30 very> <# adjectives_easy>.
-It wasn't <%  30 particularly> <# adjectives_difficult>.
+It was <% 30 quite> <# adjectives_difficult>. 
+It was <% 30 rather>  <# adjectives_easy>.
+It wasn't <% 30 very> <# adjectives_easy>.
+It wasn't <% 30 particularly> <# adjectives_difficult>.
 }
 
 #firedReason
@@ -129,6 +130,7 @@ the <# calendar_dayOfMonth> of <# calendar_month> <$ currentYear>
 
 $setSpouseName
 {
+<= married true>
 <?= gender male spouse <# female_name>>
 <?= gender male spousePron she>
 <?= gender female spouse <# male_name>>
@@ -145,16 +147,21 @@ pickpocketed a <# _18thcentury_maleMiddleClassWork>.
 nicked a silver cross. 
 bribed a public official. 
 broke into a house in <# geography_englishVillage>. 
-conspired against the government.
+conspired against the government. 
 disturbed the peace when I celebrated my <$ currentAge> birthday. 
 plotted to institue a republic. 
-drunk ale and rode my horse.
-forged the handwriting of <# _18thcentury_famousArtists>.
-kidnapped a <# nouns_pet>.
+drunk ale and rode my horse. 
+forged the handwriting of <# _18thcentury_famousArtists>. 
+kidnapped a <# nouns_pet>. 
 put my enemy <# random_name>'s house on fire. 
-attacked my <# nouns_friend> <# random_name>.
+attacked my <# nouns_friend> <# random_name>. 
 grew illegal plants. 
-smuggled <# contraband> from <# geography_country.
+smuggled <# contraband> from <# geography_country>. 
+breeded <# nouns_animal>s without an offical license. 
+fabricated the art of <# _18thcentury_famousArtists>. 
+spied for <# geography_country>. 
+sold illegal books. 
+impersonated the local <# _18thcentury_maleMiddleClassWork>. 
 }
 
 #contraband
@@ -185,7 +192,7 @@ I prayed a lot when I was a child.
 I had to work a lot of course, it was <# adjectives_difficult>. 
 I thought a lot about the mystery of <# mysteryName>. 
 I used to visit the <# _18thcentury_publicPlaces> and look for the <# _18thcentury_maleMiddleClassWork>s and <# _18thcentury_maleMiddleClassWork>s. 
-I loved to read, especially §1<# _18thcentury_famousBooks>§0. 
+I loved to read, especially §1<# _18thcentury_famousBooks>§1. 
 Every <# calendar_weekDay> I went to the <# _18thcentury_publicPlaces>. 
 I often borrowed my uncle's boat and sailed it far. 
 I was forced to polish the shoes of rich gentlemen to make some money. 
@@ -235,33 +242,55 @@ Queen
 
 #goToSeaIntro
 {
-But I felt it was time for met to go to sea. I left on a ship called §1<$ currentShip>§1. 
-I wanted to go sailing. I found a <$ shipType> by the name §1<$ currentShip>§1.
-I took to the sea on §1<$ currentShip>§1, a <# adjectives_looks> <$ shipType>.
+But I felt it was time for met to go to sea <? hasSailed true again>. I left on <# shipDescribe>. 
+I wanted to go sailing <? hasSailed true once∫more>. I found <# shipDescribe>. 
+I took to the sea <? hasSailed true again> on <# shipDescribe>. 
+But I longed for the seas to much. I enrolled on <# shipDescribe>. 
+I enrolled on <# shipDescribe>. 
+<? hasSailed true "§1I could always return to the seas§1"><! hasSailed true "§1I wonder where this will take me§1">, I thought as I boarded <# shipDescribe>. 
+<? hasSailed true "But I needed to smell the ocean! I got a place on"><! hasSailed true "I was afraid when I decided to go as a sailor on "> <# shipDescribe>. 
+<? hasSailed true "I wanted to try my luck on the salt seas!"><! hasSailed true "I was forced to the vengeful waves again."> It was <# shipDescribe>. 
+}
+
+#shipDescribe
+{
+the <$ shipType> §1<$ currentShip>§1
+§1<$ currentShip>§1, a <# adjectives_looks> <$ shipType>
+a <$ shipType> by the name §1<$ currentShip>§1
+the <# adjectives_old> <$ shipType> §1<$ currentShip>§1
+a ship called §1<$ currentShip>§1
+the §1<$ currentShip>§1, a <$ shipType> from <# geography_country>
+the <$ shipType> §1<$ currentShip>§1.
+a <$ shipType> called §1<$ currentShip>§1
 }
 
 #goToSeaInfo
 {
-It was <# adjectives_lovely> ship, indeed.
+It was a <# adjectives_lovely> ship<% 30 ", indeed">. 
 The ship itself was built from <# nouns_woods> logs. 
-It was <# adjectives_horrible> looking ship.
-The crew was <# adjectives_kinda>  <# adjectives_old>.
-The captain, Mr. <$ captainsName> was a <? KINDNESS 5 <# adjectives_nice>,> <# adjectives_incredible> man. He looked <# adjectives_looks>.
+It was a <# adjectives_horrible> looking ship. 
+The crew was <# adjectives_kinda> <# adjectives_old>. 
+The captain was a Mr. <$ captainsName>. <? KINDNESS 5 <# comment_like>><! KINDNESS 5 <# comment_neutral>> He looked <# adjectives_looks>. 
+<= cName the∫Captain><= cPron he><# comment_neutral>
+We were going to sail to the <# geography_sea>. 
 }
 
 #goToSeaTravelInfo
 {
+We had to cross the <# geography_sea>. 
 We were bound for <# geography_country> and <# geography_country>. 
 We were sailing on the coast of <# geography_country>. 
-The ocean passages were <# adjectives_long>.
+The ocean passages were <# adjectives_long>. 
+The weather was <# adjectives_kinda> <# weather_descriptor> on the <# geography_sea>. 
 We were smuggling <# contraband> from  <# geography_country>. 
-They said our ship had once brought <# _18thcentury_famousPoliticalFigures> home.
+They said our ship had once brought <# _18thcentury_famousPoliticalFigures> home. 
 We were following the tradewinds <# geography_cardinaldDirection>-ward. 
 The seas were high and the weather was <# weather_descriptor>. 
-We passed many <# adjectives_old> ports.
-We had to sail with reefed sails for much of the journey.
-The crew grew tired by the <# adjectives_long> legs.
-I had many <# nouns_friend>s among the crew. One of them, <# random_name>, <# random_person_fact>.
+We spent most of the <# calendar_season> in <# geography_sea>. 
+We passed many <# adjectives_old> ports. 
+We had to sail with reefed sails for much of the journey. 
+The crew grew tired by the <# adjectives_long> legs. 
+<$ newPerson>I had many <# nouns_friend>s among the crew. One of them, <$ npName>, <# random_person_fact><= cName <$ npName>><= cPron <$ npPron><# comment_like>
 }
 
 #random_person_fact
@@ -286,7 +315,7 @@ But fortunately I got better after some months.
 <# diseaseCure>. And soon my health returned.
 <# diseaseCure>. Unfortunately it only made me feel worse. But then I tried something else: <# diseaseCure>. That worked and now I am as healthy as ever!
 My doctor, who <# random_person_fact>, gave me advice. <# diseaseCure>. It didn't really work out. I took me nine months to feel well again.
-<# diseaseCure> and it made me feel worse. I almost died. I thank the lord i am still alive. 
+<# diseaseCure> and it made me feel worse. I almost died. I thank the lord I am still alive. 
 <# diseaseCure> but it didn't help. Nowadays I feel better. 
 <# diseaseCure> and I almost <# verbs_died>. I am fortunately a bit better now.
 <# diseaseCure>. Never try that.
@@ -314,5 +343,32 @@ $newPerson
 <= npName <# male_name>><= npPron he>
 <= npName <# female_name>><= npPron she>
 }
+
+#madeMeFeel
+{
+§0 [x 10]
+It made me feel <# adjectives_kinda> <# adjectives_neutralTraits>. 
+It appeared <# adjectives_kinda> <# adjectives_neutralTraits> to me. 
+It made me feel <# adjectives_kinda> <# adjectives_positiveTraits>. 
+It made me feel <# adjectives_kinda> <# adjectives_negativeTraits>. 
+It made me <# emotions_random>. 
+}
+
+#crimeResults
+{
+They put me in prison but I ran away! <# madeMeFeel>
+They never caught me however! 
+I was lucky they never supspected me. 
+But they arrested my <# nouns_friend> <# random_name> instead of me. <# madeMeFeel>
+I had to spend <# numbers_1-20> months in prison. 
+I had to go into exile in <# geography_country>. I came back in <# calendar_month> of <$ currentYear>. 
+But no one ever noticed. 
+I had to change my name to <? gender male <# male_name>><? gender female <# female_name>> <# surName> for a while.
+<$ newPerson>Fortunately, my <# nouns_friend> <$ npName> <# surName> who is a rich <# _18thcentury_maleMiddleClassWork>, helped me out and bribed the sheriff. <= cName <$ npName>><= cPron <$ npPron>><# comment_like>
+But I had left no traces so they couldn't find me. 
+But the <# adjectives_stupid> police had no chance catching me. 
+}
+
+
 
 

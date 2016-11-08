@@ -16,6 +16,69 @@ stupendous
 terrific
 }
 
+#adjectives_stupid
+{
+airheaded
+birdbrained
+bonehead
+boneheaded
+brain-dead
+brainless
+bubbleheaded
+chuckleheaded
+dense
+dim
+dim-witted
+doltish
+dorky
+dull
+dumb
+dunderheaded
+empty-headed
+fatuous
+gormless
+half-witted
+knuckleheaded
+lamebrain
+lunkheaded
+mindless
+oafish
+obtuse
+opaque
+pinheaded
+senseless
+simple
+slow
+slow-witted
+soft
+softheaded
+thick
+thickheaded
+thick-witted
+unintelligent
+unsmart
+vacuous
+weak-minded
+witless
+}
+
+#adjectives_funny
+{
+funny [x 10]
+chucklesome
+comedic
+comical
+droll
+farcical
+hilarious
+humoristic
+humorous
+hysterical
+laughable
+ludicrous
+ridiculous
+}
+
 #adjectives_horrible
 {
 horrible
@@ -128,7 +191,6 @@ pretty
 quite
 rather
 relatively
-something
 somewhat
 sort of
 }
@@ -392,7 +454,7 @@ loyal
 lyrical
 magnanimous
 many-sided
-masculine  (manly)
+masculine
 maticulous
 mature
 methodical
@@ -624,7 +686,7 @@ unsentimental
 whimsical
 }
 
-#adjectives_negative
+#adjectives_negativeTraits
 {
 abrasive
 abrupt
@@ -806,4 +868,9 @@ protracted
 tedious
 wearisome
 monotonous
+}
+
+#adjectives_cruel
+{
+cruel
 }

@@ -38,6 +38,12 @@ servant girl
 nanny
 cook
 rowing lady
+brewer
+baker
+seamstress
+shopkeeper
+landlady
+midwife
 }
 
 #_18thcentury_maleMiddleClassWork
@@ -57,7 +63,7 @@ bargeman
 boatswain on a large merchantman
 merchant
 poet
-philosopher of sorts
+philosopher
 clerk
 }
 
@@ -85,11 +91,12 @@ Pierre-Ambroise Choderlos de Laclos
 {
 King George III
 Rousseau
+Émilie Du Châtelet
 Benjamin Franklin
-Washington
+George Washington
 Marie Antoinette
 Gustav III of Sweden
-Maria Theresa
+Maria Theresa of Austria
 Joseph II of Austria
 Louis XVI of France
 Thomas Jefferson
@@ -97,6 +104,7 @@ Denis Diderot
 Alexander Hamilton
 Wilhelm von Humboldt
 Thomas Paine
+Catherine the great of Russia
 Adam Smith
 Mary Wollstonecraft
 Frederick II of Prussia
@@ -130,4 +138,7 @@ church [x 3]
 market
 fort
 main square
+cathedral
+high street
+park
 }

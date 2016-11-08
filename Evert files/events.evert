@@ -1,6 +1,6 @@
 #CHARACTER_BORN
 {
-<# startTitle><$ character_name><# endTitle>‹p›I was born on a <# weather_descriptor> day in <# calendar_month><% 20 " in "<$ currentYear>>. 
+<# startTitle><$ character_name><# endTitle>‹p›I was born on a <# weather_descriptor> day in <# calendar_month><% 20 ∫in∫<$ currentYear>>. 
 <# startTitle><$ character_name><# endTitle>‹p›I was born in this very town, in the good year of <$ currentYear>. 
 <# startTitle><$ character_name><# endTitle>‹p›I come from <# geography_englishVillage>. 
 <# startTitle><$ character_name><# endTitle>‹p›I was born in <# weather_descriptor> <# geography_englishVillage> in <$ currentYear>. 
@@ -23,13 +23,13 @@ I started going more and more to Church and studied the bible closely.
 
 #EVENT_GROW_UP
 {
-<# yearsLater> I grew older and older. <# kidStuff>. 
-My childhood was <# adjectives_kinda> <# emotions_random>. <# kidStuff>. 
-<# kidStuff>. 
+<# yearsLater> I grew older and older. <# kidStuff>
+My childhood was <# adjectives_kinda> <# emotions_random>. <# kidStuff>
+<# kidStuff>
 When I grew up my dad taught me all about his trade as a <# _18thcentury_maleLowerClassWork>. <# kidStuff>
 My father was a <# _18thcentury_maleLowerClassWork> and my mother a <# _18thcentury_femaleLowerClassWork>. 
 I was an orphan child and had to manage on my own. <# kidStuff><# kidStuff>
-
+<# kidStuff><# kidStuff>
 }
 
 #EVENT_FIND_FROG
@@ -45,23 +45,24 @@ I was an orphan child and had to manage on my own. <# kidStuff><# kidStuff>
 
 #EVENT_BECOME_ADULT_WOMAN
 {
-<# yearsLater> I wasn't a child anymore. 
-<# yearsLater> I became a woman. 
-<# yearsLater> I turned into an adult. 
+<# yearsLater> I wasn't a child anymore. <# madeMeFeel>
+<# yearsLater> I became a woman. <# madeMeFeel>
+<# yearsLater> I turned into an adult. <# madeMeFeel>
 }
 
 #EVENT_GET_MARRIED
 {
 <$ setSpouseName><# yearsLater> I married. 
 <$ setSpouseName><# yearsLater> I got married to <$ spouse>. <= cName <$ spouse>><= cPron <$ spousePron>><# comment_like>
-<$ setSpouseName><# yearsLater> I married <$ spouse>. 
+<$ setSpouseName><# yearsLater> I married <$ spouse>. <# madeMeFeel>
 <$ setSpouseName><# yearsLater> <$ spouse>, my <? gender male wife><? gender female husband>, and I married. 
 }
 
 #EVENT_COMMIT_CRIME
 {
-<# once> I did a <# adjectives_horrible> thing: i committed a crime: I <# sailors_crime>. 
-<# once> I <# sailors_crime>. <# itsTrue>
+<# once> I did a <# adjectives_horrible> thing: I <# sailors_crime><# crimeResults>
+<# once> I <# sailors_crime><# crimeResults> <# itsTrue>
+<# once> I something quite <# adjectives_kinda> <# adjectives_funny>. I <# sailors_crime><# crimeResults>
 }
 
 #EVENT_BECOME_MOTHER_FIRST_TIME
@@ -90,14 +91,14 @@ I was an orphan child and had to manage on my own. <# kidStuff><# kidStuff>
 {
 <# yearsLater> and I got a <# adjectives_incredible> little kid named <# random_name>. 
 <# suddenly> my <# adjectives_lovely> <# random_name> was born!
-<# yearsLater> I became a father. 
-<# yearsLater> my son <# male_name> were born.
-<# yearsLater> my daughter <# female_name> were born.
+<# yearsLater> I became a father<? married false ", the mother was a girl called "<# female_name>>. 
+<# yearsLater> my <? married false illegitimate∫>son <# male_name> were born. <# madeMeFeel>
+<# yearsLater> my <? married false illegitimate∫>daughter <# female_name> were born.
 }
 
 #EVENT_HAVE_AN_AFFAIR
 {
-<# yearsLater> I had an extramarital affair!
+<# yearsLater> I had an extramarital affair! <# madeMeFeel>
 }
 
 #EVENT_BUY_FARM
@@ -107,9 +108,9 @@ I was an orphan child and had to manage on my own. <# kidStuff><# kidStuff>
 
 #EVENT_GO_FIND_WORK
 {
-<# yearsLater> I realised i had to go and search for employment. It was <# adjectives_difficult>. 
-I had to find employment. 
-I went ahead and tried to get a job. 
+<# yearsLater> I realised I had to go and search for employment. <# itWasAdjective>
+<# newLine>I had to find employment. <# madeMeFeel>
+<# newLine>I went ahead and tried to get a job. <# madeMeFeel>
 }
 
 #EVENT_HATE_SPOUSE
@@ -124,7 +125,7 @@ But efter living with <$ spouse> for a few years <$ spousePron> drove me mad!
 
 #EVENT_GET_FEMALE_WORK
 {
-I started working as a <= currentJob <# _18thcentury_femaleLowerClassWork>> <$ currentJob>. 
+I started working as a <= currentJob <# _18thcentury_femaleLowerClassWork>> <$ currentJob>. <# madeMeFeel>
 }
 
 #EVENT_GET_MANUAL_WORK
@@ -140,14 +141,17 @@ I started working as a <= currentJob <# _18thcentury_femaleLowerClassWork>> <$ c
 
 #EVENT_SOLVE_MYSTERY
 {
-<# once>: I solved the <# adjectives_old> problem of <# mysteryName>. <# itsTrue>
-I kept on trying to solve the problem of <# mysteryName> and in <$ currentYear> I finally succeeded. 
-I managed to solve the mystery of <# mysteryName> when I was <$ currentAge>. <# itsTrue>
+<# once>: I solved the <# adjectives_old> <# mysteryName>. <# itsTrue><# madeMeFeel>
+I kept on trying to solve the <# mysteryName> and in <$ currentYear> I finally succeeded. <# itWasAdjective>
+I managed to solve the <# mysteryName> when I was <$ currentAge>. <# itWasAdjective><# itsTrue>
+In <$ currentYear> I spent <# numbers_1-20> months looking into the <# mysteryName>. It wasn't until <# calendar_month> I solved it. <# madeMeFeel>
+<$ newPerson><$ npName>, my <# nouns_friend>, and I solved the <# mysteryName> together. <= cName <$ npName>><= cPron <$ npPron>><# commentLike>
+In <$ currentYear> I would have solved the <# mysteryName> if it wasn't for my <# adjectives_stupid>, <# adjectives_stupid> <$ spouse>. 
 }
 
 #EVENT_FRIEND_DIES
 {
-<$ newPerson><# yearsLater> my <# adjectives_dear> <# nouns_friend> <$ npName> <# verbs_died>. <= cName <$ npName>><= cPron <$ npPron>><# comment_like>
+<$ newPerson><# yearsLater> my <# adjectives_dear> <# nouns_friend> <$ npName> <# verbs_died>. <= cName <$ npName>><= cPron <$ npPron>><# comment_like><# madeMeFeel>
 <$ newPerson><# suddenly> <$ npName>, my <# adjectives_dear> <# adjectives_old> <# nouns_friend>, <# verbs_died>. <= cName <$ npName>><= cPron <$ npPron>><# comment_like><# comment_like>
 }
 
@@ -161,17 +165,24 @@ I managed to solve the mystery of <# mysteryName> when I was <$ currentAge>. <# 
 
 #EVENT_BECOME_HAUNTED
 {
-<# yearsLater> was when I started noticing the <# adjectives_horrible> demons that had started haunting me. 
+<# yearsLater> was when I started noticing the <# adjectives_horrible> demons that had started haunting me. <# madeMeFeel>
 <# suddenly> ghosts started following me. <# itsTrue>. It was <# adjectives_horrible>!
 But since I was so full of <# verbs_hate> for my siblings, the Lord punished me. I became haunted! <# itsTrue>
-In the year <$ currentYear> I started seeing ghosts. 
+In the year <$ currentYear> I started seeing ghosts. <# madeMeFeel>
 <# yearsLater> I discovered my talent: I could see those who had <# verbs_died>. 
-Have I told you about my relationship with the dead? It started in <$ currentYear>. Every night they came to me, whispering who would die. 
+Have I told you about my relationship with the dead? It started in <$ currentYear>. Every night they came to me, whispering who would die. <# madeMeFeel>
 }
 
 #EVENT_GO_SAILING
 {
-<= currentShip <# shipName>><= shipType <# shipTypes>><= captainsName <# male_name><# surName>><# newLine><# goToSeaIntro><# goToSeaInfo><# goToSeaInfo><# goToSeaInfo><# goToSeaTravelInfo>
+<= currentShip <# shipName>><= shipType <# shipTypes>><= captainsName <# male_name>∫<# surName>><# newLine><# goToSeaIntro><# goToSeaInfo><# goToSeaInfo><# goToSeaInfo><# goToSeaTravelInfo><# goToSeaTravelInfo><# goToSeaTravelInfo><# goToSeaTravelInfo><= hasSailed true>
+}
+
+#EVENT_LEAVE_SHIP_FIND_WORK
+{
+<# newLine>But I had gotten enough of the seas so I went ashore to find work. I didn't have very much luck. <# madeMeFeel>
+<# newLine>I was <# adjectives_kinda> fed up with sailing by <$ currentYear> so I tried to find a job on land. <# madeMeFeel>
+<# newLine> When I was <$ currentAge> I left the §1<$ currentShip>§1 to pursue a life on land. <# madeMeFeel>
 }
 
 #EVENT_BECOME_ILL

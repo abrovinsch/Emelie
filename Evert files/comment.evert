@@ -13,4 +13,12 @@ I liked how <# adjectives_positiveTraits> <$ cPron> was.
 
 #comment_neutral
 {
+§0[x 9]
+<? cPron he He><? cPron she She> was very <# adjectives_neutralTraits>. 
+<$ cName> was so <# adjectives_neutralTraits>. 
+<$ cPron> was <# adjectives_neutralTraits> anf <# adjectives_neutralTraits>. 
+<$ cName> was <# adjectives_kinda <# adjectives_neutralTraits>. 
+The thing about <$ cName> was thar <$ cPron> was <# adjectives_neutralTraits>. 
+<$ cName> was as <# adjectives_neutralTraits> as <$ cPron> was <# adjectives_neutralTraits>. 
+<? cPron he He><? cPron she She> was very <# adjectives_neutralTraits> and <# adjectives_neutralTraits>. 
 }

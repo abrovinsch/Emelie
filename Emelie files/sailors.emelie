@@ -118,7 +118,7 @@
         "VIOLENT_STORM",
         "ATTACKED_BY_PIRATES",
         "MUTINY",
-        "GO_FIND_WORK"
+        "LEAVE_SHIP_FIND_WORK"
       ]
     },
     {
@@ -194,6 +194,13 @@
           "number": 0
         }
       ]
+    },
+    {
+      "name": "LEAVE_SHIP_FIND_WORK",
+      "probability": 30.0,
+      "destinationState": "SEARCHING_FOR_WORK",
+      "attributesAdded": [],
+      "requirements": []
     },
     {
       "name": "BECOME_HOUSEWIFE",
@@ -533,7 +540,7 @@
     },
     {
       "name": "SOLVE_MYSTERY",
-      "probability": 0.4,
+      "probability": 0.2,
       "destinationState": "",
       "attributesAdded": ["mystery_solver"],
       "requirements": [

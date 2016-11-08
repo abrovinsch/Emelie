@@ -6,6 +6,9 @@
 $setVariables
 {
 <= currentAge 20>
+<= spouse <# nouns_friend>>
+<= hasSailed false>
+<= married false>
 }
 
 #newLine
@@ -43,6 +46,7 @@ $setVariables
 [i nouns]
 [i geography]
 [i comment]
+[i numbers]
 [i weather]
 [i calendar]
 [i 18thcentury]
