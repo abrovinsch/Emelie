@@ -193,6 +193,7 @@ rather
 relatively
 somewhat
 sort of
+comparatively
 }
 
 #adjectives_mean
@@ -323,6 +324,11 @@ Tall
 Short
 Low
 High
+}
+
+#adjectives_cursed
+{
+cursed
 }
 
 #adjectives_positiveTraits

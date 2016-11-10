@@ -1,3 +1,10 @@
+#comment_random
+{
+<# comment_like>
+<# comment_neutral>
+<# comment_dislike>
+}
+
 #comment_like
 {
 §0[x 9]
@@ -9,6 +16,10 @@ The thing I liked best about <$ cName> was how <# adjectives_positiveTraits> <$ 
 <$ cName> was as <# adjectives_positiveTraits> as <$ cPron> was <# adjectives_positiveTraits>. 
 I liked how <# adjectives_positiveTraits> <$ cPron> was.
 <? cPron he He><? cPron she She> was very <# adjectives_positiveTraits> and <# adjectives_positiveTraits>. 
+<? cPron he His><? cPron she Her> habits and moral character were entirely unimpeachable. 
+I marvel now at the purity and elevated sentiment possessed by this <? cPron she woman><? cPron he man>. 
+<? cPron he He><? cPron she She> looked like a man who had never cringed and never had had a creditor.
+<? cPron he He><? cPron she She> appeared <# adjectives_positiveTraits> and <# adjectives_positiveTraits>! 
 }
 
 #comment_neutral
@@ -18,7 +29,29 @@ I liked how <# adjectives_positiveTraits> <$ cPron> was.
 <$ cName> was so <# adjectives_neutralTraits>. 
 <$ cPron> was <# adjectives_neutralTraits> anf <# adjectives_neutralTraits>. 
 <$ cName> was <# adjectives_kinda <# adjectives_neutralTraits>. 
-The thing about <$ cName> was thar <$ cPron> was <# adjectives_neutralTraits>. 
+The thing about <$ cName> was that <$ cPron> was <# adjectives_neutralTraits>. 
 <$ cName> was as <# adjectives_neutralTraits> as <$ cPron> was <# adjectives_neutralTraits>. 
 <? cPron he He><? cPron she She> was very <# adjectives_neutralTraits> and <# adjectives_neutralTraits>. 
+}
+
+#comment_dislike
+{
+<? cPron he He><? cPron she She> was by no means the sort of <? cPron he man><? cPron she woman> whose habits had been formed in drawing-rooms or among people of good breeding. 
+<? cPron he He><? cPron she She> looked to me like a tree walking about.
+Morally, <$ cPron> is like a lad of twenty. 
+}
+
+#comment_loveSomeone
+{
+§0 [x 5]
+<# comment_like>[x 4]
+We grew very close that <# calendar_season>. 
+It changed my world. I became so <# emotions_happy>. 
+Our relationship was <# adjectives_incredible>. 
+<? cPron he He><? cPron she She> made me <# emotions_happy> unlike no one else. 
+<? cPron he He><? cPron she She> was my world back then. 
+<? cPron he He><? cPron she She> showed me things about myself I will never forget. 
+<? cPron he He><? cPron she She> sweetened my heart. 
+<? cPron he He><? cPron she She> was unquestionably endowed with the magnetic gift of winning hearts. 
+<? cPron he He><? cPron she She> was all that my heart could desire. 
 }

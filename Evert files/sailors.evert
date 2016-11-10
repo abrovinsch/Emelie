@@ -50,7 +50,7 @@
 <# newLine>Then it happened: 
 <# newLine>In <$ currentYear> something <# adjectives_incredible> happened: 
 <# newLine>You will not believe what happened to me on <# certainDay>: 
-I<# newLine> was <# adjectives_completely> unprepared for what happened later: 
+<# newLine>I was <# adjectives_completely> unprepared for what happened later: 
 <# newLine>I got older and one day 
 <# newLine>Months and years passed but suddenly 
 <# newLine>Nothing much happened for a long time. But one day in the <# calendar_season> of <$ currentYear> 
@@ -74,6 +74,18 @@ You probably don't believe it but it's true!
 I am not lying! 
 You have my word of honor! 
 I assure you! 
+}
+
+#youSee
+{
+§0 [x 10]
+You see, [x 3]
+The fact of the matter was, 
+The thing was 
+Well, 
+However, 
+As you might know, 
+You might not know this but 
 }
 
 #mysteryName
@@ -196,8 +208,9 @@ I loved to read, especially §1<# _18thcentury_famousBooks>§1.
 Every <# calendar_weekDay> I went to the <# _18thcentury_publicPlaces>. 
 I often borrowed my uncle's boat and sailed it far. 
 I was forced to polish the shoes of rich gentlemen to make some money. 
-My mother <# random_person_fact>. 
-My dad <# random_person_fact>. 
+My mother <# randomPersonFact>. 
+My dad <# randomPersonFact>. 
+I studied the habits of animals just as you study your books. 
 }
 
 #shipName
@@ -243,7 +256,7 @@ Queen
 #goToSeaIntro
 {
 But I felt it was time for met to go to sea <? hasSailed true again>. I left on <# shipDescribe>. 
-I wanted to go sailing <? hasSailed true once∫more>. I found <# shipDescribe>. 
+<#youSee>I wanted to go sailing <? hasSailed true once∫more>. I found <# shipDescribe>. 
 I took to the sea <? hasSailed true again> on <# shipDescribe>. 
 But I longed for the seas to much. I enrolled on <# shipDescribe>. 
 I enrolled on <# shipDescribe>. 
@@ -290,21 +303,33 @@ We spent most of the <# calendar_season> in <# geography_sea>.
 We passed many <# adjectives_old> ports. 
 We had to sail with reefed sails for much of the journey. 
 The crew grew tired by the <# adjectives_long> legs. 
-<$ newPerson>I had many <# nouns_friend>s among the crew. One of them, <$ npName>, <# random_person_fact><= cName <$ npName>><= cPron <$ npPron><# comment_like>
+<$ newPerson><#youSee>I had many <# nouns_friend>s among the crew. One of them, <$ npName>, <# randomPersonFact><= cName <$ npName>><= cPron <$ npPron><# comment_like>
 }
 
-#random_person_fact
+#randomPersonFact
 {
 was a secret lover to <# _18thcentury_famousPoliticalFigures>. 
 had smuggled <# contraband> to the prince of <# geography_country>. 
 could lift 100 pounds. 
-had eigtheen children.
+had <# numbers_1-20> children.
 could speak <# geography_language>, <# geography_language> and <# geography_language>. 
 was a former pirate. 
 had fought in the <# history_war>. 
 was a childhood friend of <# _18thcentury_famousFigures>. 
+had ended up as a sailor after leaving <# geography_majorCity> following <# anUnfortunateFaith>. 
+had once been a catholic. 
+had once seen and spoken to <# _18thcentury_famousArtists>. 
+in <# geography_majorCity> had married a woman from <# geography_country> who soon after the wedding disappeared...
+used to relate an amusing adventure once had in a horse carriage with a <# _18thcentury_aristocraticTitle> and a <# _18thcentury_maleMiddleClassWork>. 
 }
 
+#anUnfortunateFaith
+{
+an unfortunate love affair with with some <# adjectives_negativeTraits> <# _18thcentury_aristocraticTitle>
+a <# adjective_horrible> episode with a wild <# nouns_animal>
+a <# adjective_horrible> terrible week looking after the child of some <# adjectives_stupid> <# _18thcentury_aristocraticTitle>
+many <# adjectives_difficult> months on 
+}
 
 #diseaseResult
 {
@@ -314,7 +339,7 @@ But fortunately I got better after some months.
 <# diseaseCure>, fortunately it was effective.
 <# diseaseCure>. And soon my health returned.
 <# diseaseCure>. Unfortunately it only made me feel worse. But then I tried something else: <# diseaseCure>. That worked and now I am as healthy as ever!
-My doctor, who <# random_person_fact>, gave me advice. <# diseaseCure>. It didn't really work out. I took me nine months to feel well again.
+My doctor, who <# randomPersonFact>, gave me advice. <# diseaseCure>. It didn't really work out. I took me nine months to feel well again.
 <# diseaseCure> and it made me feel worse. I almost died. I thank the lord I am still alive. 
 <# diseaseCure> but it didn't help. Nowadays I feel better. 
 <# diseaseCure> and I almost <# verbs_died>. I am fortunately a bit better now.
@@ -325,7 +350,7 @@ My doctor, who <# random_person_fact>, gave me advice. <# diseaseCure>. It didn'
 {
 I cured myself using my grandmothers healthy stew
 I treated my body with holy water
-I ate medicine and lay in bed for the whole <$ calendar_seasons>
+I ate medicine and lay in bed for the whole <$ calendar_season>
 I followed a diet of exclusively <# food_fruit>s
 I drank only <# food_drinks>
 I slept 14 hours a day

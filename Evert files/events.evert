@@ -8,9 +8,10 @@
 
 #EVENT_FALL_IN_LOVE
 {
-<$ newPerson><= loveInterest <$ npName>><# yearsLater> I fell in love with <$ loveInterest>. <= cName <$ npName>><= cPron <$ npPron>><# comment_like>
-<$ newPerson><= loveInterest <$ npName>><# yearsLater> I met <$ loveInterest>. It changed my world. I became so <# emotions_happy>. Our relationship was <# adjectives_incredible>. <= cName <$ npName>><= cPron <$ npPron>><# comment_like>
-<$ newPerson><= loveInterest <$ npName>>I will never forget the year <$ currentYear>, for that was when I met the <# adjectives_lovely> <$ loveInterest>. <$ npPron> made me <# emotions_happy> unlike no one else. <= cName <$ npName>><= cPron <$ npPron>><# comment_like>
+<$ newPerson><= loveInterest <$ npName>><# yearsLater> I fell in love with <$ loveInterest>. <= cName <$ npName>><= cPron <$ npPron>><# comment_loveSomeone><# comment_loveSomeone>
+<$ newPerson><= loveInterest <$ npName>><# yearsLater> I met <$ loveInterest>. <= cName <$ npName>><= cPron <$ npPron>><# comment_loveSomeone>
+<$ newPerson><= loveInterest <$ npName>>I will never forget the year <$ currentYear>, for that was when I met the <# adjectives_lovely> <$ loveInterest>.<= cName <$ npName>><= cPron <$ npPron>><# comment_loveSomeone><# comment_loveSomeone>
+<$ newPerson><# youSee><nName> was a handsome <? npPron she girl><? npPron he boy>, and an affectionate <# nouns_friend>. <= cName <$ npName>><= cPron <$ npPron>><# comment_loveSomeone><# comment_loveSomeone>
 }
 
 #EVENT_BECOME_RELIGIOUS
@@ -18,11 +19,13 @@
 <# yearsLater> I found god. 
 <# suddenly> the most important thing happened - I discovered Jesus. <# itsTrue>
 <# yearsLater> I found guidance in the Lord. 
-I started going more and more to Church and studied the bible closely. 
+<# youSee>I started going more and more to Church and studied the bible closely. 
 }
 
 #EVENT_GROW_UP
 {
+I was so unfortunate as to be the youngest of five children of our mother, who <# randomPersonFact>
+after I was born, were left motherless.
 <# yearsLater> I grew older and older. <# kidStuff>
 My childhood was <# adjectives_kinda> <# emotions_random>. <# kidStuff>
 <# kidStuff>
@@ -30,6 +33,8 @@ When I grew up my dad taught me all about his trade as a <# _18thcentury_maleLow
 My father was a <# _18thcentury_maleLowerClassWork> and my mother a <# _18thcentury_femaleLowerClassWork>. 
 I was an orphan child and had to manage on my own. <# kidStuff><# kidStuff>
 <# kidStuff><# kidStuff>
+<# kidStuff>When I grew out of boyhood into youth, I was <# adjectives_looks> to all those who met me. 
+I was adopted into the family of my father’s younger brother, when my father was betrayed and imprisoned. 
 }
 
 #EVENT_FIND_FROG
@@ -145,7 +150,7 @@ I started working as a <= currentJob <# _18thcentury_femaleLowerClassWork>> <$ c
 I kept on trying to solve the <# mysteryName> and in <$ currentYear> I finally succeeded. <# itWasAdjective>
 I managed to solve the <# mysteryName> when I was <$ currentAge>. <# itWasAdjective><# itsTrue>
 In <$ currentYear> I spent <# numbers_1-20> months looking into the <# mysteryName>. It wasn't until <# calendar_month> I solved it. <# madeMeFeel>
-<$ newPerson><$ npName>, my <# nouns_friend>, and I solved the <# mysteryName> together. <= cName <$ npName>><= cPron <$ npPron>><# commentLike>
+<$ newPerson><$ npName>, my <# nouns_friend>, and I solved the <# mysteryName> together. <= cName <$ npName>><= cPron <$ npPron>><# comment_like>
 In <$ currentYear> I would have solved the <# mysteryName> if it wasn't for my <# adjectives_stupid>, <# adjectives_stupid> <$ spouse>. 
 }
 
@@ -153,6 +158,7 @@ In <$ currentYear> I would have solved the <# mysteryName> if it wasn't for my <
 {
 <$ newPerson><# yearsLater> my <# adjectives_dear> <# nouns_friend> <$ npName> <# verbs_died>. <= cName <$ npName>><= cPron <$ npPron>><# comment_like><# madeMeFeel>
 <$ newPerson><# suddenly> <$ npName>, my <# adjectives_dear> <# adjectives_old> <# nouns_friend>, <# verbs_died>. <= cName <$ npName>><= cPron <$ npPron>><# comment_like><# comment_like>
+<$ newPerson>when my <# adjectives_dear> <# nouns_friend>, <# verbs_died> I was still comparatively a young <? gender male man><? gender female woman>--still <# adjectives_positiveTraits>, <# adjectives_positiveTraits> and <# adjectives_positiveTraits>- 
 }
 
 #EVENT_GET_KICKED_FROM_WORK
