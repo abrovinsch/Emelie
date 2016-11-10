@@ -86,6 +86,7 @@ Well,
 However, 
 As you might know, 
 You might not know this but 
+As it happened,
 }
 
 #mysteryName
@@ -97,16 +98,16 @@ mystery of the <# _18thcentury_maleMiddleClassWork>
 <# nouns_abstract> mystery
 <# adjectives_shippy> <# nouns_abstract> mystery
 the riddle of the prince of <# geography_country>
-<# geography_country> riddle.f
-
+<# geography_country> riddle
+<# adjectives_old> riddle of <# geography_majorCity>
 }
 
 #itWasAdjective
 {
 It was <% 30 quite> <# adjectives_difficult>. 
-It was <% 30 rather>  <# adjectives_easy>.
-It wasn't <% 30 very> <# adjectives_easy>.
-It wasn't <% 30 particularly> <# adjectives_difficult>.
+It was <% 30 rather>  <# adjectives_easy>. 
+It wasn't <% 30 very> <# adjectives_easy>. 
+It wasn't <% 30 particularly> <# adjectives_difficult>. 
 }
 
 #firedReason
@@ -256,13 +257,35 @@ Queen
 #goToSeaIntro
 {
 But I felt it was time for met to go to sea <? hasSailed true again>. I left on <# shipDescribe>. 
-<#youSee>I wanted to go sailing <? hasSailed true once∫more>. I found <# shipDescribe>. 
+<# youSee> I wanted to go sailing <? hasSailed true once∫more>. I found <# shipDescribe>. 
 I took to the sea <? hasSailed true again> on <# shipDescribe>. 
 But I longed for the seas to much. I enrolled on <# shipDescribe>. 
 I enrolled on <# shipDescribe>. 
 <? hasSailed true "§1I could always return to the seas§1"><! hasSailed true "§1I wonder where this will take me§1">, I thought as I boarded <# shipDescribe>. 
 <? hasSailed true "But I needed to smell the ocean! I got a place on"><! hasSailed true "I was afraid when I decided to go as a sailor on "> <# shipDescribe>. 
 <? hasSailed true "I wanted to try my luck on the salt seas!"><! hasSailed true "I was forced to the vengeful waves again."> It was <# shipDescribe>. 
+But in every healthy soul, the call of the sirenes is sometimes heard. So I took to sea on <# shipDescribe>. 
+But since there was little to keep my on land I joined the crew on <# shipDescribe>. 
+<# youSee>I could find few reasons to stay ashore, so I went to sea <? hasSailed true again> on <# shipDescribe>. 
+<# youSee>I heard that <# shipDescribe> lay at anchor outside the harbor and seized the opportunity!
+There was talk in town of <# shipDescribe> leaving on <# calendar_weekDay>, and I decided to try and join the crew before it was too late. 
+I didn't know if any captain would show interest in a <$ currentAge> year old <? hasSailed true rusty><? hasSailed false inexperienced> sailor, but I did find employment on <# shipDescribe>. 
+}
+
+#shipPurpose
+{
+whaling
+fishing
+east india trading
+atlantic trading
+north sea trade
+smuggling <# contraband>
+carrying passengers between <# geography_majorCity> and <# geography_majorCity>
+carrying mail
+luxurious yachting
+piloting
+privateering
+pirating on the <# geography_sea>. 
 }
 
 #shipDescribe
@@ -273,23 +296,33 @@ a <$ shipType> by the name §1<$ currentShip>§1
 the <# adjectives_old> <$ shipType> §1<$ currentShip>§1
 a ship called §1<$ currentShip>§1
 the §1<$ currentShip>§1, a <$ shipType> from <# geography_country>
-the <$ shipType> §1<$ currentShip>§1.
+the <$ shipType> §1<$ currentShip>§1. 
 a <$ shipType> called §1<$ currentShip>§1
 }
 
 #goToSeaInfo
 {
+<$ currentShip> was once part of the proud navy of <# geography_country>. 
+It was said that she had been through <# numbers_1-20> storms. 
+We set sail with the purpose of <# shipPurpose>. 
+Our objective was <# shipPurpose>. 
+We specialized in <# shipPurpose>. 
+She had been badly damaged in the <# history_war>. 
 It was a <# adjectives_lovely> ship<% 30 ", indeed">. 
 The ship itself was built from <# nouns_woods> logs. 
 It was a <# adjectives_horrible> looking ship. 
 The crew was <# adjectives_kinda> <# adjectives_old>. 
 The captain was a Mr. <$ captainsName>. <? KINDNESS 5 <# comment_like>><! KINDNESS 5 <# comment_neutral>> He looked <# adjectives_looks>. 
-<= cName the∫Captain><= cPron he><# comment_neutral>
+<= cName the∫captain><= cPron he><# comment_neutral> 
 We were going to sail to the <# geography_sea>. 
+She was commanded and officered by high-class sailors and educated gentlemen. 
+There was never a ship's crew so well agreed. 
+The ship was originally built in <# geography_majorCity> for the purpose of <# shipPurpose>. 
 }
 
 #goToSeaTravelInfo
 {
+There was a large amount of <# food_drink> drunk during this trip and there was plenty of fighting. 
 We had to cross the <# geography_sea>. 
 We were bound for <# geography_country> and <# geography_country>. 
 We were sailing on the coast of <# geography_country>. 
@@ -303,56 +336,58 @@ We spent most of the <# calendar_season> in <# geography_sea>.
 We passed many <# adjectives_old> ports. 
 We had to sail with reefed sails for much of the journey. 
 The crew grew tired by the <# adjectives_long> legs. 
-<$ newPerson><#youSee>I had many <# nouns_friend>s among the crew. One of them, <$ npName>, <# randomPersonFact><= cName <$ npName>><= cPron <$ npPron><# comment_like>
+<# newPerson><# youSee> I had many <# nouns_friend>s among the crew. One of them, <$ npName>, <# randomPersonFact>. <= cName <$ npName>><= cPron <$ npPron><# comment_like>
+<= cName <# surName>><= cPron he>The first mate was called <$ cName>.<# comment_random>
 }
 
 #randomPersonFact
 {
-was a secret lover to <# _18thcentury_famousPoliticalFigures>. 
-had smuggled <# contraband> to the prince of <# geography_country>. 
-could lift 100 pounds. 
-had <# numbers_1-20> children.
-could speak <# geography_language>, <# geography_language> and <# geography_language>. 
-was a former pirate. 
-had fought in the <# history_war>. 
-was a childhood friend of <# _18thcentury_famousFigures>. 
-had ended up as a sailor after leaving <# geography_majorCity> following <# anUnfortunateFaith>. 
-had once been a catholic. 
-had once seen and spoken to <# _18thcentury_famousArtists>. 
-in <# geography_majorCity> had married a woman from <# geography_country> who soon after the wedding disappeared...
-used to relate an amusing adventure once had in a horse carriage with a <# _18thcentury_aristocraticTitle> and a <# _18thcentury_maleMiddleClassWork>. 
+was a secret lover to <# _18thcentury_famousPoliticalFigures>
+had smuggled <# contraband> to the prince of <# geography_country>
+could lift 100 pounds
+had <# numbers_1-20> children
+could speak <# geography_language>, <# geography_language> and <# geography_language>
+was a former pirate
+had fought in the <# history_war>
+was a childhood friend of <# _18thcentury_famousFigures>
+had ended up as a sailor after leaving <# geography_majorCity> following <# anUnfortunateFaith>
+had once been a catholic
+had once seen and spoken to <# _18thcentury_famousArtists>
+in <# geography_majorCity> had married a <? gender male woman><? gender female man> from <# geography_country> who soon after the wedding disappeared
+used to relate an amusing adventure once had in a horse carriage with a <# _18thcentury_aristocraticTitle> and a <# _18thcentury_maleMiddleClassWork>
+descended from a very good family in the <# geography_country>
 }
 
 #anUnfortunateFaith
 {
 an unfortunate love affair with with some <# adjectives_negativeTraits> <# _18thcentury_aristocraticTitle>
-a <# adjective_horrible> episode with a wild <# nouns_animal>
-a <# adjective_horrible> terrible week looking after the child of some <# adjectives_stupid> <# _18thcentury_aristocraticTitle>
-many <# adjectives_difficult> months on 
+a <# adjectives_horrible> episode with a wild <# nouns_animal>
+a <# adjectives_horrible> terrible week looking after the child of some <# adjectives_stupid> <# _18thcentury_aristocraticTitle>
+many <# adjectives_difficult> months on the <# geography_sea>
 }
 
 #diseaseResult
 {
-But fortunately I got better after some months. 
-<# diseaseCure>, and I felt my strength returning.
-<# diseaseCure>, so I got better. 
-<# diseaseCure>, fortunately it was effective.
-<# diseaseCure>. And soon my health returned.
+But fortunately I got better after some months
+<# diseaseCure>, and I felt my strength returning
+<# diseaseCure>, so I got better
+<# diseaseCure>, fortunately it was effective
+<# diseaseCure>. And soon my health returned
 <# diseaseCure>. Unfortunately it only made me feel worse. But then I tried something else: <# diseaseCure>. That worked and now I am as healthy as ever!
-My doctor, who <# randomPersonFact>, gave me advice. <# diseaseCure>. It didn't really work out. I took me nine months to feel well again.
-<# diseaseCure> and it made me feel worse. I almost died. I thank the lord I am still alive. 
-<# diseaseCure> but it didn't help. Nowadays I feel better. 
-<# diseaseCure> and I almost <# verbs_died>. I am fortunately a bit better now.
-<# diseaseCure>. Never try that.
+My doctor, who <# randomPersonFact>, gave me advice. <# diseaseCure>. It didn't really work out. I took me nine months to feel well again
+<# diseaseCure> and it made me feel worse. I almost died. I thank the lord I am still alive
+<# diseaseCure> but it didn't help. Nowadays I feel better
+<# diseaseCure> and I almost <# verbs_died>. I am fortunately a bit better now
+<# diseaseCure>. Never try that
 }
 
 #diseaseCure
 {
 I cured myself using my grandmothers healthy stew
 I treated my body with holy water
-I ate medicine and lay in bed for the whole <$ calendar_season>
-I followed a diet of exclusively <# food_fruit>s
-I drank only <# food_drinks>
+I ate medicine and lay in bed for the whole <# calendar_season>
+I followed a diet of eating exclusively <# food_fruit>s
+I drank only <# food_drink>
 I slept 14 hours a day
 I prayed intensely to Jesus
 I went to get some fresh air in <# geography_englishVillage>
@@ -363,7 +398,7 @@ I drank lots of water
 I ate lots of brown bread
 }
 
-$newPerson
+#newPerson
 {
 <= npName <# male_name>><= npPron he>
 <= npName <# female_name>><= npPron she>
@@ -388,8 +423,8 @@ But they arrested my <# nouns_friend> <# random_name> instead of me. <# madeMeFe
 I had to spend <# numbers_1-20> months in prison. 
 I had to go into exile in <# geography_country>. I came back in <# calendar_month> of <$ currentYear>. 
 But no one ever noticed. 
-I had to change my name to <? gender male <# male_name>><? gender female <# female_name>> <# surName> for a while.
-<$ newPerson>Fortunately, my <# nouns_friend> <$ npName> <# surName> who is a rich <# _18thcentury_maleMiddleClassWork>, helped me out and bribed the sheriff. <= cName <$ npName>><= cPron <$ npPron>><# comment_like>
+I had to change my name to <? gender male <# male_name>><? gender female <# female_name>> <# surName> for a while. 
+<# newPerson>Fortunately, my <# nouns_friend> <$ npName> <# surName> who is a rich <# _18thcentury_maleMiddleClassWork>, helped me out and bribed the sheriff. <= cName <$ npName>><= cPron <$ npPron>><# comment_like>
 But I had left no traces so they couldn't find me. 
 But the <# adjectives_stupid> police had no chance catching me. 
 }

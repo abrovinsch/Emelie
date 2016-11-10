@@ -10,16 +10,18 @@
 §0[x 9]
 <? cPron he He><? cPron she She> was very <# adjectives_positiveTraits>. 
 <$ cName> was so <# adjectives_positiveTraits>. 
-<$ cPron> was <# adjectives_positiveTraits> anf <# adjectives_positiveTraits>. 
+<? cPron he He><? cPron she She> was <# adjectives_positiveTraits> anf <# adjectives_positiveTraits>. 
 I liked that <$ cPron> was so <# adjectives_positiveTraits>. 
 The thing I liked best about <$ cName> was how <# adjectives_positiveTraits> <$ cPron> was. 
 <$ cName> was as <# adjectives_positiveTraits> as <$ cPron> was <# adjectives_positiveTraits>. 
-I liked how <# adjectives_positiveTraits> <$ cPron> was.
+I liked how <# adjectives_positiveTraits> <$ cPron> was. 
 <? cPron he He><? cPron she She> was very <# adjectives_positiveTraits> and <# adjectives_positiveTraits>. 
 <? cPron he His><? cPron she Her> habits and moral character were entirely unimpeachable. 
 I marvel now at the purity and elevated sentiment possessed by this <? cPron she woman><? cPron he man>. 
-<? cPron he He><? cPron she She> looked like a man who had never cringed and never had had a creditor.
+<? cPron he He><? cPron she She> looked like a man who had never cringed and never had had a creditor. 
 <? cPron he He><? cPron she She> appeared <# adjectives_positiveTraits> and <# adjectives_positiveTraits>! 
+<$ cName> was good-looking and gentlemanlike. 
+<? cPron he He><? cPron she She> had a pleasant countenance, and easy, unaffected manners. 
 }
 
 #comment_neutral
@@ -27,7 +29,7 @@ I marvel now at the purity and elevated sentiment possessed by this <? cPron she
 §0[x 9]
 <? cPron he He><? cPron she She> was very <# adjectives_neutralTraits>. 
 <$ cName> was so <# adjectives_neutralTraits>. 
-<$ cPron> was <# adjectives_neutralTraits> anf <# adjectives_neutralTraits>. 
+<? cPron he He><? cPron she She> was <# adjectives_neutralTraits> anf <# adjectives_neutralTraits>. 
 <$ cName> was <# adjectives_kinda <# adjectives_neutralTraits>. 
 The thing about <$ cName> was that <$ cPron> was <# adjectives_neutralTraits>. 
 <$ cName> was as <# adjectives_neutralTraits> as <$ cPron> was <# adjectives_neutralTraits>. 
@@ -37,8 +39,8 @@ The thing about <$ cName> was that <$ cPron> was <# adjectives_neutralTraits>.
 #comment_dislike
 {
 <? cPron he He><? cPron she She> was by no means the sort of <? cPron he man><? cPron she woman> whose habits had been formed in drawing-rooms or among people of good breeding. 
-<? cPron he He><? cPron she She> looked to me like a tree walking about.
-Morally, <$ cPron> is like a lad of twenty. 
+<? cPron he He><? cPron she She> looked to me like a tree walking about. 
+Morally, <$ cPron> was like a lad of twenty. 
 }
 
 #comment_loveSomeone

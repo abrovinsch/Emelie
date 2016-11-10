@@ -8,10 +8,10 @@
 
 #EVENT_FALL_IN_LOVE
 {
-<$ newPerson><= loveInterest <$ npName>><# yearsLater> I fell in love with <$ loveInterest>. <= cName <$ npName>><= cPron <$ npPron>><# comment_loveSomeone><# comment_loveSomeone>
-<$ newPerson><= loveInterest <$ npName>><# yearsLater> I met <$ loveInterest>. <= cName <$ npName>><= cPron <$ npPron>><# comment_loveSomeone>
-<$ newPerson><= loveInterest <$ npName>>I will never forget the year <$ currentYear>, for that was when I met the <# adjectives_lovely> <$ loveInterest>.<= cName <$ npName>><= cPron <$ npPron>><# comment_loveSomeone><# comment_loveSomeone>
-<$ newPerson><# youSee><nName> was a handsome <? npPron she girl><? npPron he boy>, and an affectionate <# nouns_friend>. <= cName <$ npName>><= cPron <$ npPron>><# comment_loveSomeone><# comment_loveSomeone>
+<# newPerson><= loveInterest <$ npName>><# yearsLater> I fell in love with <$ loveInterest>. <= cName <$ npName>><= cPron <$ npPron>><# comment_loveSomeone><# comment_loveSomeone>
+<# newPerson><= loveInterest <$ npName>><# yearsLater> I met <$ loveInterest>. <= cName <$ npName>><= cPron <$ npPron>><# comment_loveSomeone>
+<# newPerson><= loveInterest <$ npName>>I will never forget the year <$ currentYear>, for that was when I met the <# adjectives_lovely> <$ loveInterest>.<= cName <$ npName>><= cPron <$ npPron>><# comment_loveSomeone><# comment_loveSomeone>
+<# newPerson><# youSee><nName> was a handsome <? npPron she girl><? npPron he boy>, and an affectionate <# nouns_friend>. <= cName <$ npName>><= cPron <$ npPron>><# comment_loveSomeone><# comment_loveSomeone>
 }
 
 #EVENT_BECOME_RELIGIOUS
@@ -24,7 +24,7 @@
 
 #EVENT_GROW_UP
 {
-I was so unfortunate as to be the youngest of five children of our mother, who <# randomPersonFact>
+I was so unfortunate as to be the youngest of five children of our mother, who <# randomPersonFact>. 
 after I was born, were left motherless.
 <# yearsLater> I grew older and older. <# kidStuff>
 My childhood was <# adjectives_kinda> <# emotions_random>. <# kidStuff>
@@ -73,10 +73,10 @@ I was adopted into the family of my father’s younger brother, when my father w
 #EVENT_BECOME_MOTHER_FIRST_TIME
 {
 <# yearsLater> I got a <# adjectives_incredible> little baby. 
-<$ newPerson><= newKid <$ npName>><# suddenly> my <# adjectives_lovely> <$ newKid> was born! 
-<$ newPerson><= newKid <$ npName>><# yearsLater> I became a mother for the first time. It was a <? npPron she girl><? npPron he boy> called <$ newKid>.
-<$ newPerson><= newKid <$ npName>><# yearsLater> I gave birth to my eldest <? npPron she girl><? npPron he boy> <$ newKid>. 
-<$ newPerson><= newKid <$ npName>><# yearsLater> my eldest <? npPron she girl><? npPron he boy> <$ newKid> were born.
+<# newPerson><= newKid <$ npName>><# suddenly> my <# adjectives_lovely> <$ newKid> was born! 
+<# newPerson><= newKid <$ npName>><# yearsLater> I became a mother for the first time. It was a <? npPron she girl><? npPron he boy> called <$ newKid>.
+<# newPerson><= newKid <$ npName>><# yearsLater> I gave birth to my eldest <? npPron she girl><? npPron he boy> <$ newKid>. 
+<# newPerson><= newKid <$ npName>><# yearsLater> my eldest <? npPron she girl><? npPron he boy> <$ newKid> were born.
 <# yearsLater> I became pregnant and had twins named <# random_name> and  <# random_name>. 
 }
 
@@ -150,15 +150,15 @@ I started working as a <= currentJob <# _18thcentury_femaleLowerClassWork>> <$ c
 I kept on trying to solve the <# mysteryName> and in <$ currentYear> I finally succeeded. <# itWasAdjective>
 I managed to solve the <# mysteryName> when I was <$ currentAge>. <# itWasAdjective><# itsTrue>
 In <$ currentYear> I spent <# numbers_1-20> months looking into the <# mysteryName>. It wasn't until <# calendar_month> I solved it. <# madeMeFeel>
-<$ newPerson><$ npName>, my <# nouns_friend>, and I solved the <# mysteryName> together. <= cName <$ npName>><= cPron <$ npPron>><# comment_like>
+<# newPerson><$ npName>, my <# nouns_friend>, and I solved the <# mysteryName> together. <= cName <$ npName>><= cPron <$ npPron>><# comment_like>
 In <$ currentYear> I would have solved the <# mysteryName> if it wasn't for my <# adjectives_stupid>, <# adjectives_stupid> <$ spouse>. 
 }
 
 #EVENT_FRIEND_DIES
 {
-<$ newPerson><# yearsLater> my <# adjectives_dear> <# nouns_friend> <$ npName> <# verbs_died>. <= cName <$ npName>><= cPron <$ npPron>><# comment_like><# madeMeFeel>
-<$ newPerson><# suddenly> <$ npName>, my <# adjectives_dear> <# adjectives_old> <# nouns_friend>, <# verbs_died>. <= cName <$ npName>><= cPron <$ npPron>><# comment_like><# comment_like>
-<$ newPerson>when my <# adjectives_dear> <# nouns_friend>, <# verbs_died> I was still comparatively a young <? gender male man><? gender female woman>--still <# adjectives_positiveTraits>, <# adjectives_positiveTraits> and <# adjectives_positiveTraits>- 
+<# newPerson><# yearsLater> my <# adjectives_dear> <# nouns_friend> <$ npName> <# verbs_died>. <= cName <$ npName>><= cPron <$ npPron>><# comment_like><# madeMeFeel>
+<# newPerson><# suddenly> <$ npName>, my <# adjectives_dear> <# adjectives_old> <# nouns_friend>, <# verbs_died>. <= cName <$ npName>><= cPron <$ npPron>><# comment_like><# comment_like>
+<# newPerson> When my <# adjectives_dear> <# nouns_friend>, <# verbs_died> I was still comparatively a young <? gender male man><? gender female woman>--still <# adjectives_positiveTraits>, <# adjectives_positiveTraits> and <# adjectives_positiveTraits>- 
 }
 
 #EVENT_GET_KICKED_FROM_WORK

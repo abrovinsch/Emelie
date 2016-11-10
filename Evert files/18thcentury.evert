@@ -44,6 +44,7 @@ seamstress
 shopkeeper
 landlady
 midwife
+bartendress
 }
 
 #_18thcentury_maleMiddleClassWork
@@ -51,7 +52,7 @@ midwife
 writer
 teacher
 watchmaker
-small scale trader
+trader
 post officer
 mapmaker
 light house keeper
@@ -60,7 +61,11 @@ attorney
 lawyer
 priest
 bargeman
-boatswain on a large merchantman
+politician
+captain
+officer
+lieutenant
+boatswain
 merchant
 poet
 philosopher
